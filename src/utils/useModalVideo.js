@@ -1,6 +1,6 @@
 "use client"
 import { useState, useCallback } from "react";
-import ModalVideo from "react-modal-video";
+import ModalVideo from "@/components/mortar-runtime/ModalVideo";
 
 const useModalVideo = (videoId = "", options = {}) => {
   const [isOpen, setOpen] = useState(false);

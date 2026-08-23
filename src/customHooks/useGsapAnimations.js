@@ -2,19 +2,14 @@
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SplitText } from "gsap/SplitText.js";
 
 export default function useGsapAnimations() {
   useEffect(() => {
     // Ensure the code runs only in the client
     if (typeof window !== "undefined") {
       // Register plugins
-      gsap.registerPlugin(ScrollTrigger);
-
-      // Check if SplitText is available
-      if (typeof SplitText === "undefined") {
-        console.error("SplitText is not available. Please check your script tags.");
-        return;
-      }
+      gsap.registerPlugin(ScrollTrigger, SplitText);
 
       // Title Animation
       const splitTitleLines = gsap.utils.toArray(".text-animation");

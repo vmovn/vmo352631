@@ -1,7 +1,6 @@
 "use client";
 import React, { useMemo, useState } from "react";
-import ModalVideo from "react-modal-video";
-import "react-modal-video/css/modal-video.css";
+import ModalVideo from "@/components/mortar-runtime/ModalVideo";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, {
     Autoplay,

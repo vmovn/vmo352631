@@ -1,7 +1,6 @@
 "use client"
 import React, { useState } from 'react'
-import ModalVideo from "react-modal-video";
-import "react-modal-video/css/modal-video.css";
+import ModalVideo from "@/components/mortar-runtime/ModalVideo";
 const Home1Banner2 = () => {
     const [isOpen, setOpen] = useState(false);
     return (

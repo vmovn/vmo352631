@@ -10,8 +10,7 @@ import SwiperCore, {
 } from "swiper";
 SwiperCore.use([Autoplay, EffectFade, Navigation, Pagination]);
 import useModalVideo from "@/utils/useModalVideo";
-import ModalVideo from "react-modal-video";
-import "react-modal-video/css/modal-video.css";
+import ModalVideo from "@/components/mortar-runtime/ModalVideo";
 
 
 const Home6TestimonialSection = () => {
