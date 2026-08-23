@@ -155,11 +155,14 @@ No original route, component, animation, asset, package declaration, or lockfile
 
 - Untouched source commit: `e753792` (`vmo-1.0.1`)
 - Annotated tag: `mortar-original` → `e753792`
-- Evidence checkpoint: screenshots and this report are committed immediately after the tagged source state.
+- Evidence checkpoint: `7e08a3b` (`phase 0: freeze Mortar golden master`)
+- Push status: local checkpoint and tag are ready, but the environment blocked export to `https://github.com/vmovn/vmo352631.git` pending fresh destination-specific user approval.
 
 ## Blockers
 
-No Phase 0 blocker remains. Network permission was required for lockfile package downloads and the original Google Fonts build fetch. Original console/build warnings are documented above for later compatibility review.
+No technical Phase 0 blocker remains. Network permission was required for lockfile package downloads and the original Google Fonts build fetch. Original console/build warnings are documented above for later compatibility review.
+
+GitHub synchronization is the only outstanding operational blocker: the local evidence commit and `mortar-original` tag were not pushed because the environment requires fresh explicit approval to export the repository artifacts to the configured remote.
 
 ## Stop boundary
 
