@@ -1,0 +1,5 @@
+---
+description: Apply during Next React dependency or layout migration
+globs: ["package.json","package-lock.json","src/app/**/*","src/customHooks/**/*","src/utils/**/*"]
+---
+Use docs/MORTAR-COMPATIBILITY.md and skill migrating-mortar-framework. Do not install Payload in the compatibility phase. Preserve visual behavior.

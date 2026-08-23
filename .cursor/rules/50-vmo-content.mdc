@@ -1,0 +1,5 @@
+---
+description: Apply to public VMO content and SEO copy
+globs: ["src/**/*","content/**/*","seed/**/*"]
+---
+Read VMO35.md. Business Problem and Outcome first. No SaaS/AI-vendor positioning, fake proof, or tool-first copy.

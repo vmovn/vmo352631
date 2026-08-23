@@ -1,0 +1,30 @@
+{
+  "total_assets": 686,
+  "extensions": {
+    "(none)": 2,
+    ".pdf": 2,
+    ".js": 14,
+    ".css": 15,
+    ".map": 1,
+    ".scss": 1,
+    ".gif": 8,
+    ".ttf": 6,
+    ".woff": 9,
+    ".svg": 127,
+    ".woff2": 8,
+    ".eot": 6,
+    ".mp4": 6,
+    ".png": 301,
+    ".jpg": 180
+  },
+  "image_folders": {
+    "home1": 106,
+    "home2": 61,
+    "home3": 39,
+    "home4": 61,
+    "home5": 31,
+    "home6": 69,
+    "home7": 22,
+    "innerpages": 210
+  }
+}

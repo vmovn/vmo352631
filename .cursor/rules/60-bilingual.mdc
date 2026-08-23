@@ -1,0 +1,5 @@
+---
+description: Apply to localization and localized routes
+globs: ["src/app/**/*","src/**/*locale*","src/**/*i18n*","src/**/*slug*"]
+---
+VI default, EN /en prefix. Preserve section parity and map language switch by document identity.

@@ -1,0 +1,5 @@
+---
+description: Protect purchased Mortar experience
+alwaysApply: true
+---
+Before changing Mortar UI, inspect TEMPLATE.md and original component. Do not delete or genericize original sections. Preserve composition, motion, interaction and responsive behavior unless explicitly approved.

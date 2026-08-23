@@ -1,0 +1,678 @@
+{
+  "source": "Mortar Next.js purchased ThemeForest source",
+  "source_root_expected": ".",
+  "baseline": {
+    "next": "14.2.4",
+    "react": "^18",
+    "react_dom": "^18",
+    "bootstrap": "^5.3.3",
+    "gsap": "^3.12.5",
+    "swiper": "^8.4.5"
+  },
+  "files": {
+    "src/app/about/page.js": {
+      "sha256": "9baf76aff0de6cfaff5ba9327e689a8f8bc7c6986204f5c524c79771f262f90b",
+      "size": 64557
+    },
+    "src/app/award-recognitions/page.js": {
+      "sha256": "435352aed2841e327aa21e3950de6e9ae81deac1a7b2a34fb45ac325a30ae9fe",
+      "size": 4264
+    },
+    "src/app/career/details/page.js": {
+      "sha256": "77d0013c52d8efd2d75161289f76154c889591bb0ef61c171c89447be364705d",
+      "size": 19482
+    },
+    "src/app/career/page.js": {
+      "sha256": "551a44dd61713f8b2e6d38cd3e8d0f0b9019583e4e531b754b5f1f5207e4833d",
+      "size": 50789
+    },
+    "src/app/cart/page.js": {
+      "sha256": "026c63bb63209b976547300060e6cbc6e6ff41471958ef3b48325941feb6dcd8",
+      "size": 11781
+    },
+    "src/app/case-study/details/page.js": {
+      "sha256": "58447be55adc40acb3d8d651b3bbbf78a2983539f7911f2f5d61b7d3f20e3b76",
+      "size": 26041
+    },
+    "src/app/case-study/page.js": {
+      "sha256": "6b33a141434194b7ad47ec44fb6607fa289fefa27db66983983dc746fa42d125",
+      "size": 37877
+    },
+    "src/app/case-study/style2/page.js": {
+      "sha256": "65872d45229501e57339efe2f14422a758528f946c50c239843a871f23d8f28c",
+      "size": 37502
+    },
+    "src/app/checkout/page.js": {
+      "sha256": "c488e18eac7a0779aca99bbf62891640faf771b193793db4c6e0387644a9d989",
+      "size": 19732
+    },
+    "src/app/contact/page.js": {
+      "sha256": "e716814791d9ef4754bce3589b97f573c985b43679421a57d0c5a308d41a2761",
+      "size": 16098
+    },
+    "src/app/digital-agency/page.js": {
+      "sha256": "b5b3a0c5e481d53911ed78d8d642bda2b697800dc0cc889692823d6351ff7b9b",
+      "size": 1326
+    },
+    "src/app/digital-agency-dark/page.js": {
+      "sha256": "1ca396412bb6568e5991746a54f774de45c0b2c62dff2cb47807fdea86c6faf0",
+      "size": 1373
+    },
+    "src/app/faq/page.js": {
+      "sha256": "38322c8a6823fdbff7464464f825a27357db0aafbc6430dfbc706000eaa5ef6c",
+      "size": 13280
+    },
+    "src/app/fav-icon.svg": {
+      "sha256": "f82b2d0750fa5453d1f59b4d056cbc664a2987885a0486c46c3ef59adc4a9d3f",
+      "size": 2664
+    },
+    "src/app/favicon.ico": {
+      "sha256": "6552569becc1ff80a8e8cd798a8109a5b25c051d0ba6c16f7f6b8e324558a5e9",
+      "size": 1742
+    },
+    "src/app/fintech/page.js": {
+      "sha256": "7c8f57c5fe05f6ded12e15d480ca0c84038bd5101a8c2758814155c1183f70e0",
+      "size": 1241
+    },
+    "src/app/fintech-dark/page.js": {
+      "sha256": "8de4e5162e699f388db73536c6a00205844c2adb941b518701f63e78a4914918",
+      "size": 1286
+    },
+    "src/app/industry/details/page.js": {
+      "sha256": "c88fba3424b323c6a34160f51a4d5c5dca4bc194928e660a777c8f250db3c519",
+      "size": 15785
+    },
+    "src/app/industry/page.js": {
+      "sha256": "72db756f1951308b72bf558f335ff975c12721419e28796450c900c10580666c",
+      "size": 12545
+    },
+    "src/app/it-consulting/page.js": {
+      "sha256": "1fcc71f78161cb611d936c836efee2de3e91f6e7e5ce430dda69a31fb1b8e05e",
+      "size": 1327
+    },
+    "src/app/it-consulting-dark/page.js": {
+      "sha256": "0e7a4a6b44af67f21fbaefcb7cc56bbe56863f6259706d0b9758adb1881dba41",
+      "size": 1362
+    },
+    "src/app/layout.js": {
+      "sha256": "9b9ce92a3bca7aa5284c37a4d10c42b1f123c2ec08b9202c2cfe622e8a25874c",
+      "size": 3199
+    },
+    "src/app/marketing-agency/page.js": {
+      "sha256": "27a83e15d88f4e292f00737ceaa6c713906ddfb881a2a7c6af9c646bd1c07224",
+      "size": 1324
+    },
+    "src/app/marketing-agency-dark/page.js": {
+      "sha256": "94181a91789474ce0a0e7b12453eb797fa9c39484a57889c371a2737443637a7",
+      "size": 1454
+    },
+    "src/app/news-insight-grid/details/page.js": {
+      "sha256": "53f44feeb71d06dd1092c4e2afcf5934a98f59fd330470b5a87f4941952da784",
+      "size": 28650
+    },
+    "src/app/news-insight-grid/page.js": {
+      "sha256": "e68057df3d4b113008fa968f4d5d0604c63d1592114c6f69945a2f60d19ba922",
+      "size": 19977
+    },
+    "src/app/news-insight-grid/style2/page.js": {
+      "sha256": "5f7b54d32bee0979e50c889769280ca929af02dabd0cafda800b6c6d891e2d1b",
+      "size": 17608
+    },
+    "src/app/news-insight-grid/style3/page.js": {
+      "sha256": "612286341c95d81983e7d58141aba0c9575d5a217bcdce89d558f1dc4476d3b7",
+      "size": 14927
+    },
+    "src/app/not-found.js": {
+      "sha256": "5903053b716dd94698e55ee219f6cd5f7c45c7cba3f8550da391dcc211437180",
+      "size": 131
+    },
+    "src/app/page.js": {
+      "sha256": "120329b708c712908e08c733ded7d925f9eae8a74394d5bcc64a0493a72e4c6a",
+      "size": 6527
+    },
+    "src/app/portfolio/caption/page.js": {
+      "sha256": "c2705c7c631d573df023426ac63f4f1bf13b15219166209e6db2e92d83e5d53f",
+      "size": 8817
+    },
+    "src/app/portfolio/carousel/page.js": {
+      "sha256": "6897d16d0a3a4d747515357bc4116fec3052c25cbaf67c8a717ce1608fa270da",
+      "size": 21034
+    },
+    "src/app/portfolio/classic/page.js": {
+      "sha256": "762e64600e1309a83ec1ea229e5c413faf850d128b79a1884853d130a15995ad",
+      "size": 55892
+    },
+    "src/app/portfolio/creative/page.js": {
+      "sha256": "e60d5d59fdad6053dc0633af817954980d472523a81acc509ef0927ca481881f",
+      "size": 15224
+    },
+    "src/app/portfolio/details/page.js": {
+      "sha256": "b2696e34c7f06182ba6db6ce205265ae141f5acafd5616e633b9967ddf4cb616",
+      "size": 31614
+    },
+    "src/app/portfolio/grid/page.js": {
+      "sha256": "89b96bc9d0436ef7284367fe910eaec7e4deecd2dea0b9d8099cafa17b0195ae",
+      "size": 16352
+    },
+    "src/app/portfolio/horizontal/page.js": {
+      "sha256": "9b3ed5aa87a8ad768a3da92df9a72ed9ad499994b189eefe5ed81a75cf3d9adc",
+      "size": 10102
+    },
+    "src/app/portfolio/interactive-link/page.js": {
+      "sha256": "f9f2dcc4908aeb8dd612ca9ef629f19e3a42d5ba50e7313dbaaa274eee778680",
+      "size": 22379
+    },
+    "src/app/portfolio/page.js": {
+      "sha256": "99cda405c8e0ccdd47382205a23f5f7d1f99b41e7fb78df22ec593a255b9dbdf",
+      "size": 918
+    },
+    "src/app/portfolio/vertical/page.js": {
+      "sha256": "584a608de1d1ddfd5ee62c94f71594c813f38f7cc53c0a3dbea3d780a3690a60",
+      "size": 9338
+    },
+    "src/app/portfolio-dark/page.js": {
+      "sha256": "e6814045f3478eb7a54014c674ddcf64d10949dbd2b96564d6214fc4bc7bac1b",
+      "size": 1046
+    },
+    "src/app/pricing/page.js": {
+      "sha256": "b99344c024958524570c917a1315f873e7223de865c5dead9fc6b18167587567",
+      "size": 40339
+    },
+    "src/app/product-details/page.js": {
+      "sha256": "8450deec5f6db84137250db74665dbd1c433436a70954cdd8f3f5812782eb264",
+      "size": 47268
+    },
+    "src/app/saas-product/page.js": {
+      "sha256": "ffb8aa9917ec55b9448f962965c8701ce0c71dca24c21681dbfed1b31815bafc",
+      "size": 1286
+    },
+    "src/app/saas-product-dark/page.js": {
+      "sha256": "f0897bba21dfb18718ff7be57c1f76cf0cddeaec94e278113fe09db839f7ea0e",
+      "size": 1360
+    },
+    "src/app/service/details/page.js": {
+      "sha256": "ce3e69e5140bb152b6b9d674f60c3b253b51b05a2943ce2b871433e27578979e",
+      "size": 19428
+    },
+    "src/app/service/page.js": {
+      "sha256": "d9e05ee6b01b0f2e61ce841878c9e8973fe76cb7fabd3167a82cd83f499db4f1",
+      "size": 39803
+    },
+    "src/app/service/style2/page.js": {
+      "sha256": "2edba843fe2882dbb3e679df78c1fe4eaaa0da2e271c8f00abe7e544fb2c30c9",
+      "size": 23965
+    },
+    "src/app/shop/page.js": {
+      "sha256": "a215b02fca616e72de9f5962d965a6ca9c22064b40761f066687e4473772c4ea",
+      "size": 33073
+    },
+    "src/app/social-responsibility/page.js": {
+      "sha256": "b3e1a8915e981e3267910b8fb4a19a75f1545919c6b95e23a8f4eef4ff4c8262",
+      "size": 11046
+    },
+    "src/app/startup-agency-dark/page.js": {
+      "sha256": "7ecd8eed3581d0f3d756f645bd739b32e07e3048d18ee547e6dfe1e0d740289c",
+      "size": 8075
+    },
+    "src/app/team/details/page.js": {
+      "sha256": "9297fa80df6def3e6ab8e111f6040eadc657e1ba752dc872af0d7e0a5512f229",
+      "size": 9441
+    },
+    "src/app/team/page.js": {
+      "sha256": "2c6310381d433ad0aad8769d2fdcbfab90247f9f9807be883fbbf5494951c4ac",
+      "size": 56720
+    },
+    "src/app/team/style2/page.js": {
+      "sha256": "1f12be650c1822471906124f5e2e03fc0c80fcfc44fdd2d6a4a1c47eeec6932e",
+      "size": 44849
+    },
+    "src/app/team/style3/page.js": {
+      "sha256": "6016d361e3cd4148b9461c5618200b9447273bba38d0ba7ad238f16d01273d45",
+      "size": 24282
+    },
+    "src/components/AwardListSection.jsx": {
+      "sha256": "1fd9cf168247363c5fbe962ed4f3d600d753f465b9c2d023b59263ed5284103a",
+      "size": 3245
+    },
+    "src/components/Footer/Footer1.jsx": {
+      "sha256": "bcc44723bdf38461f41591437d57969aa555af4276c21881c5a020996dc27eda",
+      "size": 10732
+    },
+    "src/components/Footer/Footer6.jsx": {
+      "sha256": "b3768bdef4e1aced2b9275cbc1c1e6a967d84cf1a856c7f3736c48386703204e",
+      "size": 9096
+    },
+    "src/components/Footer/Footer7.jsx": {
+      "sha256": "60003aaf6090fe9f61c528eeb97ce5dd78b874393638bfb8fac7779a120fb6e6",
+      "size": 7297
+    },
+    "src/components/Footer/Home1FooterTop.jsx": {
+      "sha256": "da9110f3bcb75e1a63a3f556c0dffecf6a67cd45adaab13badc726504795e77f",
+      "size": 1974
+    },
+    "src/components/Footer/Home2FooterSection.jsx": {
+      "sha256": "1d236ea06d94c925a7afd8497bfbe3c4ccce3cb8d8f9992ba7cb3fd1ed935d2c",
+      "size": 9392
+    },
+    "src/components/Footer/Home3Footer.jsx": {
+      "sha256": "c300dc0d21a0410a3582352050849f089bfb2b9d1423d715f11d52add4407324",
+      "size": 22420
+    },
+    "src/components/Footer/Home4Footer.jsx": {
+      "sha256": "f7a1f37c402fe3613178e39b11096ef6af35cc2fd9005070df3c1865097e39c1",
+      "size": 14108
+    },
+    "src/components/Footer/Home5Footer.jsx": {
+      "sha256": "18e1bd404a53a351243f753e4cbe6db6ccbdb253377cef1a4908236d3300e156",
+      "size": 14932
+    },
+    "src/components/about/Home1About.jsx": {
+      "sha256": "de3ab244de604e200a805e3e1bab4d187c90e193169deca1d96fdb6ecf6c7fea",
+      "size": 8882
+    },
+    "src/components/about/Home3aboutSection.jsx": {
+      "sha256": "aad6ae3276a2d7b1f953a56616ae7fccaa825c2cc407088da35aa19e52649681",
+      "size": 9787
+    },
+    "src/components/about/Home5AboutSection.jsx": {
+      "sha256": "d35e5137745efdc149b62a4a62ed4a566adaa9ca33b361d1e2b31aab921304fb",
+      "size": 12654
+    },
+    "src/components/about/Home7About.jsx": {
+      "sha256": "d2c39ca9673e0c5207b866adf9407539e02a120b327eb6c97f044797867df82a",
+      "size": 5452
+    },
+    "src/components/banner/FintechBanner.jsx": {
+      "sha256": "c76eb42358be1780e38c080eb36c526f580ef003a685c2ed8955c4cc5b73fb46",
+      "size": 3799
+    },
+    "src/components/banner/Home1Banner2.jsx": {
+      "sha256": "542b2b2b8ffc80202e79b3dc762a957926836f336380c8b7420e64b4b032c3a8",
+      "size": 5622
+    },
+    "src/components/banner/Home1banner.jsx": {
+      "sha256": "3fce9402a39c4e6e8f3d7c515df3c718b97b0c6a2c557b818fcba75bf9cd0a34",
+      "size": 3078
+    },
+    "src/components/banner/Home3Banner.jsx": {
+      "sha256": "b61ee72e867865da2e27dcc96792ebc938b8d81db827e3d08cdc788278e93e32",
+      "size": 9498
+    },
+    "src/components/banner/Home4Banner.jsx": {
+      "sha256": "47005c0d3e459f8415b27cfbfbe837ab9d8d5b47bdb9e74c0008a58aa716053c",
+      "size": 6632
+    },
+    "src/components/banner/Home5Banner.jsx": {
+      "sha256": "841f329f0a8e585989b5c23f8818a7f08cc71cc55faa6709dacc6e22a5bb3163",
+      "size": 13499
+    },
+    "src/components/banner/Home6Banner.jsx": {
+      "sha256": "87b0abe54dffcab28f9f035be6d9c6556c65d3bdae299b6ecd2e7f6c0a845c12",
+      "size": 8684
+    },
+    "src/components/banner/Home7Banner.jsx": {
+      "sha256": "413c407b09676161307a7741eafe9edab419f01e64f1273c388f6563994a333f",
+      "size": 3596
+    },
+    "src/components/blog-section/Home1blog.jsx": {
+      "sha256": "7c44afe8832d962c987182943e9e4da776423eb99b2a44aa4a9af9abfa85aab1",
+      "size": 6532
+    },
+    "src/components/blog-section/Home2BlogSection.jsx": {
+      "sha256": "3d351f7614a4a00bec3d3cbd946b70f99dabbae36f992c7d5e17b9d5776734ee",
+      "size": 3317
+    },
+    "src/components/blog-section/Home3BlogSection.jsx": {
+      "sha256": "6139bd455fa85922e37fbed5ba1a80c8f33b43f8fba255e3651dc7dc76f314f8",
+      "size": 15911
+    },
+    "src/components/blog-section/Home5BlogSection.jsx": {
+      "sha256": "a920644952c44af307233dc7744eceb9112d92637d2c996ab8714e1978b81d22",
+      "size": 10384
+    },
+    "src/components/blog-section/Home6BlogSection.jsx": {
+      "sha256": "079176922eba132e4c7a47d96d25e9310638165dbec9ac5668d302c521ad511e",
+      "size": 4535
+    },
+    "src/components/blog-section/Home7BlogSection.jsx": {
+      "sha256": "b27efca0d1127d163b9e3baa91f1de40ea72933c975855ec0bd4fd8ab9db6e1f",
+      "size": 15885
+    },
+    "src/components/case-study-section/Home1CaseStudy.jsx": {
+      "sha256": "130292ee83ab591b0790e676f91f8c5867185c9b4cda74312cbafc22452b93a5",
+      "size": 11955
+    },
+    "src/components/case-study-section/Home4CaseStudySection.jsx": {
+      "sha256": "27799e524082e00bb0b77fc0eec7c63a10ec8ea87abdd103109f3aa4cb53f884",
+      "size": 14874
+    },
+    "src/components/common/AnimateCursor.js": {
+      "sha256": "0fc2f258d6b8b86447b00abbed578664dc0e0bc2264837919a74134d6666230c",
+      "size": 2977
+    },
+    "src/components/common/Breadcrum.jsx": {
+      "sha256": "9d2e2e040db9f08cc4d16bc48ed831926a5831d5a52022bf88e3d9f974528c3f",
+      "size": 905
+    },
+    "src/components/common/Counter.js": {
+      "sha256": "2717c511c534b0de4700e8ff65718499fb2243ed08382d0ff286a7080072dd38",
+      "size": 368
+    },
+    "src/components/common/GallerySection.jsx": {
+      "sha256": "8f7fe73b1ef3fae9b17625f2e86ed20df36cc115738fbf33a0c70d0a3ab99be8",
+      "size": 5980
+    },
+    "src/components/common/ScrollProgress.js": {
+      "sha256": "fb8b49d10f341ad66e3014d8fc494029df2cd62352c9cec3c7848824d158ade9",
+      "size": 1025
+    },
+    "src/components/common/SelectComponent.jsx": {
+      "sha256": "76a971bcbe20b1a3c1ca8ed73b04428a3e526b0291741df149715d129c9ddcac",
+      "size": 1790
+    },
+    "src/components/common/SidebarMenu.jsx": {
+      "sha256": "6419716d56e6a9309969a492e4e0f6c107b899d2300eef8eb036f084e4958ee2",
+      "size": 38746
+    },
+    "src/components/common/Theme.js": {
+      "sha256": "5554abe69f41688d4b1f163adffd384ef7f6f49e165becde60a72d0626a3b8dc",
+      "size": 1031
+    },
+    "src/components/common/Topbar.jsx": {
+      "sha256": "63218b9c278da6efba9d94ab6ec9148e4974bc36a37eb9abc91d6202252f4c23",
+      "size": 9552
+    },
+    "src/components/contact-section/Home1ContactSection.jsx": {
+      "sha256": "bb4d726debb9b5a1af7e223e67c3697f5bf8976abbe1d3fbc1e9d4bc011c0142",
+      "size": 15460
+    },
+    "src/components/contact-section/Home4ContactSection.jsx": {
+      "sha256": "5319bb374660d818d1ad78acbca735f6b671f84ad6ba64c060e8e7dd5c12daf3",
+      "size": 4436
+    },
+    "src/components/faq-section/Home1Faq.jsx": {
+      "sha256": "8c97e2f9b691f8e5aa4c1b427ed92e5c8592fa13ef2fcc69f7fc10ec81e42a54",
+      "size": 9032
+    },
+    "src/components/faq-section/Home6Faq.jsx": {
+      "sha256": "2b3734d5fbd85216c9e9867991d242a38faef02fc143e449906c892f88b9b698",
+      "size": 11866
+    },
+    "src/components/feature-section/Home1SeatureSection.js": {
+      "sha256": "708ad65a32fd6f851970220317e5415999f788284ddbc7ab666eba605bb79628",
+      "size": 7971
+    },
+    "src/components/feature-section/Home2FeatureSection.jsx": {
+      "sha256": "3caad3bb5cc379f41982b721a67467a277d71467752f511bd0ea61822e01c26b",
+      "size": 6158
+    },
+    "src/components/feature-section/Home2FeatureSliderSection.jsx": {
+      "sha256": "ad583d397ee24f50ac4e30f0649a945db3b4e1a68412dc428ec705f9b83853f2",
+      "size": 20814
+    },
+    "src/components/feature-section/Home4FeatureSection.jsx": {
+      "sha256": "adac21de9aa06daab2849534879fe80a61b5272d7d313459d5e06538c7f3858c",
+      "size": 45242
+    },
+    "src/components/feature-section/Home5FeatureSection.jsx": {
+      "sha256": "3a826b787eefb4b3f69ba950fa998b3073d8771fcde681d2d1fb8505a16d3c4f",
+      "size": 12408
+    },
+    "src/components/feature-section/Home6FeatureSection.jsx": {
+      "sha256": "075e4ff696f7a46c3fb4d26f86b551772c8dba073c4238e8132d338bbd50367e",
+      "size": 25565
+    },
+    "src/components/header/Header.js": {
+      "sha256": "c62fa4b661472bc22b1ebddec3acbcab2e07fae4c5722187d30a0d016f479b83",
+      "size": 109893
+    },
+    "src/components/header/Header2.js": {
+      "sha256": "5355be461bd4142bf65f0d69dceb6fbddcb2d0c598966ee4ae54d40188f4fb56",
+      "size": 108710
+    },
+    "src/components/header/Header3.js": {
+      "sha256": "a99e4a72609a7819e9c5de85c3c22a74c239dc0ab61fe38a778a4f50865a11cc",
+      "size": 121608
+    },
+    "src/components/header/Header4.js": {
+      "sha256": "7972c52c3bb30050f9149bf31fd6ed9a548e3ef1e911ce11727bcec9783e7a38",
+      "size": 119381
+    },
+    "src/components/header/Header4.jsx": {
+      "sha256": "ad132c9775e46e531f7166b26236513be797a61bd2a921688d3bf1c9c52bc22a",
+      "size": 61872
+    },
+    "src/components/header/Header5.jsx": {
+      "sha256": "65cfa66f0f2a743774928cf9a76b244a0fc3c227ecb6a5eb4b67e65ed7432210",
+      "size": 121423
+    },
+    "src/components/header/Header6.js": {
+      "sha256": "7ebc67fa0ce369788eabcf4ccdc0550d65b1a70ff3b055cf8e9d856ade837776",
+      "size": 113746
+    },
+    "src/components/header/Header7.js": {
+      "sha256": "95027001bbe82bc4167acc8879e227c6bed33af87778940cb228b877303db2f3",
+      "size": 23422
+    },
+    "src/components/header/PortfolioHeader.js": {
+      "sha256": "f1d93c9707cf9ed9f0635189cfa270bcd54842be5d6f3f6cbb5dc5526c2f11f7",
+      "size": 100173
+    },
+    "src/components/industries-section/IndustriesSection.jsx": {
+      "sha256": "dd262095f559d2c4063ed17321363a021d42c871e56986178890c50c65b0253a",
+      "size": 5386
+    },
+    "src/components/integration-section/Home6IntegrationSection.jsx": {
+      "sha256": "4ae05c969fa41d2099d6dbe24559f0a12cd1cd53b74ce25a789e72438e301e25",
+      "size": 22588
+    },
+    "src/components/partner-sections/Home1ParnerSection.jsx": {
+      "sha256": "16f44d899c44036b2a12e8dbc36c4c7eec7ff3a9be8cb5a39b8699cff57c1045",
+      "size": 3013
+    },
+    "src/components/partner-sections/Home2PartnerArea.jsx": {
+      "sha256": "7fc5853dd2292d5c0fd8733b15e8ea4e1dbfeba393bf3a10c247547e1ae52b57",
+      "size": 2958
+    },
+    "src/components/partner-sections/Home3PartnerSection.jsx": {
+      "sha256": "0b6270909a0a75a24e26e4382abe2a44a40619ed02ae42cc6196c5f350cac2c8",
+      "size": 3575
+    },
+    "src/components/partner-sections/Home4ParnerSection.jsx": {
+      "sha256": "b74913c291293f6f30e0a0244b65d0716e38dffc0731ade8cff01a099beeb4e4",
+      "size": 3019
+    },
+    "src/components/partner-sections/Home5PartnerSection.jsx": {
+      "sha256": "2840e151ba2514276f9fe2887e0518e9f858e3de0d94852c86f7dcce4128223b",
+      "size": 5017
+    },
+    "src/components/partner-sections/Home6PartnerSection.jsx": {
+      "sha256": "42044e70636e5ab0a0b0bab48899d359f1611c157536e356289a02370a7d6921",
+      "size": 12262
+    },
+    "src/components/portfolio-section/Home3PortfolioSection.jsx": {
+      "sha256": "c93a30579dc25fcc149be62e214692c43fde3132d2af6452d1373b3f4d29ddc3",
+      "size": 6936
+    },
+    "src/components/portfolio-section/Home7PortfolioSection.jsx": {
+      "sha256": "40c557b4e200367606d547eb1428d6a1568fb1a0b34240316933622d79673865",
+      "size": 9296
+    },
+    "src/components/process-sections/Home1processSection.jsx": {
+      "sha256": "cbca40c9a6c4c9613905d0f333986c7dfb41de567eae937775023006406a1ad8",
+      "size": 33727
+    },
+    "src/components/process-sections/Home3ProcessSection.jsx": {
+      "sha256": "102ba765c9baf6d2c7902fae39cb5633dc6373f0453a85d4c712497e1f8eb14b",
+      "size": 7091
+    },
+    "src/components/process-sections/Home4ProcessSection.jsx": {
+      "sha256": "cf8892cf3930c863a87fba78edcf28990046f36f00ad79753ac36ebaae4fbfdb",
+      "size": 3775
+    },
+    "src/components/process-sections/Home5ProcessSection.jsx": {
+      "sha256": "f53ebfa4e010deca64dc8e9f2d0ddc0507a01dbd8ca03ca74afebd6d984ae0fa",
+      "size": 10933
+    },
+    "src/components/process-sections/Home6processSection.jsx": {
+      "sha256": "04683fee7871bfca4fefb4bcff5d7380cb7ea8bb09eff26d5e9c8433bfa226be",
+      "size": 5043
+    },
+    "src/components/service-section/Home1ServiceSection.jsx": {
+      "sha256": "da030aac0ec13b33e6abccad7719e95c997ef8dbb859ebe3251e5925215390f9",
+      "size": 9615
+    },
+    "src/components/service-section/Home2ServiceSection.jsx": {
+      "sha256": "d88a1c11d1b23a40a342009a28eebb5708b678552a2438c39f3c8257993a405c",
+      "size": 23668
+    },
+    "src/components/service-section/Home3ServiceSection.jsx": {
+      "sha256": "77ed4cb5ffeebbb6c670c2766483457c60f7330b3b67bafb5ebf51dce3868b93",
+      "size": 25449
+    },
+    "src/components/service-section/Home4ServiceSection.jsx": {
+      "sha256": "f87e90a9fbc5049ac4f2ebc996c215de5f9bfb6aab0221b200ccda4c88932ef4",
+      "size": 42329
+    },
+    "src/components/service-section/Home5ServiceSection.jsx": {
+      "sha256": "df5a0f2fe08aa2464433178baf1aaf270f9f1a7f1374740a7fdd808a906caf96",
+      "size": 22299
+    },
+    "src/components/service-section/Home7ServiceSection.jsx": {
+      "sha256": "4e03a4722b9f7b2954bc30d35917d4d74a1318885bf1581fe00b29149c26acbe",
+      "size": 12673
+    },
+    "src/components/team-section/Home4TeamSection.jsx": {
+      "sha256": "7e86012b84ddafed22f36ea83a55b19d468bd4bcc116600d09bcdd9a8de9141a",
+      "size": 20328
+    },
+    "src/components/testimonial-section/Home1TestimonialSection.jsx": {
+      "sha256": "85d4a2a5dd4c2659b998dbbfe822c2ad819b8e60e436d3d320c34bfe344311c3",
+      "size": 21344
+    },
+    "src/components/testimonial-section/Home2TestimonialSection.jsx": {
+      "sha256": "2e04a8c4f706c8f8ba893b643df211208adca37e78636cdb4c39e886489a246f",
+      "size": 17848
+    },
+    "src/components/testimonial-section/Home3TestimonialSection.jsx": {
+      "sha256": "ef47d77f588662b8734b436269432c9843c879dcc3032c82964809239b71efb5",
+      "size": 21560
+    },
+    "src/components/testimonial-section/Home4testimonialSection.jsx": {
+      "sha256": "7c8434ac05c62cdd3d418d55844efa41e689c3e6bb6a765ebc64efbd914657b7",
+      "size": 18805
+    },
+    "src/components/testimonial-section/Home5TestimonialSection.jsx": {
+      "sha256": "6d06606b50c35b49025dfc82681cae20a368d139f0824ada575ab55aefb3fd20",
+      "size": 21979
+    },
+    "src/components/testimonial-section/Home6TestimonialSection.jsx": {
+      "sha256": "3d6da896f4bdd66a9b6af98e043fc76615e8142657207544a47473ef85bec378",
+      "size": 31253
+    },
+    "src/components/testimonial-section/Home7TestimonialSection.jsx": {
+      "sha256": "6ee900db5aaa6185fbd4ce12051e81781a4e1b71550892c76b95b3fa148a0bbf",
+      "size": 17094
+    },
+    "src/customHooks/useButtonHoverEffect.js": {
+      "sha256": "210e8b3e4f7b66a6271f798eb0a6dec739f899e8517386ba7753e258493ec595",
+      "size": 1099
+    },
+    "src/customHooks/useCountdownTimer.js": {
+      "sha256": "8b37ade1bbfd92a6d50bde89c80c4d21246a195b8f4d09d6169d09171b936551",
+      "size": 1383
+    },
+    "src/customHooks/useCustomSelect.js": {
+      "sha256": "bf650bf97e2c4cd9f59ad2f4c0d22a52ad4592796aeb8e2f8998a2a1781387ea",
+      "size": 715
+    },
+    "src/customHooks/useDropdown.js": {
+      "sha256": "2448f1fd8ba93e12dd8d0f4bbcbc6c6a8a73ded5c7ff1a31b9a1c6b0305ed770",
+      "size": 553
+    },
+    "src/customHooks/useGsapAnimations.js": {
+      "sha256": "12d96ef0d25bb287139e1d129755f3d7b5b7af39d1cab284d8dd37849c7823b1",
+      "size": 2335
+    },
+    "src/customHooks/useHoverEffect.js": {
+      "sha256": "c4c7a2dc9367ad49f0f53e66b78930e881fcd886baac68ae199d23c111dd40cc",
+      "size": 1405
+    },
+    "src/customHooks/useInViewCounter.js": {
+      "sha256": "4c616ff029c4be722180c6896be5f8b8eff5662048b53f21997874f0a7b34c81",
+      "size": 1101
+    },
+    "src/customHooks/useMagicCursor.js": {
+      "sha256": "adb6f252b2b329e49decc06096abb2a2f8908c03cd4ef06f2f83ec20a3f56524",
+      "size": 1264
+    },
+    "src/customHooks/useMagneticHover.js": {
+      "sha256": "b418379658f2a8bfb548753aff4e74e530219340dab55c5eed9fa2af3d490309",
+      "size": 1786
+    },
+    "src/customHooks/useWow.js": {
+      "sha256": "de14bbe3d789822add7ae29bfd44f30b45b943025de19f57b0ea630c62c1ab47",
+      "size": 910
+    },
+    "src/utils/Cursor.js": {
+      "sha256": "d2f5778c43b9ee795e48ee09d9f67e051c4d06ce0a294f98c20ad24400273da5",
+      "size": 1845
+    },
+    "src/utils/MagicCursor.js": {
+      "sha256": "5f8ed994d4d3e020742a0006ddea9ea4ca863f904e4ca53219bacbe086f487a3",
+      "size": 3913
+    },
+    "src/utils/ScrollCircleProgess.js": {
+      "sha256": "5e1cbbfa53aa2123241e3f8cb8adaf61c7f27be5a73720eb76fd79efdcba54d2",
+      "size": 3029
+    },
+    "src/utils/SmoothPageScroll.js": {
+      "sha256": "b9b1e1b0309a1a4db393c4a23015d4af924be4093b1cfae4d2c042adc1a43fbe",
+      "size": 14248
+    },
+    "src/utils/ThrowableItems.js": {
+      "sha256": "e4566dcb520eefc3c7a400c32eebf2451eef24c96a031354f79fd10e5f40b3bf",
+      "size": 5048
+    },
+    "src/utils/slugify.js": {
+      "sha256": "412fc0f0f5e145b386b73c2d3e12bbebb2510e468c154039f8e1dc2b12e4f4c3",
+      "size": 481
+    },
+    "src/utils/useModalVideo.js": {
+      "sha256": "bfe8d9b82353c284e2fed8d016b6d28f8c1fd851137f1de9516986e01dc1066d",
+      "size": 577
+    },
+    "src/fonts/SUSE-VariableFont_wght.ttf": {
+      "sha256": "6f1bcf7b7c9123fb441d0800de0950ffc6655bcba9b25034e308ea360abb8189",
+      "size": 120652
+    },
+    "src/fonts/font.js": {
+      "sha256": "d9e6e47982ae055701f5e6cf6b7d24034f220cb882ea3946e5d99fa6e145af26",
+      "size": 585
+    },
+    "src/data/blog-data.json": {
+      "sha256": "ff0180a6677991b3d8c2b1140be918c053c5b3ef224da4c966d6ad709bfdbe29",
+      "size": 33721
+    },
+    "src/data/career-page-data.json": {
+      "sha256": "03de34c1ce5e7d6be751a5f43c65e1455348057aa637af5d673c75a6906c885a",
+      "size": 1269
+    },
+    "src/data/case-study-data.json": {
+      "sha256": "86af9a80dbb930f50c2be0779764f9c9d14dccac42c6db9e676127618ed02123",
+      "size": 10871
+    },
+    "src/data/category.json": {
+      "sha256": "819216e55c28545a23b89847af49db703acd61e61956ec406dd0cab32fde1d0a",
+      "size": 3565
+    },
+    "src/data/nav.json": {
+      "sha256": "a339e83037522b13328b48ecdbdcdee1c0fb694b15be88aa7d7da07d8d1ba644",
+      "size": 6422
+    },
+    "src/data/portfolio-data.json": {
+      "sha256": "adc05282043f5cdc6ed0b8785a602ffed2ac1927c15f767390392d02fb372bc6",
+      "size": 10719
+    }
+  }
+}

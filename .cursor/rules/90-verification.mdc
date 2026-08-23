@@ -1,0 +1,5 @@
+---
+description: Verification gate for completed work
+alwaysApply: true
+---
+Never claim a phase complete without fresh commands and required visual gate from TESTING.md. Stop at human visual acceptance checkpoints.

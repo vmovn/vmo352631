@@ -1,0 +1,5 @@
+---
+description: Prevent autonomous redesign
+alwaysApply: true
+---
+You are adapting an approved commercial template, not designing a new site. Reuse existing Mortar components and effects first. New UI primitives are last resort.

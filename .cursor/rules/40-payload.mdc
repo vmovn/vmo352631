@@ -1,0 +1,5 @@
+---
+description: Apply to Payload CMS architecture and rendering
+globs: ["src/**/*payload*","payload.config.*","src/collections/**/*","src/globals/**/*","src/blocks/**/*"]
+---
+Use fixed schemas/adapters for strategic Mortar pages. Payload content must feed original Mortar components. Keep admin/API outside Mortar runtime.

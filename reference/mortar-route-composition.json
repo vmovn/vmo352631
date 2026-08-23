@@ -1,0 +1,1196 @@
+[
+  {
+    "route": "/",
+    "file": "src/app/page.js",
+    "components": [
+      {
+        "symbol": "Home1CaseStudy",
+        "path": "src/components/case-study-section/Home1CaseStudy"
+      },
+      {
+        "symbol": "Home1ContactSection",
+        "path": "src/components/contact-section/Home1ContactSection"
+      },
+      {
+        "symbol": "Home1SeatureSection",
+        "path": "src/components/feature-section/Home1SeatureSection"
+      },
+      {
+        "symbol": "Footer1",
+        "path": "src/components/Footer/Footer1"
+      },
+      {
+        "symbol": "Header",
+        "path": "src/components/header/Header"
+      },
+      {
+        "symbol": "IndustriesSection",
+        "path": "src/components/industries-section/IndustriesSection"
+      },
+      {
+        "symbol": "Home1ParnerSection",
+        "path": "src/components/partner-sections/Home1ParnerSection"
+      },
+      {
+        "symbol": "Home1processSection",
+        "path": "src/components/process-sections/Home1processSection"
+      },
+      {
+        "symbol": "Home1ServiceSection",
+        "path": "src/components/service-section/Home1ServiceSection"
+      },
+      {
+        "symbol": "Home1TestimonialSection",
+        "path": "src/components/testimonial-section/Home1TestimonialSection"
+      }
+    ]
+  },
+  {
+    "route": "/about",
+    "file": "src/app/about/page.js",
+    "components": [
+      {
+        "symbol": "AwardListSection",
+        "path": "src/components/AwardListSection"
+      },
+      {
+        "symbol": "Home3Footer",
+        "path": "src/components/Footer/Home3Footer"
+      },
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      },
+      {
+        "symbol": "Home3PartnerSection",
+        "path": "src/components/partner-sections/Home3PartnerSection"
+      },
+      {
+        "symbol": "Counter",
+        "path": "src/components/common/Counter"
+      }
+    ]
+  },
+  {
+    "route": "/award-recognitions",
+    "file": "src/app/award-recognitions/page.js",
+    "components": [
+      {
+        "symbol": "AwardListSection",
+        "path": "src/components/AwardListSection"
+      },
+      {
+        "symbol": "Home3Footer",
+        "path": "src/components/Footer/Home3Footer"
+      },
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      }
+    ]
+  },
+  {
+    "route": "/career",
+    "file": "src/app/career/page.js",
+    "components": [
+      {
+        "symbol": "Home3Footer",
+        "path": "src/components/Footer/Home3Footer"
+      },
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      }
+    ]
+  },
+  {
+    "route": "/career/details",
+    "file": "src/app/career/details/page.js",
+    "components": [
+      {
+        "symbol": "Home3Footer",
+        "path": "src/components/Footer/Home3Footer"
+      },
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      }
+    ]
+  },
+  {
+    "route": "/cart",
+    "file": "src/app/cart/page.js",
+    "components": [
+      {
+        "symbol": "Home3Footer",
+        "path": "src/components/Footer/Home3Footer"
+      },
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      }
+    ]
+  },
+  {
+    "route": "/case-study",
+    "file": "src/app/case-study/page.js",
+    "components": [
+      {
+        "symbol": "Counter",
+        "path": "src/components/common/Counter"
+      },
+      {
+        "symbol": "Home3Footer",
+        "path": "src/components/Footer/Home3Footer"
+      },
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      }
+    ]
+  },
+  {
+    "route": "/case-study/details",
+    "file": "src/app/case-study/details/page.js",
+    "components": [
+      {
+        "symbol": "Counter",
+        "path": "src/components/common/Counter"
+      },
+      {
+        "symbol": "Home3Footer",
+        "path": "src/components/Footer/Home3Footer"
+      },
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      }
+    ]
+  },
+  {
+    "route": "/case-study/style2",
+    "file": "src/app/case-study/style2/page.js",
+    "components": [
+      {
+        "symbol": "Counter",
+        "path": "src/components/common/Counter"
+      },
+      {
+        "symbol": "Home3Footer",
+        "path": "src/components/Footer/Home3Footer"
+      },
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      }
+    ]
+  },
+  {
+    "route": "/checkout",
+    "file": "src/app/checkout/page.js",
+    "components": [
+      {
+        "symbol": "Home3Footer",
+        "path": "src/components/Footer/Home3Footer"
+      },
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      }
+    ]
+  },
+  {
+    "route": "/contact",
+    "file": "src/app/contact/page.js",
+    "components": [
+      {
+        "symbol": "Home3Footer",
+        "path": "src/components/Footer/Home3Footer"
+      },
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      }
+    ]
+  },
+  {
+    "route": "/digital-agency",
+    "file": "src/app/digital-agency/page.js",
+    "components": [
+      {
+        "symbol": "Home3aboutSection",
+        "path": "src/components/about/Home3aboutSection"
+      },
+      {
+        "symbol": "Home3Banner",
+        "path": "src/components/banner/Home3Banner"
+      },
+      {
+        "symbol": "Home3BlogSection",
+        "path": "src/components/blog-section/Home3BlogSection"
+      },
+      {
+        "symbol": "Home3Footer",
+        "path": "src/components/Footer/Home3Footer"
+      },
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      },
+      {
+        "symbol": "Home3PartnerSection",
+        "path": "src/components/partner-sections/Home3PartnerSection"
+      },
+      {
+        "symbol": "Home3PortfolioSection",
+        "path": "src/components/portfolio-section/Home3PortfolioSection"
+      },
+      {
+        "symbol": "Home3ProcessSection",
+        "path": "src/components/process-sections/Home3ProcessSection"
+      },
+      {
+        "symbol": "Home3ServiceSection",
+        "path": "src/components/service-section/Home3ServiceSection"
+      },
+      {
+        "symbol": "Home3TestimonialSection",
+        "path": "src/components/testimonial-section/Home3TestimonialSection"
+      }
+    ]
+  },
+  {
+    "route": "/digital-agency-dark",
+    "file": "src/app/digital-agency-dark/page.js",
+    "components": [
+      {
+        "symbol": "Home3aboutSection",
+        "path": "src/components/about/Home3aboutSection"
+      },
+      {
+        "symbol": "Home3Banner",
+        "path": "src/components/banner/Home3Banner"
+      },
+      {
+        "symbol": "Home3BlogSection",
+        "path": "src/components/blog-section/Home3BlogSection"
+      },
+      {
+        "symbol": "Home3Footer",
+        "path": "src/components/Footer/Home3Footer"
+      },
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      },
+      {
+        "symbol": "Home3PartnerSection",
+        "path": "src/components/partner-sections/Home3PartnerSection"
+      },
+      {
+        "symbol": "Home3PortfolioSection",
+        "path": "src/components/portfolio-section/Home3PortfolioSection"
+      },
+      {
+        "symbol": "Home3ProcessSection",
+        "path": "src/components/process-sections/Home3ProcessSection"
+      },
+      {
+        "symbol": "Home3ServiceSection",
+        "path": "src/components/service-section/Home3ServiceSection"
+      },
+      {
+        "symbol": "Home3TestimonialSection",
+        "path": "src/components/testimonial-section/Home3TestimonialSection"
+      }
+    ]
+  },
+  {
+    "route": "/faq",
+    "file": "src/app/faq/page.js",
+    "components": [
+      {
+        "symbol": "Home3Footer",
+        "path": "src/components/Footer/Home3Footer"
+      },
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      }
+    ]
+  },
+  {
+    "route": "/fintech",
+    "file": "src/app/fintech/page.js",
+    "components": [
+      {
+        "symbol": "FintechBanner",
+        "path": "src/components/banner/FintechBanner"
+      },
+      {
+        "symbol": "Home2BlogSection",
+        "path": "src/components/blog-section/Home2BlogSection"
+      },
+      {
+        "symbol": "Home2FeatureSection",
+        "path": "src/components/feature-section/Home2FeatureSection"
+      },
+      {
+        "symbol": "Home2FeatureSliderSection",
+        "path": "src/components/feature-section/Home2FeatureSliderSection"
+      },
+      {
+        "symbol": "Home2FooterSection",
+        "path": "src/components/Footer/Home2FooterSection"
+      },
+      {
+        "symbol": "Header2",
+        "path": "src/components/header/Header2"
+      },
+      {
+        "symbol": "Home2PartnerArea",
+        "path": "src/components/partner-sections/Home2PartnerArea"
+      },
+      {
+        "symbol": "Home2ServiceSection",
+        "path": "src/components/service-section/Home2ServiceSection"
+      },
+      {
+        "symbol": "Home2TestimonialSection",
+        "path": "src/components/testimonial-section/Home2TestimonialSection"
+      }
+    ]
+  },
+  {
+    "route": "/fintech-dark",
+    "file": "src/app/fintech-dark/page.js",
+    "components": [
+      {
+        "symbol": "FintechBanner",
+        "path": "src/components/banner/FintechBanner"
+      },
+      {
+        "symbol": "Home2BlogSection",
+        "path": "src/components/blog-section/Home2BlogSection"
+      },
+      {
+        "symbol": "Home2FeatureSection",
+        "path": "src/components/feature-section/Home2FeatureSection"
+      },
+      {
+        "symbol": "Home2FeatureSliderSection",
+        "path": "src/components/feature-section/Home2FeatureSliderSection"
+      },
+      {
+        "symbol": "Home2FooterSection",
+        "path": "src/components/Footer/Home2FooterSection"
+      },
+      {
+        "symbol": "Header2",
+        "path": "src/components/header/Header2"
+      },
+      {
+        "symbol": "Home2PartnerArea",
+        "path": "src/components/partner-sections/Home2PartnerArea"
+      },
+      {
+        "symbol": "Home2ServiceSection",
+        "path": "src/components/service-section/Home2ServiceSection"
+      },
+      {
+        "symbol": "Home2TestimonialSection",
+        "path": "src/components/testimonial-section/Home2TestimonialSection"
+      }
+    ]
+  },
+  {
+    "route": "/industry",
+    "file": "src/app/industry/page.js",
+    "components": [
+      {
+        "symbol": "Home3Footer",
+        "path": "src/components/Footer/Home3Footer"
+      },
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      }
+    ]
+  },
+  {
+    "route": "/industry/details",
+    "file": "src/app/industry/details/page.js",
+    "components": [
+      {
+        "symbol": "Home3Footer",
+        "path": "src/components/Footer/Home3Footer"
+      },
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      }
+    ]
+  },
+  {
+    "route": "/it-consulting",
+    "file": "src/app/it-consulting/page.js",
+    "components": [
+      {
+        "symbol": "Home5AboutSection",
+        "path": "src/components/about/Home5AboutSection"
+      },
+      {
+        "symbol": "Home5Banner",
+        "path": "src/components/banner/Home5Banner"
+      },
+      {
+        "symbol": "Home5BlogSection",
+        "path": "src/components/blog-section/Home5BlogSection"
+      },
+      {
+        "symbol": "Home5FeatureSection",
+        "path": "src/components/feature-section/Home5FeatureSection"
+      },
+      {
+        "symbol": "Home5Footer",
+        "path": "src/components/Footer/Home5Footer"
+      },
+      {
+        "symbol": "Header5",
+        "path": "src/components/header/Header5"
+      },
+      {
+        "symbol": "Home5PartnerSection",
+        "path": "src/components/partner-sections/Home5PartnerSection"
+      },
+      {
+        "symbol": "Home5ProcessSection",
+        "path": "src/components/process-sections/Home5ProcessSection"
+      },
+      {
+        "symbol": "Home5ServiceSection",
+        "path": "src/components/service-section/Home5ServiceSection"
+      },
+      {
+        "symbol": "Home5TestimonialSection",
+        "path": "src/components/testimonial-section/Home5TestimonialSection"
+      }
+    ]
+  },
+  {
+    "route": "/it-consulting-dark",
+    "file": "src/app/it-consulting-dark/page.js",
+    "components": [
+      {
+        "symbol": "Home5AboutSection",
+        "path": "src/components/about/Home5AboutSection"
+      },
+      {
+        "symbol": "Home5Banner",
+        "path": "src/components/banner/Home5Banner"
+      },
+      {
+        "symbol": "Home5BlogSection",
+        "path": "src/components/blog-section/Home5BlogSection"
+      },
+      {
+        "symbol": "Home5FeatureSection",
+        "path": "src/components/feature-section/Home5FeatureSection"
+      },
+      {
+        "symbol": "Home5Footer",
+        "path": "src/components/Footer/Home5Footer"
+      },
+      {
+        "symbol": "Header5",
+        "path": "src/components/header/Header5"
+      },
+      {
+        "symbol": "Home5PartnerSection",
+        "path": "src/components/partner-sections/Home5PartnerSection"
+      },
+      {
+        "symbol": "Home5ProcessSection",
+        "path": "src/components/process-sections/Home5ProcessSection"
+      },
+      {
+        "symbol": "Home5ServiceSection",
+        "path": "src/components/service-section/Home5ServiceSection"
+      },
+      {
+        "symbol": "Home5TestimonialSection",
+        "path": "src/components/testimonial-section/Home5TestimonialSection"
+      }
+    ]
+  },
+  {
+    "route": "/marketing-agency",
+    "file": "src/app/marketing-agency/page.js",
+    "components": [
+      {
+        "symbol": "Home4Banner",
+        "path": "src/components/banner/Home4Banner"
+      },
+      {
+        "symbol": "Home4CaseStudySection",
+        "path": "src/components/case-study-section/Home4CaseStudySection"
+      },
+      {
+        "symbol": "Home4ContactSection",
+        "path": "src/components/contact-section/Home4ContactSection"
+      },
+      {
+        "symbol": "Home4FeatureSection",
+        "path": "src/components/feature-section/Home4FeatureSection"
+      },
+      {
+        "symbol": "Home4Footer",
+        "path": "src/components/Footer/Home4Footer"
+      },
+      {
+        "symbol": "Header4",
+        "path": "src/components/header/Header4"
+      },
+      {
+        "symbol": "Home4ParnerSection",
+        "path": "src/components/partner-sections/Home4ParnerSection"
+      },
+      {
+        "symbol": "Home4ProcessSection",
+        "path": "src/components/process-sections/Home4ProcessSection"
+      },
+      {
+        "symbol": "Home4ServiceSection",
+        "path": "src/components/service-section/Home4ServiceSection"
+      },
+      {
+        "symbol": "Home4TeamSection",
+        "path": "src/components/team-section/Home4TeamSection"
+      },
+      {
+        "symbol": "Home4testimonialSection",
+        "path": "src/components/testimonial-section/Home4testimonialSection"
+      }
+    ]
+  },
+  {
+    "route": "/marketing-agency-dark",
+    "file": "src/app/marketing-agency-dark/page.js",
+    "components": [
+      {
+        "symbol": "Home4Banner",
+        "path": "src/components/banner/Home4Banner"
+      },
+      {
+        "symbol": "Home4CaseStudySection",
+        "path": "src/components/case-study-section/Home4CaseStudySection"
+      },
+      {
+        "symbol": "Home4ContactSection",
+        "path": "src/components/contact-section/Home4ContactSection"
+      },
+      {
+        "symbol": "Home4FeatureSection",
+        "path": "src/components/feature-section/Home4FeatureSection"
+      },
+      {
+        "symbol": "Home4Footer",
+        "path": "src/components/Footer/Home4Footer"
+      },
+      {
+        "symbol": "Header4",
+        "path": "src/components/header/Header4"
+      },
+      {
+        "symbol": "Home4ParnerSection",
+        "path": "src/components/partner-sections/Home4ParnerSection"
+      },
+      {
+        "symbol": "Home4ProcessSection",
+        "path": "src/components/process-sections/Home4ProcessSection"
+      },
+      {
+        "symbol": "Home4ServiceSection",
+        "path": "src/components/service-section/Home4ServiceSection"
+      },
+      {
+        "symbol": "Home4TeamSection",
+        "path": "src/components/team-section/Home4TeamSection"
+      },
+      {
+        "symbol": "Home4testimonialSection",
+        "path": "src/components/testimonial-section/Home4testimonialSection"
+      }
+    ]
+  },
+  {
+    "route": "/news-insight-grid",
+    "file": "src/app/news-insight-grid/page.js",
+    "components": [
+      {
+        "symbol": "Home3Footer",
+        "path": "src/components/Footer/Home3Footer"
+      },
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      }
+    ]
+  },
+  {
+    "route": "/news-insight-grid/details",
+    "file": "src/app/news-insight-grid/details/page.js",
+    "components": [
+      {
+        "symbol": "Home3Footer",
+        "path": "src/components/Footer/Home3Footer"
+      },
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      }
+    ]
+  },
+  {
+    "route": "/news-insight-grid/style2",
+    "file": "src/app/news-insight-grid/style2/page.js",
+    "components": [
+      {
+        "symbol": "Home3Footer",
+        "path": "src/components/Footer/Home3Footer"
+      },
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      }
+    ]
+  },
+  {
+    "route": "/news-insight-grid/style3",
+    "file": "src/app/news-insight-grid/style3/page.js",
+    "components": [
+      {
+        "symbol": "Home3Footer",
+        "path": "src/components/Footer/Home3Footer"
+      },
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      }
+    ]
+  },
+  {
+    "route": "/portfolio",
+    "file": "src/app/portfolio/page.js",
+    "components": [
+      {
+        "symbol": "Home7About",
+        "path": "src/components/about/Home7About"
+      },
+      {
+        "symbol": "Home7Banner",
+        "path": "src/components/banner/Home7Banner"
+      },
+      {
+        "symbol": "Home7BlogSection",
+        "path": "src/components/blog-section/Home7BlogSection"
+      },
+      {
+        "symbol": "Footer7",
+        "path": "src/components/Footer/Footer7"
+      },
+      {
+        "symbol": "Header7",
+        "path": "src/components/header/Header7"
+      },
+      {
+        "symbol": "Home7PortfolioSection",
+        "path": "src/components/portfolio-section/Home7PortfolioSection"
+      },
+      {
+        "symbol": "Home7ServiceSection",
+        "path": "src/components/service-section/Home7ServiceSection"
+      },
+      {
+        "symbol": "Home7TestimonialSection",
+        "path": "src/components/testimonial-section/Home7TestimonialSection"
+      }
+    ]
+  },
+  {
+    "route": "/portfolio-dark",
+    "file": "src/app/portfolio-dark/page.js",
+    "components": [
+      {
+        "symbol": "Home7About",
+        "path": "src/components/about/Home7About"
+      },
+      {
+        "symbol": "Home7Banner",
+        "path": "src/components/banner/Home7Banner"
+      },
+      {
+        "symbol": "Home7BlogSection",
+        "path": "src/components/blog-section/Home7BlogSection"
+      },
+      {
+        "symbol": "Footer7",
+        "path": "src/components/Footer/Footer7"
+      },
+      {
+        "symbol": "Header7",
+        "path": "src/components/header/Header7"
+      },
+      {
+        "symbol": "Home7PortfolioSection",
+        "path": "src/components/portfolio-section/Home7PortfolioSection"
+      },
+      {
+        "symbol": "Home7ServiceSection",
+        "path": "src/components/service-section/Home7ServiceSection"
+      },
+      {
+        "symbol": "Home7TestimonialSection",
+        "path": "src/components/testimonial-section/Home7TestimonialSection"
+      }
+    ]
+  },
+  {
+    "route": "/portfolio/caption",
+    "file": "src/app/portfolio/caption/page.js",
+    "components": [
+      {
+        "symbol": "Home3Footer",
+        "path": "src/components/Footer/Home3Footer"
+      },
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      }
+    ]
+  },
+  {
+    "route": "/portfolio/carousel",
+    "file": "src/app/portfolio/carousel/page.js",
+    "components": [
+      {
+        "symbol": "Home3Footer",
+        "path": "src/components/Footer/Home3Footer"
+      },
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      }
+    ]
+  },
+  {
+    "route": "/portfolio/classic",
+    "file": "src/app/portfolio/classic/page.js",
+    "components": [
+      {
+        "symbol": "Home3Footer",
+        "path": "src/components/Footer/Home3Footer"
+      },
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      }
+    ]
+  },
+  {
+    "route": "/portfolio/creative",
+    "file": "src/app/portfolio/creative/page.js",
+    "components": [
+      {
+        "symbol": "Home3Footer",
+        "path": "src/components/Footer/Home3Footer"
+      },
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      }
+    ]
+  },
+  {
+    "route": "/portfolio/details",
+    "file": "src/app/portfolio/details/page.js",
+    "components": [
+      {
+        "symbol": "Home3Footer",
+        "path": "src/components/Footer/Home3Footer"
+      },
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      }
+    ]
+  },
+  {
+    "route": "/portfolio/grid",
+    "file": "src/app/portfolio/grid/page.js",
+    "components": [
+      {
+        "symbol": "Home3Footer",
+        "path": "src/components/Footer/Home3Footer"
+      },
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      }
+    ]
+  },
+  {
+    "route": "/portfolio/horizontal",
+    "file": "src/app/portfolio/horizontal/page.js",
+    "components": [
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      }
+    ]
+  },
+  {
+    "route": "/portfolio/interactive-link",
+    "file": "src/app/portfolio/interactive-link/page.js",
+    "components": [
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      }
+    ]
+  },
+  {
+    "route": "/portfolio/vertical",
+    "file": "src/app/portfolio/vertical/page.js",
+    "components": [
+      {
+        "symbol": "Home3Footer",
+        "path": "src/components/Footer/Home3Footer"
+      },
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      }
+    ]
+  },
+  {
+    "route": "/pricing",
+    "file": "src/app/pricing/page.js",
+    "components": [
+      {
+        "symbol": "Home3Footer",
+        "path": "src/components/Footer/Home3Footer"
+      },
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      }
+    ]
+  },
+  {
+    "route": "/product-details",
+    "file": "src/app/product-details/page.js",
+    "components": [
+      {
+        "symbol": "Home3Footer",
+        "path": "src/components/Footer/Home3Footer"
+      },
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      }
+    ]
+  },
+  {
+    "route": "/saas-product",
+    "file": "src/app/saas-product/page.js",
+    "components": [
+      {
+        "symbol": "Home6Banner",
+        "path": "src/components/banner/Home6Banner"
+      },
+      {
+        "symbol": "Home6BlogSection",
+        "path": "src/components/blog-section/Home6BlogSection"
+      },
+      {
+        "symbol": "Home6Faq",
+        "path": "src/components/faq-section/Home6Faq"
+      },
+      {
+        "symbol": "Home6FeatureSection",
+        "path": "src/components/feature-section/Home6FeatureSection"
+      },
+      {
+        "symbol": "Footer6",
+        "path": "src/components/Footer/Footer6"
+      },
+      {
+        "symbol": "Header6",
+        "path": "src/components/header/Header6"
+      },
+      {
+        "symbol": "Home6IntegrationSection",
+        "path": "src/components/integration-section/Home6IntegrationSection"
+      },
+      {
+        "symbol": "Home6PartnerSection",
+        "path": "src/components/partner-sections/Home6PartnerSection"
+      },
+      {
+        "symbol": "Home6processSection",
+        "path": "src/components/process-sections/Home6processSection"
+      },
+      {
+        "symbol": "Home6TestimonialSection",
+        "path": "src/components/testimonial-section/Home6TestimonialSection"
+      }
+    ]
+  },
+  {
+    "route": "/saas-product-dark",
+    "file": "src/app/saas-product-dark/page.js",
+    "components": [
+      {
+        "symbol": "Home6Banner",
+        "path": "src/components/banner/Home6Banner"
+      },
+      {
+        "symbol": "Home6BlogSection",
+        "path": "src/components/blog-section/Home6BlogSection"
+      },
+      {
+        "symbol": "Home6Faq",
+        "path": "src/components/faq-section/Home6Faq"
+      },
+      {
+        "symbol": "Home6FeatureSection",
+        "path": "src/components/feature-section/Home6FeatureSection"
+      },
+      {
+        "symbol": "Footer6",
+        "path": "src/components/Footer/Footer6"
+      },
+      {
+        "symbol": "Header6",
+        "path": "src/components/header/Header6"
+      },
+      {
+        "symbol": "Home6IntegrationSection",
+        "path": "src/components/integration-section/Home6IntegrationSection"
+      },
+      {
+        "symbol": "Home6PartnerSection",
+        "path": "src/components/partner-sections/Home6PartnerSection"
+      },
+      {
+        "symbol": "Home6processSection",
+        "path": "src/components/process-sections/Home6processSection"
+      },
+      {
+        "symbol": "Home6TestimonialSection",
+        "path": "src/components/testimonial-section/Home6TestimonialSection"
+      }
+    ]
+  },
+  {
+    "route": "/service",
+    "file": "src/app/service/page.js",
+    "components": [
+      {
+        "symbol": "Counter",
+        "path": "src/components/common/Counter"
+      },
+      {
+        "symbol": "Home3Footer",
+        "path": "src/components/Footer/Home3Footer"
+      },
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      }
+    ]
+  },
+  {
+    "route": "/service/details",
+    "file": "src/app/service/details/page.js",
+    "components": [
+      {
+        "symbol": "Home3Footer",
+        "path": "src/components/Footer/Home3Footer"
+      },
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      }
+    ]
+  },
+  {
+    "route": "/service/style2",
+    "file": "src/app/service/style2/page.js",
+    "components": [
+      {
+        "symbol": "Counter",
+        "path": "src/components/common/Counter"
+      },
+      {
+        "symbol": "Home3Footer",
+        "path": "src/components/Footer/Home3Footer"
+      },
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      }
+    ]
+  },
+  {
+    "route": "/shop",
+    "file": "src/app/shop/page.js",
+    "components": [
+      {
+        "symbol": "Home3Footer",
+        "path": "src/components/Footer/Home3Footer"
+      },
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      }
+    ]
+  },
+  {
+    "route": "/social-responsibility",
+    "file": "src/app/social-responsibility/page.js",
+    "components": [
+      {
+        "symbol": "Home3Footer",
+        "path": "src/components/Footer/Home3Footer"
+      },
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      }
+    ]
+  },
+  {
+    "route": "/startup-agency-dark",
+    "file": "src/app/startup-agency-dark/page.js",
+    "components": [
+      {
+        "symbol": "Home1CaseStudy",
+        "path": "src/components/case-study-section/Home1CaseStudy"
+      },
+      {
+        "symbol": "Home1ContactSection",
+        "path": "src/components/contact-section/Home1ContactSection"
+      },
+      {
+        "symbol": "Home1SeatureSection",
+        "path": "src/components/feature-section/Home1SeatureSection"
+      },
+      {
+        "symbol": "Footer1",
+        "path": "src/components/Footer/Footer1"
+      },
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      },
+      {
+        "symbol": "IndustriesSection",
+        "path": "src/components/industries-section/IndustriesSection"
+      },
+      {
+        "symbol": "Home1ParnerSection",
+        "path": "src/components/partner-sections/Home1ParnerSection"
+      },
+      {
+        "symbol": "Home1processSection",
+        "path": "src/components/process-sections/Home1processSection"
+      },
+      {
+        "symbol": "Home1ServiceSection",
+        "path": "src/components/service-section/Home1ServiceSection"
+      },
+      {
+        "symbol": "Home1TestimonialSection",
+        "path": "src/components/testimonial-section/Home1TestimonialSection"
+      }
+    ]
+  },
+  {
+    "route": "/team",
+    "file": "src/app/team/page.js",
+    "components": [
+      {
+        "symbol": "Counter",
+        "path": "src/components/common/Counter"
+      },
+      {
+        "symbol": "GallerySection",
+        "path": "src/components/common/GallerySection"
+      },
+      {
+        "symbol": "Home3Footer",
+        "path": "src/components/Footer/Home3Footer"
+      },
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      }
+    ]
+  },
+  {
+    "route": "/team/details",
+    "file": "src/app/team/details/page.js",
+    "components": [
+      {
+        "symbol": "Home3Footer",
+        "path": "src/components/Footer/Home3Footer"
+      },
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      }
+    ]
+  },
+  {
+    "route": "/team/style2",
+    "file": "src/app/team/style2/page.js",
+    "components": [
+      {
+        "symbol": "GallerySection",
+        "path": "src/components/common/GallerySection"
+      },
+      {
+        "symbol": "Home3Footer",
+        "path": "src/components/Footer/Home3Footer"
+      },
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      }
+    ]
+  },
+  {
+    "route": "/team/style3",
+    "file": "src/app/team/style3/page.js",
+    "components": [
+      {
+        "symbol": "Counter",
+        "path": "src/components/common/Counter"
+      },
+      {
+        "symbol": "GallerySection",
+        "path": "src/components/common/GallerySection"
+      },
+      {
+        "symbol": "Home3Footer",
+        "path": "src/components/Footer/Home3Footer"
+      },
+      {
+        "symbol": "Header3",
+        "path": "src/components/header/Header3"
+      }
+    ]
+  }
+]

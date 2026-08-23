@@ -1,0 +1,1421 @@
+[
+  {
+    "file": "src/components/AwardListSection.jsx",
+    "effects": [
+      "WOW/Animate"
+    ],
+    "headings": [
+      "Our Achievements"
+    ],
+    "labels": []
+  },
+  {
+    "file": "src/components/Footer/Footer1.jsx",
+    "effects": [],
+    "headings": [
+      "We are Global Digital Brand Tech Agency.",
+      "Company",
+      "Industries"
+    ],
+    "labels": [
+      "Call 24/7 Hours",
+      "Send Us Mail",
+      "View Site Map",
+      "View Site Map",
+      "Hiring"
+    ]
+  },
+  {
+    "file": "src/components/Footer/Footer6.jsx",
+    "effects": [],
+    "headings": [
+      "14 Days Free Trial",
+      "Company",
+      "Products",
+      "Help"
+    ],
+    "labels": [
+      "14 days free trial. Cancle any time. Let’s Connect Company About us Our Team Our Portfolio Careers Hiring"
+    ]
+  },
+  {
+    "file": "src/components/Footer/Footer7.jsx",
+    "effects": [
+      "Confetti"
+    ],
+    "headings": [
+      "Let’s Talk About Your Dreams.",
+      "Useful Links",
+      "More Work",
+      "Newsletter"
+    ],
+    "labels": []
+  },
+  {
+    "file": "src/components/Footer/Home1FooterTop.jsx",
+    "effects": [
+      "WOW/Animate"
+    ],
+    "headings": [
+      "Let's Build Dream Something Amazing."
+    ],
+    "labels": [
+      "Building Your Vision",
+      "Start A Project"
+    ]
+  },
+  {
+    "file": "src/components/Footer/Home2FooterSection.jsx",
+    "effects": [
+      "WOW/Animate"
+    ],
+    "headings": [
+      "Download Mobile App",
+      "Ready to Get Started?",
+      "We are Global Digital Brand Fintech Agency.",
+      "Product",
+      "Resource",
+      "Solutions",
+      "Company"
+    ],
+    "labels": [
+      "Quick Features",
+      "Help Line",
+      "Contact Us",
+      "Contact Us",
+      "WhatsApp",
+      "Send Us Mail",
+      "Hiring"
+    ]
+  },
+  {
+    "file": "src/components/Footer/Home3Footer.jsx",
+    "effects": [],
+    "headings": [
+      "We are Global Digital Brand Tech Agency.",
+      "Company",
+      "Industries",
+      "Newsletter"
+    ],
+    "labels": [
+      "New York",
+      "Australia",
+      "Send Us Mail",
+      "View Site Map",
+      "View Site Map",
+      "Hiring"
+    ]
+  },
+  {
+    "file": "src/components/Footer/Home4Footer.jsx",
+    "effects": [],
+    "headings": [
+      "We are Global #1 Digital Marketing Agency.",
+      "Company",
+      "Industries",
+      "Newsletter"
+    ],
+    "labels": [
+      "Send Us Mail",
+      "Hiring",
+      "New York",
+      "Australia"
+    ]
+  },
+  {
+    "file": "src/components/Footer/Home5Footer.jsx",
+    "effects": [],
+    "headings": [
+      "We are Global Digital Brand Tech Agency.",
+      "Company",
+      "Industries",
+      "Newsletter"
+    ],
+    "labels": [
+      "Send Us Mail",
+      "WhatsApp",
+      "Hiring"
+    ]
+  },
+  {
+    "file": "src/components/about/Home1About.jsx",
+    "effects": [
+      "ModalVideo",
+      "WOW/Animate"
+    ],
+    "headings": [
+      "Experts in Construction Your Excellence."
+    ],
+    "labels": [
+      "Building Trust Since 2005"
+    ]
+  },
+  {
+    "file": "src/components/about/Home3aboutSection.jsx",
+    "effects": [
+      "WOW/Animate"
+    ],
+    "headings": [
+      "Make Brands in the Digital World.",
+      "06",
+      "99",
+      "Keep Reading"
+    ],
+    "labels": [
+      "About Mortar",
+      "Businesses, Organizations,",
+      "“Digital Excellence Awards”"
+    ]
+  },
+  {
+    "file": "src/components/about/Home5AboutSection.jsx",
+    "effects": [
+      "WOW/Animate"
+    ],
+    "headings": [
+      "Business-Driven IT Solutions",
+      "Impactful Area of Consulting"
+    ],
+    "labels": [
+      "IT Project Planning &amp; Execution",
+      "Agile &amp; Scrum Consulting",
+      "Budgeting &amp; Cost Control",
+      "Project Tracking &amp; Reporting",
+      "Years of Experience.",
+      "Industries Cover Area",
+      "Finance &amp; Banking (04)",
+      "Healthcare &amp; Life (03)",
+      "Retail &amp; E-commerce (05)",
+      "Education &amp; EdTech (08)",
+      "Government &amp; Public Sector (04)",
+      "Travel &amp; Hospitality (04)"
+    ]
+  },
+  {
+    "file": "src/components/about/Home7About.jsx",
+    "effects": [
+      "WOW/Animate"
+    ],
+    "headings": [],
+    "labels": [
+      "About Me",
+      "I focus on human-centered design and usability.",
+      "My Skills",
+      "Figma Design",
+      "Adobe XD",
+      "Webflow",
+      "Zepline",
+      "Miro",
+      "Framer",
+      "Collaborate"
+    ]
+  },
+  {
+    "file": "src/components/banner/FintechBanner.jsx",
+    "effects": [],
+    "headings": [
+      "Transforming Finance, One Click at a Time."
+    ],
+    "labels": [
+      "01 Online Payment System",
+      "Get The App",
+      "Get The App"
+    ]
+  },
+  {
+    "file": "src/components/banner/Home1Banner2.jsx",
+    "effects": [
+      "ModalVideo"
+    ],
+    "headings": [
+      "Build Your",
+      "Own Building."
+    ],
+    "labels": []
+  },
+  {
+    "file": "src/components/banner/Home1banner.jsx",
+    "effects": [
+      "Swiper"
+    ],
+    "headings": [
+      "Building Your Dreams With Precision"
+    ],
+    "labels": [
+      "Start A Project"
+    ]
+  },
+  {
+    "file": "src/components/banner/Home3Banner.jsx",
+    "effects": [
+      "GSAP/ScrollTrigger"
+    ],
+    "headings": [
+      "Pioneering Pro Digital Excellence."
+    ],
+    "labels": [
+      "(2011-2024)",
+      "#1 Digital Agency, UK",
+      "Pro",
+      "Marketing, Development, Design,",
+      "X+",
+      "Unique Depth, Bold Impact."
+    ]
+  },
+  {
+    "file": "src/components/banner/Home4Banner.jsx",
+    "effects": [],
+    "headings": [
+      "Let’s Grow Your Business."
+    ],
+    "labels": [
+      "Think Depth.Bold Impact",
+      "#1 Rated Marketing Agency",
+      "Let’s Grow",
+      "Marketing, Development, Design,",
+      "Get A Proposal",
+      "X+",
+      "Award Wining."
+    ]
+  },
+  {
+    "file": "src/components/banner/Home5Banner.jsx",
+    "effects": [
+      "Swiper"
+    ],
+    "headings": [
+      "Tailored IT Consulting for Modern Business Needs."
+    ],
+    "labels": [
+      "Drive Innovation",
+      "Enhance Security",
+      "REVIEWED",
+      "50 REVIEWS",
+      "Award Wining."
+    ]
+  },
+  {
+    "file": "src/components/banner/Home6Banner.jsx",
+    "effects": [],
+    "headings": [
+      "The Ultimate Work Hub Platform."
+    ],
+    "labels": [
+      "#1 Ranking Software"
+    ]
+  },
+  {
+    "file": "src/components/banner/Home7Banner.jsx",
+    "effects": [],
+    "headings": [
+      "CREATIVE PRODUCT DESIGNER."
+    ],
+    "labels": [
+      "CREATIVE",
+      "Product Design, Web Design, Graphics &amp; Branding Design."
+    ]
+  },
+  {
+    "file": "src/components/blog-section/Home1blog.jsx",
+    "effects": [
+      "Swiper",
+      "WOW/Animate"
+    ],
+    "headings": [
+      "News &amp; Blog Insights."
+    ],
+    "labels": [
+      "Industry Insights"
+    ]
+  },
+  {
+    "file": "src/components/blog-section/Home2BlogSection.jsx",
+    "effects": [
+      "WOW/Animate"
+    ],
+    "headings": [
+      "News &amp; Insight"
+    ],
+    "labels": [
+      "Latest Article"
+    ]
+  },
+  {
+    "file": "src/components/blog-section/Home3BlogSection.jsx",
+    "effects": [
+      "Swiper",
+      "WOW/Animate"
+    ],
+    "headings": [
+      "Latest Article.",
+      "Celebrates Major Milestone in Digital Services.",
+      "Powerful Impact in Digital Marketplace in One Era.",
+      "Essential Social Media Strategies for-2024.",
+      "The Power of Influencer Marketing Insights and Tips."
+    ],
+    "labels": [
+      "Businesses &amp; Organizations."
+    ]
+  },
+  {
+    "file": "src/components/blog-section/Home5BlogSection.jsx",
+    "effects": [
+      "WOW/Animate"
+    ],
+    "headings": [
+      "Business-Driven IT Solutions"
+    ],
+    "labels": [
+      "Read More",
+      "Read More",
+      "Read More"
+    ]
+  },
+  {
+    "file": "src/components/blog-section/Home6BlogSection.jsx",
+    "effects": [
+      "WOW/Animate"
+    ],
+    "headings": [
+      "News &amp; Insight"
+    ],
+    "labels": [
+      "Latest Article"
+    ]
+  },
+  {
+    "file": "src/components/blog-section/Home7BlogSection.jsx",
+    "effects": [
+      "Swiper",
+      "WOW/Animate"
+    ],
+    "headings": [
+      "Latest Article.",
+      "Celebrates Major Milestone in Digital Services.",
+      "Powerful Impact in Digital Marketplace in One Era.",
+      "Essential Social Media Strategies for-2024.",
+      "The Power of Influencer Marketing Insights and Tips."
+    ],
+    "labels": []
+  },
+  {
+    "file": "src/components/case-study-section/Home1CaseStudy.jsx",
+    "effects": [
+      "WOW/Animate"
+    ],
+    "headings": [
+      "Case Study",
+      "Revamping Brand Identity Success Story.",
+      "Cloud Infrastructure for Rapid Growth.",
+      "Rovik's Transition to a Cloud-First Strategy."
+    ],
+    "labels": [
+      "Success Stories",
+      "View All",
+      "View All",
+      "Key Word",
+      "Work Period",
+      "Read More",
+      "Read More",
+      "Key Word",
+      "Work Period",
+      "Read More",
+      "Read More",
+      "Key Word"
+    ]
+  },
+  {
+    "file": "src/components/case-study-section/Home4CaseStudySection.jsx",
+    "effects": [
+      "WOW/Animate"
+    ],
+    "headings": [
+      "Result in Previous Case Study."
+    ],
+    "labels": [
+      "80%",
+      "M+",
+      "Read Case Study",
+      "M+",
+      "Read Case Study"
+    ]
+  },
+  {
+    "file": "src/components/common/AnimateCursor.js",
+    "effects": [],
+    "headings": [],
+    "labels": []
+  },
+  {
+    "file": "src/components/common/Breadcrum.jsx",
+    "effects": [],
+    "headings": [],
+    "labels": []
+  },
+  {
+    "file": "src/components/common/Counter.js",
+    "effects": [],
+    "headings": [],
+    "labels": []
+  },
+  {
+    "file": "src/components/common/GallerySection.jsx",
+    "effects": [
+      "Lightbox",
+      "WOW/Animate"
+    ],
+    "headings": [
+      "Candid Frame"
+    ],
+    "labels": []
+  },
+  {
+    "file": "src/components/common/ScrollProgress.js",
+    "effects": [],
+    "headings": [],
+    "labels": []
+  },
+  {
+    "file": "src/components/common/SelectComponent.jsx",
+    "effects": [],
+    "headings": [],
+    "labels": []
+  },
+  {
+    "file": "src/components/common/SidebarMenu.jsx",
+    "effects": [],
+    "headings": [],
+    "labels": [
+      "CALL ANY TIME",
+      "ADDRESS",
+      "SAY HELLO",
+      "NEW YORK",
+      "WASHINGTON DC",
+      "collapseMenu(\"home\")}>",
+      "collapseMenu(\"solution\")}>",
+      "collapseMenu(\"project\")}>",
+      "collapseMenu(\"pages\")}>",
+      "toggleSubMenu(\"properties\")}>",
+      "toggleSubMenu(\"blog\")}>",
+      "toggleSubMenu(\"shop\")}>"
+    ]
+  },
+  {
+    "file": "src/components/common/Theme.js",
+    "effects": [],
+    "headings": [],
+    "labels": []
+  },
+  {
+    "file": "src/components/common/Topbar.jsx",
+    "effects": [],
+    "headings": [],
+    "labels": []
+  },
+  {
+    "file": "src/components/contact-section/Home1ContactSection.jsx",
+    "effects": [
+      "WOW/Animate"
+    ],
+    "headings": [
+      "We’d Love to Hear You!",
+      "Number of Key",
+      "Grow Your Business on Digital Platform."
+    ],
+    "labels": [
+      "Free Consultation",
+      "Send Us Mail",
+      "Call 24/7 Hours",
+      "Submit",
+      "Submit",
+      "Company Info",
+      "Machine Learning",
+      "Professional Expert",
+      "06 Global Branches",
+      "99% Success",
+      "Data Analytics",
+      "Product Design"
+    ]
+  },
+  {
+    "file": "src/components/contact-section/Home4ContactSection.jsx",
+    "effects": [],
+    "headings": [
+      "Let’s Start A Project?"
+    ],
+    "labels": [
+      "Free Stretagy Session"
+    ]
+  },
+  {
+    "file": "src/components/faq-section/Home1Faq.jsx",
+    "effects": [
+      "WOW/Animate"
+    ],
+    "headings": [
+      "01. Do you provide design and architectural services?",
+      "02. Is Vernex suitable for my business?",
+      "03. What is your typical project timeline?",
+      "04. How do you handle permits and inspections?",
+      "05. How do you handle waste disposal and recycling?",
+      "06. How do ensure buildings are structurally safe?",
+      "Curious About Vernex?"
+    ],
+    "labels": [
+      "Ask the Builder",
+      "Contact Us Now"
+    ]
+  },
+  {
+    "file": "src/components/faq-section/Home6Faq.jsx",
+    "effects": [
+      "WOW/Animate"
+    ],
+    "headings": [
+      "FAQ’s"
+    ],
+    "labels": [
+      "Mailchimp -",
+      "Slack -",
+      "WhatsApp -",
+      "Mailchimp -",
+      "Slack -",
+      "WhatsApp -",
+      "Mailchimp -",
+      "Slack -",
+      "WhatsApp -",
+      "Mailchimp -",
+      "Slack -",
+      "WhatsApp -"
+    ]
+  },
+  {
+    "file": "src/components/feature-section/Home1SeatureSection.js",
+    "effects": [
+      "WOW/Animate"
+    ],
+    "headings": [
+      "Challenge We Tackle",
+      "Quality Assurance",
+      "Value Assurance",
+      "Security &amp; Compliance",
+      "Scalability &amp; Growth"
+    ],
+    "labels": [
+      "Our Challenge Part",
+      "Collaborate",
+      "Contact Us",
+      "Contact Us"
+    ]
+  },
+  {
+    "file": "src/components/feature-section/Home2FeatureSection.jsx",
+    "effects": [
+      "WOW/Animate"
+    ],
+    "headings": [
+      "Why Mortar?",
+      "Advanced Security",
+      "Digital Payments",
+      "AI Data Analytics"
+    ],
+    "labels": [
+      "Outstanding Features",
+      "Feature List",
+      "Feature List",
+      "2FA security alert.",
+      "without traditional bank",
+      "AI-driven analysis",
+      "Contact Us",
+      "Contact Us"
+    ]
+  },
+  {
+    "file": "src/components/feature-section/Home2FeatureSliderSection.jsx",
+    "effects": [
+      "Swiper"
+    ],
+    "headings": [
+      "Quick Onboarding",
+      "Rapid Beginning",
+      "Instant Onboarding"
+    ],
+    "labels": [
+      "Quick Features",
+      "Let’s Find Out",
+      "Let’s Find Out",
+      "Quick Features",
+      "Let’s Find Out",
+      "Let’s Find Out",
+      "Quick Features",
+      "Let’s Find Out",
+      "Let’s Find Out"
+    ]
+  },
+  {
+    "file": "src/components/feature-section/Home4FeatureSection.jsx",
+    "effects": [
+      "WOW/Animate"
+    ],
+    "headings": [
+      "Marketing Solutions Easily."
+    ],
+    "labels": [
+      "Let’s Talk"
+    ]
+  },
+  {
+    "file": "src/components/feature-section/Home5FeatureSection.jsx",
+    "effects": [
+      "WOW/Animate"
+    ],
+    "headings": [],
+    "labels": [
+      "K+"
+    ]
+  },
+  {
+    "file": "src/components/feature-section/Home6FeatureSection.jsx",
+    "effects": [
+      "WOW/Animate"
+    ],
+    "headings": [
+      "Sustainable Growth, Managed Risk.",
+      "Your Success, Our Commitment.",
+      "Strategic Growth, Controlled Risk."
+    ],
+    "labels": [
+      "01.",
+      "Email Support",
+      "WhatsApp",
+      "Skype",
+      "Call Support",
+      "Live Chat",
+      "02.",
+      "ChatGPT-4.0",
+      "Your Success, Our Commitment. \"Grow Faster, Risk Less\"",
+      "Strategic Growth, Controlled Risk. \"Growth with Stability\""
+    ]
+  },
+  {
+    "file": "src/components/header/Header.js",
+    "effects": [],
+    "headings": [
+      "Challenge We Tackle",
+      "Innovative Thinking",
+      "We have Daynamic Team Members that Easily Problem Solve."
+    ],
+    "labels": [
+      "Our Support",
+      "Let’s Talk",
+      "Let’s Talk",
+      "News &amp; Insight",
+      "Case Study",
+      "Webinars &amp; Events",
+      "Documentation",
+      "Our Support",
+      "Contact",
+      "Contact",
+      "Contact",
+      "Contact"
+    ]
+  },
+  {
+    "file": "src/components/header/Header2.js",
+    "effects": [],
+    "headings": [
+      "Challenge We Tackle",
+      "Innovative Thinking",
+      "We have Daynamic Team Members that Easily Problem Solve."
+    ],
+    "labels": [
+      "Let’s Talk",
+      "Let’s Talk",
+      "News &amp; Insight",
+      "Case Study",
+      "Webinars &amp; Events",
+      "Documentation",
+      "Contact",
+      "Contact",
+      "Contact",
+      "Contact"
+    ]
+  },
+  {
+    "file": "src/components/header/Header3.js",
+    "effects": [],
+    "headings": [
+      "Challenge We Tackle",
+      "Innovative Thinking",
+      "We are Global Digital Brand Tech Agency.",
+      "We have Daynamic Team Members that Easily Problem Solve."
+    ],
+    "labels": [
+      "Send Us Mail",
+      "Call 24/7 Hours",
+      "Let’s Talk",
+      "Let’s Talk",
+      "News &amp; Insight",
+      "Case Study",
+      "Webinars &amp; Events",
+      "Documentation"
+    ]
+  },
+  {
+    "file": "src/components/header/Header4.js",
+    "effects": [],
+    "headings": [
+      "Challenge We Tackle",
+      "Innovative Thinking",
+      "We are Global Digital Brand Tech Agency.",
+      "We have Daynamic Team Members that Easily Problem Solve."
+    ],
+    "labels": [
+      "Send Us Mail",
+      "Call 24/7 Hours",
+      "Let’s Talk",
+      "Let’s Talk",
+      "News &amp; Insight",
+      "Case Study",
+      "Webinars &amp; Events",
+      "Documentation",
+      "Let’s Talk",
+      "Our Support",
+      "Let’s Talk"
+    ]
+  },
+  {
+    "file": "src/components/header/Header4.jsx",
+    "effects": [],
+    "headings": [
+      "Connect with Nexaq"
+    ],
+    "labels": [
+      "Drop Us a Line",
+      "To More Inquiry",
+      "To Send Mail",
+      "Office Address 01",
+      "Office Address 02",
+      "LinkedIn",
+      "Facebook",
+      "Instagram",
+      "Free Analysis",
+      "Any Question",
+      "Let’s Talk"
+    ]
+  },
+  {
+    "file": "src/components/header/Header5.jsx",
+    "effects": [],
+    "headings": [
+      "Challenge We Tackle",
+      "Innovative Thinking",
+      "We are Global Digital Brand Tech Agency.",
+      "We have Daynamic Team Members that Easily Problem Solve."
+    ],
+    "labels": [
+      "Send Us Mail",
+      "Call 24/7 Hours",
+      "Let’s Talk",
+      "Let’s Talk",
+      "News &amp; Insight",
+      "Case Study",
+      "Webinars &amp; Events",
+      "Documentation",
+      "Let’s Talk"
+    ]
+  },
+  {
+    "file": "src/components/header/Header6.js",
+    "effects": [],
+    "headings": [
+      "Challenge We Tackle",
+      "Innovative Thinking",
+      "We are Global Digital Brand Tech Agency.",
+      "We have Daynamic Team Members that Easily Problem Solve."
+    ],
+    "labels": [
+      "Send Us Mail",
+      "Call 24/7 Hours",
+      "The Integrated Work Hub.",
+      "Let’s Talk",
+      "Let’s Talk",
+      "News &amp; Insight",
+      "Case Study",
+      "Webinars &amp; Events",
+      "Documentation",
+      "Request a Demo Login EN"
+    ]
+  },
+  {
+    "file": "src/components/header/Header7.js",
+    "effects": [],
+    "headings": [],
+    "labels": [
+      "Product Designer, Based on Birmingham, UK. Email:",
+      "Phone:",
+      "Email:",
+      "Phone:"
+    ]
+  },
+  {
+    "file": "src/components/header/PortfolioHeader.js",
+    "effects": [],
+    "headings": [
+      "Challenge We Tackle",
+      "Innovative Thinking",
+      "We have Daynamic Team Members that Easily Problem Solve."
+    ],
+    "labels": [
+      "Let’s Talk",
+      "Let’s Talk",
+      "News &amp; Insight",
+      "Case Study",
+      "Webinars &amp; Events",
+      "Documentation"
+    ]
+  },
+  {
+    "file": "src/components/industries-section/IndustriesSection.jsx",
+    "effects": [
+      "WOW/Animate"
+    ],
+    "headings": [
+      "Tech Sectors to Drive Significant Impact."
+    ],
+    "labels": [
+      "Industries Cover Area",
+      "Finance &amp; Fintech (04)",
+      "Healthcare &amp; Life (03)",
+      "Retail &amp; E-commerce (05)",
+      "Education &amp; EdTech (08)",
+      "Government &amp; Public Sector (04)",
+      "Travel &amp; Hospitality (04)",
+      "Get a Free Strategy Session",
+      "Get a Free Strategy Session"
+    ]
+  },
+  {
+    "file": "src/components/integration-section/Home6IntegrationSection.jsx",
+    "effects": [
+      "WOW/Animate"
+    ],
+    "headings": [
+      "Integrations"
+    ],
+    "labels": [
+      "M+",
+      "Total Download",
+      "User Ratings",
+      "Years of Service",
+      "M+",
+      "Years of Service"
+    ]
+  },
+  {
+    "file": "src/components/partner-sections/Home1ParnerSection.jsx",
+    "effects": [
+      "WOW/Animate"
+    ],
+    "headings": [],
+    "labels": [
+      "20K+",
+      "90%+"
+    ]
+  },
+  {
+    "file": "src/components/partner-sections/Home2PartnerArea.jsx",
+    "effects": [
+      "WOW/Animate"
+    ],
+    "headings": [],
+    "labels": [
+      "20K+"
+    ]
+  },
+  {
+    "file": "src/components/partner-sections/Home3PartnerSection.jsx",
+    "effects": [
+      "WOW/Animate"
+    ],
+    "headings": [],
+    "labels": [
+      "20K+",
+      "90%+"
+    ]
+  },
+  {
+    "file": "src/components/partner-sections/Home4ParnerSection.jsx",
+    "effects": [
+      "WOW/Animate"
+    ],
+    "headings": [],
+    "labels": [
+      "20K+",
+      "90%+"
+    ]
+  },
+  {
+    "file": "src/components/partner-sections/Home5PartnerSection.jsx",
+    "effects": [
+      "WOW/Animate"
+    ],
+    "headings": [],
+    "labels": [
+      "20K+",
+      "90%+"
+    ]
+  },
+  {
+    "file": "src/components/partner-sections/Home6PartnerSection.jsx",
+    "effects": [
+      "WOW/Animate"
+    ],
+    "headings": [],
+    "labels": [
+      "20K+",
+      "90%+",
+      "4.5",
+      "4.5",
+      "5.0"
+    ]
+  },
+  {
+    "file": "src/components/portfolio-section/Home3PortfolioSection.jsx",
+    "effects": [
+      "WOW/Animate"
+    ],
+    "headings": [
+      "Latest Work",
+      "Pixel Pulse",
+      "Engage360",
+      "UX Elevate",
+      "SocialSphere"
+    ],
+    "labels": [
+      "Selected Projects",
+      "Topnotch 250+ Product",
+      "Typhography, UX Consistency.",
+      "Typhography, UX Consistency.",
+      "Typhography, UX Consistency.",
+      "Typhography, UX Consistency."
+    ]
+  },
+  {
+    "file": "src/components/portfolio-section/Home7PortfolioSection.jsx",
+    "effects": [
+      "WOW/Animate"
+    ],
+    "headings": [
+      "Latest Work"
+    ],
+    "labels": [
+      "(2015-2024).",
+      "Selected work * (2015-2024)",
+      "UI/UX Design",
+      "Branding Design",
+      "Creative Art",
+      "Branding Design",
+      "Ecommerce"
+    ]
+  },
+  {
+    "file": "src/components/process-sections/Home1processSection.jsx",
+    "effects": [
+      "Swiper",
+      "WOW/Animate"
+    ],
+    "headings": [
+      "Solution in Four Step."
+    ],
+    "labels": [
+      "Solution Process",
+      "Step-01 :",
+      "Step-02 :",
+      "Step-03 :",
+      "Step-04 :",
+      "Step-05 :"
+    ]
+  },
+  {
+    "file": "src/components/process-sections/Home3ProcessSection.jsx",
+    "effects": [
+      "WOW/Animate"
+    ],
+    "headings": [
+      "Solution of Process."
+    ],
+    "labels": [
+      "Working Step",
+      "Step",
+      "Step",
+      "Step",
+      "CEO &amp; Founder"
+    ]
+  },
+  {
+    "file": "src/components/process-sections/Home4ProcessSection.jsx",
+    "effects": [],
+    "headings": [],
+    "labels": [
+      "Step",
+      "Step",
+      "Step"
+    ]
+  },
+  {
+    "file": "src/components/process-sections/Home5ProcessSection.jsx",
+    "effects": [
+      "ApexCharts",
+      "WOW/Animate"
+    ],
+    "headings": [
+      "How to Solve the Problems."
+    ],
+    "labels": [
+      "100%",
+      "Step",
+      "Step",
+      "Step",
+      "Step"
+    ]
+  },
+  {
+    "file": "src/components/process-sections/Home6processSection.jsx",
+    "effects": [
+      "WOW/Animate"
+    ],
+    "headings": [
+      "How to Get the Support."
+    ],
+    "labels": [
+      "100%",
+      "Step",
+      "meetings",
+      "questionnaires",
+      "Step",
+      "meetings",
+      "questionnaires",
+      "Step",
+      "ROI.",
+      "Step",
+      "meetings",
+      "questionnaires"
+    ]
+  },
+  {
+    "file": "src/components/service-section/Home1ServiceSection.jsx",
+    "effects": [
+      "WOW/Animate"
+    ],
+    "headings": [
+      "Smart Solution",
+      "Product Development",
+      "Design Department",
+      "Cloud Solutions",
+      "Data &amp; Analytics",
+      "AI &amp; Machine Learning",
+      "E-commerce Solutions",
+      "IoT Development",
+      "Technical Support"
+    ],
+    "labels": [
+      "Our Solution"
+    ]
+  },
+  {
+    "file": "src/components/service-section/Home2ServiceSection.jsx",
+    "effects": [
+      "WOW/Animate"
+    ],
+    "headings": [
+      "How We Can Help?",
+      "Global Impact of Mortar",
+      "Easy Transaction",
+      "Digital Payments and Transfers.",
+      "Banking Services.",
+      "Investment &amp; Management.",
+      "Financial Inclusion Services."
+    ],
+    "labels": [
+      "What We Do",
+      "More Services",
+      "More Services",
+      "100% Secure Transaction",
+      "M",
+      "M",
+      "100% Secure Transaction",
+      "Barber Shop",
+      "Beauty &amp; Cosmetics",
+      "Grocery",
+      "Booking",
+      "E-commerce"
+    ]
+  },
+  {
+    "file": "src/components/service-section/Home3ServiceSection.jsx",
+    "effects": [
+      "WOW/Animate"
+    ],
+    "headings": [
+      "Scope of Work.",
+      "Web Development &amp; Design.",
+      "Digital Marketing",
+      "E-commerce Solutions",
+      "Branding &amp; Graphic Design",
+      "Consulting &amp; Strategy"
+    ],
+    "labels": [
+      "Smart Solution",
+      "Businesses, Organizations."
+    ]
+  },
+  {
+    "file": "src/components/service-section/Home4ServiceSection.jsx",
+    "effects": [
+      "WOW/Animate"
+    ],
+    "headings": [
+      "To Provide Smart Solution.",
+      "Real Data-Driven Website Marketing.",
+      "To Make Significant Impact.",
+      "Health Care",
+      "Pet Care &amp; Shop",
+      "Entertainment",
+      "Ecommerce",
+      "Finance &amp; Banking",
+      "Hospitality &amp; Travel"
+    ],
+    "labels": [
+      "100%",
+      "Get A Proposal",
+      "100%",
+      "Success Rate",
+      "Success Rate",
+      "Success Rate",
+      "Success Rate",
+      "Success Rate",
+      "Success Rate"
+    ]
+  },
+  {
+    "file": "src/components/service-section/Home5ServiceSection.jsx",
+    "effects": [
+      "WOW/Animate"
+    ],
+    "headings": [
+      "We Provide Smart Solution.",
+      "IT Strategy &amp; Consulting",
+      "Network Infrastructure",
+      "Cybersecurity Services",
+      "IT Project Management"
+    ],
+    "labels": []
+  },
+  {
+    "file": "src/components/service-section/Home7ServiceSection.jsx",
+    "effects": [
+      "WOW/Animate"
+    ],
+    "headings": [
+      "1. Product Design",
+      "2. Branding Design",
+      "3. Webflow",
+      "4. Digital Marekting",
+      "5. Video Editing"
+    ],
+    "labels": [
+      "What I Do",
+      "1.",
+      "2.",
+      "3.",
+      "4.",
+      "5.",
+      "Collaborate"
+    ]
+  },
+  {
+    "file": "src/components/team-section/Home4TeamSection.jsx",
+    "effects": [
+      "Swiper",
+      "WOW/Animate"
+    ],
+    "headings": [
+      "We’ve Most Talented Team."
+    ],
+    "labels": [
+      "Join Our Team",
+      "(CTO, Co-founder)",
+      "LinkedIn",
+      "(Marketing Head)",
+      "LinkedIn",
+      "(Sr. Marketing Manager)",
+      "LinkedIn",
+      "(Jr. Marketing Manager)",
+      "LinkedIn",
+      "(WordPress Developer)",
+      "LinkedIn",
+      "(Junior Engineer)"
+    ]
+  },
+  {
+    "file": "src/components/testimonial-section/Home1TestimonialSection.jsx",
+    "effects": [
+      "Swiper",
+      "WOW/Animate"
+    ],
+    "headings": [
+      "They Loves Us"
+    ],
+    "labels": [
+      "Clients Feedback",
+      "Project Manager (HR)",
+      "(Clients in 2024)",
+      "QA Engineer",
+      "(Clients in 2021)",
+      "Support Engineer",
+      "(Clients in 2023)",
+      "Support Engineer",
+      "(Clients in 2024)",
+      "REVIEWED",
+      "50 REVIEWS",
+      "GOOGLE REVIEW (4.5)"
+    ]
+  },
+  {
+    "file": "src/components/testimonial-section/Home2TestimonialSection.jsx",
+    "effects": [
+      "Swiper",
+      "WOW/Animate"
+    ],
+    "headings": [
+      "They Loves Us"
+    ],
+    "labels": [
+      "Customer Satisfaction",
+      "Project Manager (HR)",
+      "QA Engineer",
+      "Support Engineer",
+      "Support Engineer"
+    ]
+  },
+  {
+    "file": "src/components/testimonial-section/Home3TestimonialSection.jsx",
+    "effects": [
+      "Swiper",
+      "ModalVideo",
+      "WOW/Animate"
+    ],
+    "headings": [
+      "They Loves Us."
+    ],
+    "labels": [
+      "Customer Feedback",
+      "Businesses &amp; Organizations.",
+      "REVIEWED",
+      "50 REVIEWS",
+      "Product Manger",
+      "Great Agency!",
+      "QA Engineer",
+      "Superb Assistance!",
+      "Project Manager (HR)",
+      "Excellent Service!",
+      "Support Engineer",
+      "Fantastic Assistance!"
+    ]
+  },
+  {
+    "file": "src/components/testimonial-section/Home4testimonialSection.jsx",
+    "effects": [
+      "Swiper",
+      "ModalVideo",
+      "WOW/Animate"
+    ],
+    "headings": [
+      "They Loves Us!"
+    ],
+    "labels": [
+      "Outstanding Support!",
+      "Product Manger",
+      "Superb Assistance!",
+      "QA Engineer",
+      "Excellent Service!",
+      "Support Engineer",
+      "REVIEWED",
+      "50 REVIEWS",
+      "100%"
+    ]
+  },
+  {
+    "file": "src/components/testimonial-section/Home5TestimonialSection.jsx",
+    "effects": [
+      "Swiper",
+      "ModalVideo",
+      "WOW/Animate"
+    ],
+    "headings": [
+      "They Trust &amp; Loves Us!",
+      "Best Practices &amp; Recommendations."
+    ],
+    "labels": [
+      "Client Feedback",
+      "Outstanding Support!",
+      "Product Manger",
+      "Superb Assistance!",
+      "QA Engineer",
+      "Excellent Service!",
+      "Support Engineer",
+      "REVIEWED",
+      "50 REVIEWS",
+      "GOOGLE REVIEW (4.5)",
+      "2024",
+      "2024"
+    ]
+  },
+  {
+    "file": "src/components/testimonial-section/Home6TestimonialSection.jsx",
+    "effects": [
+      "Swiper",
+      "ModalVideo",
+      "WOW/Animate"
+    ],
+    "headings": [
+      "They Loves Us!"
+    ],
+    "labels": [
+      "Great Services!",
+      "support-based solution",
+      "Founder, Axleo",
+      "Execellent Support!",
+      "super fast &amp; most efficient",
+      "Founder, Buret",
+      "Fantastic Assistance!",
+      "support-based solution",
+      "Founder, Nexaq",
+      "Superb Service!",
+      "super fast &amp; most efficient",
+      "Founder, Vernex"
+    ]
+  },
+  {
+    "file": "src/components/testimonial-section/Home7TestimonialSection.jsx",
+    "effects": [
+      "Swiper",
+      "WOW/Animate"
+    ],
+    "headings": [
+      "They Loves Us",
+      "Award &amp; Recognition"
+    ],
+    "labels": [
+      "Project Manager (HR)",
+      "QA Engineer",
+      "Support Engineer",
+      "(2015-2024).",
+      "2023",
+      "2023",
+      "2024",
+      "2021"
+    ]
+  }
+]
