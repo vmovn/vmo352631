@@ -3,7 +3,41 @@ import Link from 'next/link'
 import React, { useEffect, useRef } from 'react'
 import Counter from '../common/Counter';
 
-const Home4ServiceSection = () => {
+const defaultCapabilities = [
+    ["Digital", "Marketing.", ["Social Media Marketing", "Email Marketing", "Content Marketing"]],
+    ["Branding and", "Identity.", ["Logo Design", "Rebranding Services", "Visual Branding"]],
+    ["Content Creation", "& Strategy.", ["Blog Writing", "Copywriting & Copyediting", "Video Production"]],
+    ["Paid", "Advertising.", ["Social Media Marketing", "Email Marketing", "Content Marketing"]],
+    ["Marketing", "Automation.", ["Email Drip Campaigns", "Lead Scoring & Nurturing", "Workflow Automation"]],
+    ["Affiliate", "Marketing.", ["Partner Outreach", "Affiliate Program Strategy", "Affiliate Campaign"]],
+].map(([titleLead, titleTail, bullets]) => ({
+    titleLead,
+    titleTail,
+    bullets: bullets.map((label) => ({ label })),
+}));
+
+const defaultMetrics = [
+    { value: 235, labelLead: "Total Campaign", labelTail: "Handaled." },
+    { value: 23, labelLead: "Country-wise", labelTail: "Clients." },
+    { value: 8, labelLead: "Award", labelTail: "Achievement." },
+    { value: 35, labelLead: "Clients", labelTail: "Retention Rate." },
+];
+
+const defaultIndustries = [
+    ["Health Care", 98], ["Pet Care & Shop", 95], ["Entertainment", 99],
+    ["Ecommerce", 93], ["Finance & Banking", 94], ["Hospitality & Travel", 99],
+].map(([title, successRate]) => ({
+    title,
+    successRate,
+    description: "Establish a consistent and trustworthy brand identity for Hospitals, Clinics, & Healthcare companies.",
+}));
+
+const Home4ServiceSection = ({ data = {} }) => {
+    const capabilityData = data.capabilities || {};
+    const measurementData = data.measurement || {};
+    const capabilities = defaultCapabilities.map((fallback, index) => ({ ...fallback, ...(capabilityData.items?.[index] || {}) }));
+    const metrics = defaultMetrics.map((fallback, index) => ({ ...fallback, ...(measurementData.metrics?.[index] || {}) }));
+    const industries = defaultIndustries.map((fallback, index) => ({ ...fallback, ...(measurementData.industries?.[index] || {}) }));
     const industryListRef = useRef(null);
     const industryImgRefs = useRef([]);
     const ref3 = useRef(null);
@@ -72,13 +106,13 @@ const Home4ServiceSection = () => {
                             <div className="row g-4 justify-content-between align-items-end">
                                 <div className="col-xl-5 col-lg-6">
                                     <div className="section-title2">
-                                        <h2><strong>To Provide</strong> Smart Solution.</h2>
+                                        <h2><strong>{capabilityData.titleLead || "To Provide"}</strong> {capabilityData.titleTail || "Smart Solution."}</h2>
                                     </div>
                                 </div>
                                 <div className="col-lg-3 d-flex justify-content-lg-end">
                                     <div className="result-area">
-                                        <span>100%</span>
-                                        <p>Measurable Results &amp; ROI.</p>
+                                        <span>{capabilityData.resultValue || "100%"}</span>
+                                        <p>{capabilityData.resultLabel || "Measurable Results & ROI."}</p>
                                         <svg width={200} height={6} viewBox="0 0 200 6" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5 2.5L0 0.113249V5.88675L5 3.5V2.5ZM195 3.5L200 5.88675V0.113249L195 2.5V3.5ZM4.5 3.5H195.5V2.5H4.5V3.5Z" />
                                         </svg>
@@ -90,11 +124,9 @@ const Home4ServiceSection = () => {
                     <div className="row gy-md-5 gy-4">
                         <div className="col-lg-4 col-md-6 wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
                             <div className="service-card3 magnetic-item">
-                                <h4><Link href="/service/details">Digital <br /> Marketing.</Link></h4>
+                                <h4><Link href="/service/details">{capabilities[0].titleLead} <br /> {capabilities[0].titleTail}</Link></h4>
                                 <ul>
-                                    <li>+ Social Media Marketing</li>
-                                    <li>+ Email Marketing</li>
-                                    <li>+ Content Marketing</li>
+                                    {capabilities[0].bullets.map((bullet) => <li key={bullet.label}>+ {bullet.label}</li>)}
                                 </ul>
                                 <Link href="/service/details" className="primary-btn3 three btn-hover">
                                     View Details
@@ -110,11 +142,9 @@ const Home4ServiceSection = () => {
                         </div>
                         <div className="col-lg-4 col-md-6 wow animate fadeInDown" data-wow-delay="400ms" data-wow-duration="1500ms">
                             <div className="service-card3 two magnetic-item">
-                                <h4><Link href="/service/details">Branding and  <br /> Identity.</Link></h4>
+                                <h4><Link href="/service/details">{capabilities[1].titleLead} <br /> {capabilities[1].titleTail}</Link></h4>
                                 <ul>
-                                    <li>+ Logo Design</li>
-                                    <li>+ Rebranding Services</li>
-                                    <li>+ Visual Branding</li>
+                                    {capabilities[1].bullets.map((bullet) => <li key={bullet.label}>+ {bullet.label}</li>)}
                                 </ul>
                                 <Link href="/service/details" className="primary-btn3 three btn-hover">
                                     View Details
@@ -130,11 +160,9 @@ const Home4ServiceSection = () => {
                         </div>
                         <div className="col-lg-4 col-md-6 wow animate fadeInDown" data-wow-delay="600ms" data-wow-duration="1500ms">
                             <div className="service-card3 magnetic-item">
-                                <h4><Link href="/service/details">Content Creation <br /> &amp; Strategy.</Link></h4>
+                                <h4><Link href="/service/details">{capabilities[2].titleLead} <br /> {capabilities[2].titleTail}</Link></h4>
                                 <ul>
-                                    <li>+ Blog Writing</li>
-                                    <li>+ Copywriting &amp; Copyediting</li>
-                                    <li>+ Video Production</li>
+                                    {capabilities[2].bullets.map((bullet) => <li key={bullet.label}>+ {bullet.label}</li>)}
                                 </ul>
                                 <Link href="/service/details" className="primary-btn3 three btn-hover">
                                     View Details
@@ -150,11 +178,9 @@ const Home4ServiceSection = () => {
                         </div>
                         <div className="col-lg-4 col-md-6 wow animate fadeInDown" data-wow-delay="800ms" data-wow-duration="1500ms">
                             <div className="service-card3 three magnetic-item">
-                                <h4><Link href="/service/details">Paid <br /> Advertising.</Link></h4>
+                                <h4><Link href="/service/details">{capabilities[3].titleLead} <br /> {capabilities[3].titleTail}</Link></h4>
                                 <ul>
-                                    <li>+ Social Media Marketing</li>
-                                    <li>+ Email Marketing</li>
-                                    <li>+ Content Marketing</li>
+                                    {capabilities[3].bullets.map((bullet) => <li key={bullet.label}>+ {bullet.label}</li>)}
                                 </ul>
                                 <Link href="/service/details" className="primary-btn3 three btn-hover">
                                     View Details
@@ -170,11 +196,9 @@ const Home4ServiceSection = () => {
                         </div>
                         <div className="col-lg-4 col-md-6 wow animate fadeInDown" data-wow-delay="600ms" data-wow-duration="1500ms">
                             <div className="service-card3 magnetic-item">
-                                <h4><Link href="/service/details">Marketing <br /> Automation.</Link></h4>
+                                <h4><Link href="/service/details">{capabilities[4].titleLead} <br /> {capabilities[4].titleTail}</Link></h4>
                                 <ul>
-                                    <li>+ Email Drip Campaigns</li>
-                                    <li>+ Lead Scoring &amp; Nurturing</li>
-                                    <li>+ Workflow Automation</li>
+                                    {capabilities[4].bullets.map((bullet) => <li key={bullet.label}>+ {bullet.label}</li>)}
                                 </ul>
                                 <Link href="/service/details" className="primary-btn3 three btn-hover">
                                     View Details
@@ -190,11 +214,9 @@ const Home4ServiceSection = () => {
                         </div>
                         <div className="col-lg-4 col-md-6 wow animate fadeInDown" data-wow-delay="400ms" data-wow-duration="1500ms">
                             <div className="service-card3 four magnetic-item">
-                                <h4><Link href="/service/details">Affiliate <br /> Marketing.</Link></h4>
+                                <h4><Link href="/service/details">{capabilities[5].titleLead} <br /> {capabilities[5].titleTail}</Link></h4>
                                 <ul>
-                                    <li>+ Partner Outreach</li>
-                                    <li>+ Affiliate Program Strategy</li>
-                                    <li>+ Affiliate Campaign</li>
+                                    {capabilities[5].bullets.map((bullet) => <li key={bullet.label}>+ {bullet.label}</li>)}
                                 </ul>
                                 <Link href="/service/details" className="primary-btn3 three btn-hover">
                                     View Details
@@ -225,9 +247,9 @@ const Home4ServiceSection = () => {
                                             <svg width={88} height={64} viewBox="0 0 88 64" xmlns="http://www.w3.org/2000/svg">
                                                 <path fillRule="evenodd" clipRule="evenodd" d="M88 64V0L0 64H88ZM10 44L60 8H10V44Z" />
                                             </svg>
-                                            <h2><strong>Real Data-Driven</strong> Website Marketing.</h2>
+                                            <h2><strong>{measurementData.titleLead || "Real Data-Driven"}</strong> {measurementData.titleTail || "Website Marketing."}</h2>
                                         </div>
-                                        <p>Companies need innovative ideas to engage their target audience.</p>
+                                        <p>{measurementData.description || "Companies need innovative ideas to engage their target audience."}</p>
                                     </div>
                                 </div>
                                 <div className="col-xl-4 col-lg-2 d-lg-flex d-none justify-content-lg-end">
@@ -263,7 +285,7 @@ const Home4ServiceSection = () => {
                                     <div className="number">
                                         <Counter
                                             start={0}
-                                            end={235}
+                                            end={metrics[0].value}
                                             speed={10}
                                             forwardedRef={ref6}
                                             as="h2"
@@ -271,7 +293,7 @@ const Home4ServiceSection = () => {
                                         />
                                         <span>+</span>
                                     </div>
-                                    <p>Total Campaign <br />Handaled.</p>
+                                    <p>{metrics[0].labelLead} <br />{metrics[0].labelTail}</p>
                                 </div>
                             </div>
                         </div>
@@ -282,7 +304,7 @@ const Home4ServiceSection = () => {
                                     <div className="number">
                                         <Counter
                                             start={0}
-                                            end={23}
+                                            end={metrics[1].value}
                                             speed={20}
                                             forwardedRef={ref3}
                                             as="h2"
@@ -290,7 +312,7 @@ const Home4ServiceSection = () => {
                                         />
                                         <span>+</span>
                                     </div>
-                                    <p>Country-wise <br />Clients.</p>
+                                    <p>{metrics[1].labelLead} <br />{metrics[1].labelTail}</p>
                                 </div>
                             </div>
                         </div>
@@ -301,7 +323,7 @@ const Home4ServiceSection = () => {
                                     <div className="number">
                                         <Counter
                                             start={0}
-                                            end={8}
+                                            end={metrics[2].value}
                                             speed={50}
                                             forwardedRef={ref4}
                                             as="h2"
@@ -309,7 +331,7 @@ const Home4ServiceSection = () => {
                                         />
                                         <span>+</span>
                                     </div>
-                                    <p>Award <br />Achievement.</p>
+                                    <p>{metrics[2].labelLead} <br />{metrics[2].labelTail}</p>
                                 </div>
                             </div>
                         </div>
@@ -320,7 +342,7 @@ const Home4ServiceSection = () => {
                                     <div className="number">
                                         <Counter
                                             start={0}
-                                            end={35}
+                                            end={metrics[3].value}
                                             speed={20}
                                             forwardedRef={ref5}
                                             as="h2"
@@ -328,7 +350,7 @@ const Home4ServiceSection = () => {
                                         />
                                         <span>+</span>
                                     </div>
-                                    <p>Clients <br />Retention Rate.</p>
+                                    <p>{metrics[3].labelLead} <br />{metrics[3].labelTail}</p>
                                 </div>
                             </div>
                         </div>
@@ -369,8 +391,8 @@ const Home4ServiceSection = () => {
                         </div>
                         <div className="col-lg-6 col-md-8">
                             <div className="section-title2">
-                                <h2><strong>To Make Significant</strong> Impact.</h2>
-                                <p>Providing expert legal guidance tailored to your unique needs.</p>
+                                <h2><strong>{measurementData.industryTitleLead || "To Make Significant"}</strong> {measurementData.industryTitleTail || "Impact."}</h2>
+                                <p>{measurementData.industryDescription || "Providing expert legal guidance tailored to your unique needs."}</p>
                             </div>
                         </div>
                     </div>
@@ -415,7 +437,7 @@ const Home4ServiceSection = () => {
                             <div className="industry-list" ref={industryListRef}>
                                 <ul>
                                     <li className="active">
-                                        <h2><Link href="/industry/details">Health Care</Link></h2>
+                                        <h2><Link href="/industry/details">{industries[0].title}</Link></h2>
                                         <div className="industry-content">
                                             <p>Establish a consistent and trustworthy brand identity for <strong>Hospitals, Clinics,</strong> &amp; <strong>Healthcare companies.</strong></p>
                                             <svg className="divider" width={313} height={6} viewBox="0 0 313 6" xmlns="http://www.w3.org/2000/svg">
@@ -424,7 +446,7 @@ const Home4ServiceSection = () => {
                                         </div>
                                     </li>
                                     <li>
-                                        <h2><Link href="/industry/details">Pet Care &amp; Shop</Link></h2>
+                                        <h2><Link href="/industry/details">{industries[1].title}</Link></h2>
                                         <div className="industry-content">
                                             <p>Establish a consistent and trustworthy brand identity for <strong>Hospitals, Clinics,</strong> &amp; <strong>Healthcare companies.</strong></p>
                                             <svg className="divider" width={313} height={6} viewBox="0 0 313 6" xmlns="http://www.w3.org/2000/svg">
@@ -433,7 +455,7 @@ const Home4ServiceSection = () => {
                                         </div>
                                     </li>
                                     <li>
-                                        <h2><Link href="/industry/details">Entertainment</Link></h2>
+                                        <h2><Link href="/industry/details">{industries[2].title}</Link></h2>
                                         <div className="industry-content">
                                             <p>Establish a consistent and trustworthy brand identity for <strong>Hospitals, Clinics,</strong> &amp; <strong>Healthcare companies.</strong></p>
                                             <svg className="divider" width={313} height={6} viewBox="0 0 313 6" xmlns="http://www.w3.org/2000/svg">
@@ -442,7 +464,7 @@ const Home4ServiceSection = () => {
                                         </div>
                                     </li>
                                     <li>
-                                        <h2><Link href="/industry/details">Ecommerce</Link></h2>
+                                        <h2><Link href="/industry/details">{industries[3].title}</Link></h2>
                                         <div className="industry-content">
                                             <p>Establish a consistent and trustworthy brand identity for <strong>Hospitals, Clinics,</strong> &amp; <strong>Healthcare companies.</strong></p>
                                             <svg className="divider" width={313} height={6} viewBox="0 0 313 6" xmlns="http://www.w3.org/2000/svg">
@@ -451,7 +473,7 @@ const Home4ServiceSection = () => {
                                         </div>
                                     </li>
                                     <li>
-                                        <h2><Link href="/industry/details">Finance &amp; Banking</Link></h2>
+                                        <h2><Link href="/industry/details">{industries[4].title}</Link></h2>
                                         <div className="industry-content">
                                             <p>Establish a consistent and trustworthy brand identity for <strong>Hospitals, Clinics,</strong> &amp; <strong>Healthcare companies.</strong></p>
                                             <svg className="divider" width={313} height={6} viewBox="0 0 313 6" xmlns="http://www.w3.org/2000/svg">
@@ -460,7 +482,7 @@ const Home4ServiceSection = () => {
                                         </div>
                                     </li>
                                     <li>
-                                        <h2><Link href="/industry/details">Hospitality &amp; Travel</Link></h2>
+                                        <h2><Link href="/industry/details">{industries[5].title}</Link></h2>
                                         <div className="industry-content">
                                             <p>Establish a consistent and trustworthy brand identity for <strong>Hospitals, Clinics,</strong> &amp; <strong>Healthcare companies.</strong></p>
                                             <svg className="divider" width={313} height={6} viewBox="0 0 313 6" xmlns="http://www.w3.org/2000/svg">
@@ -487,7 +509,7 @@ const Home4ServiceSection = () => {
                                         <div className="counter-wrap">
                                             <div className="counter-content">
                                                 <div className="number">
-                                                    <h4>98</h4>
+                                                    <h4>{industries[0].successRate}</h4>
                                                     <span>%</span>
                                                 </div>
                                                 <span>Success Rate</span>
@@ -504,7 +526,7 @@ const Home4ServiceSection = () => {
                                         <div className="counter-wrap">
                                             <div className="counter-content">
                                                 <div className="number">
-                                                    <h4>95</h4>
+                                                    <h4>{industries[1].successRate}</h4>
                                                     <span>%</span>
                                                 </div>
                                                 <span>Success Rate</span>
@@ -521,7 +543,7 @@ const Home4ServiceSection = () => {
                                         <div className="counter-wrap">
                                             <div className="counter-content">
                                                 <div className="number">
-                                                    <h4>99</h4>
+                                                    <h4>{industries[2].successRate}</h4>
                                                     <span>%</span>
                                                 </div>
                                                 <span>Success Rate</span>
@@ -538,7 +560,7 @@ const Home4ServiceSection = () => {
                                         <div className="counter-wrap">
                                             <div className="counter-content">
                                                 <div className="number">
-                                                    <h4>93</h4>
+                                                    <h4>{industries[3].successRate}</h4>
                                                     <span>%</span>
                                                 </div>
                                                 <span>Success Rate</span>
@@ -555,7 +577,7 @@ const Home4ServiceSection = () => {
                                         <div className="counter-wrap">
                                             <div className="counter-content">
                                                 <div className="number">
-                                                    <h4>94</h4>
+                                                    <h4>{industries[4].successRate}</h4>
                                                     <span>%</span>
                                                 </div>
                                                 <span>Success Rate</span>
@@ -572,7 +594,7 @@ const Home4ServiceSection = () => {
                                         <div className="counter-wrap">
                                             <div className="counter-content">
                                                 <div className="number">
-                                                    <h4>99</h4>
+                                                    <h4>{industries[5].successRate}</h4>
                                                     <span>%</span>
                                                 </div>
                                                 <span>Success Rate</span>

@@ -1,6 +1,13 @@
 import React from 'react'
 
-const Home4ProcessSection = () => {
+const defaults = [
+    { step: "01", titleLead: "Client", titleTail: "Onboarding", description: "Included meetings and questionnaires to gather key information." },
+    { step: "02", titleLead: "Campaign", titleTail: "Setup", description: "Like Google Ads, Facebook Ads, email marketing, or other tools." },
+    { step: "03", titleLead: "Reporting &", titleTail: "Insights", description: "A comprehensive report is delivered, outlining the results, ROI." },
+];
+
+const Home4ProcessSection = ({ data = {} }) => {
+    const stages = defaults.map((fallback, index) => ({ ...fallback, ...(data.stages?.[index] || {}) }));
     return (
         <>
             <div className="home4-process-section mb-130">
@@ -16,10 +23,10 @@ const Home4ProcessSection = () => {
                                         <div className="single-process">
                                             <div className="step-no">
                                                 <span>Step</span>
-                                                <strong>01</strong>
+                                                <strong>{stages[0].step}</strong>
                                             </div>
                                             <div className="process-content">
-                                                <h5>Client <br />Onboarding</h5>
+                                                <h5>{stages[0].titleLead} <br />{stages[0].titleTail}</h5>
                                                 <p>Included <strong>meetings</strong> and <strong>questionnaires</strong> to gather key information.</p>
                                             </div>
                                         </div>
@@ -31,10 +38,10 @@ const Home4ProcessSection = () => {
                                         <div className="single-process">
                                             <div className="step-no">
                                                 <span>Step</span>
-                                                <strong>02</strong>
+                                                <strong>{stages[1].step}</strong>
                                             </div>
                                             <div className="process-content">
-                                                <h5>Campaign <br />Setup</h5>
+                                                <h5>{stages[1].titleLead} <br />{stages[1].titleTail}</h5>
                                                 <p>Like <strong>Google Ads, Facebook Ads, email marketing,</strong> or other tools.</p>
                                             </div>
                                         </div>
@@ -43,10 +50,10 @@ const Home4ProcessSection = () => {
                                         <div className="single-process">
                                             <div className="step-no">
                                                 <span>Step</span>
-                                                <strong>03</strong>
+                                                <strong>{stages[2].step}</strong>
                                             </div>
                                             <div className="process-content">
-                                                <h5>Reporting &amp; <br />Insights</h5>
+                                                <h5>{stages[2].titleLead} <br />{stages[2].titleTail}</h5>
                                                 <p>A comprehensive report is delivered, outlining the results, <strong>ROI.</strong></p>
                                             </div>
                                         </div>

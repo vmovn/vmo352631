@@ -1,7 +1,16 @@
 import Link from 'next/link'
 import React from 'react'
 
-const Home4FeatureSection = () => {
+const defaultItems = [
+    { titleLead: "Marketing", titleTail: "Automation", description: "Marketing automation refers to the use of software & technology to streamline, automate." },
+    { titleLead: "Measurable", titleTail: "Results & ROI", description: "Tracking performance metrics, analytics, and delivering a strong return on investment (ROI)." },
+    { titleLead: "Cost-Effective", titleTail: "Solutions", description: "They are paying for will deliver results without exceeding their budget and plans efficiently." },
+    { titleLead: "Analytics and", titleTail: "Reporting", description: "Essential components for any marketing agency campaigns and provide valuable insights." },
+];
+
+const Home4FeatureSection = ({ data = {} }) => {
+    const items = defaultItems.map((fallback, index) => ({ ...fallback, ...(data.items?.[index] || {}) }));
+    const cta = { label: "Let’s Talk", url: "/contact", ...(data.cta || {}) };
     return (
         <>
             <div className="home4-feature-section mb-130">
@@ -11,8 +20,8 @@ const Home4FeatureSection = () => {
                             <div className="row g-4 justify-content-between align-items-end">
                                 <div className="col-xl-5 col-lg-6 wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
                                     <div className="section-title2">
-                                        <h2><strong>Marketing</strong> Solutions Easily.</h2>
-                                        <p>Providing expert legal guidance tailored to your unique needs.</p>
+                                        <h2><strong>{data.titleLead || "Marketing"}</strong> {data.titleTail || "Solutions Easily."}</h2>
+                                        <p>{data.description || "Providing expert legal guidance tailored to your unique needs."}</p>
                                     </div>
                                 </div>
                                 <div className="col-lg-5 wow animate fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
@@ -57,8 +66,8 @@ const Home4FeatureSection = () => {
                                     </g>
                                 </svg>
                                 <div className="feature-content">
-                                    <h4>Marketing <br /> Automation</h4>
-                                    <p>Marketing automation refers to the use of software &amp; technology to streamline, automate.</p>
+                                    <h4>{items[0].titleLead} <br /> {items[0].titleTail}</h4>
+                                    <p>{items[0].description}</p>
                                 </div>
                             </div>
                         </div>
@@ -88,8 +97,8 @@ const Home4FeatureSection = () => {
                                     </g>
                                 </svg>
                                 <div className="feature-content">
-                                    <h4>Measurable <br /> Results &amp; ROI</h4>
-                                    <p>Tracking performance metrics, analytics, and delivering a strong return on investment (ROI).</p>
+                                    <h4>{items[1].titleLead} <br /> {items[1].titleTail}</h4>
+                                    <p>{items[1].description}</p>
                                 </div>
                             </div>
                         </div>
@@ -119,8 +128,8 @@ const Home4FeatureSection = () => {
                                     </g>
                                 </svg>
                                 <div className="feature-content">
-                                    <h4>Cost-Effective <br /> Solutions</h4>
-                                    <p>They are paying for will deliver results without exceeding their budget and plans efficiently.</p>
+                                    <h4>{items[2].titleLead} <br /> {items[2].titleTail}</h4>
+                                    <p>{items[2].description}</p>
                                 </div>
                             </div>
                         </div>
@@ -150,8 +159,8 @@ const Home4FeatureSection = () => {
                                     </g>
                                 </svg>
                                 <div className="feature-content">
-                                    <h4>Analytics and <br /> Reporting</h4>
-                                    <p>Essential components for any marketing agency campaigns and provide valuable insights.</p>
+                                    <h4>{items[3].titleLead} <br /> {items[3].titleTail}</h4>
+                                    <p>{items[3].description}</p>
                                 </div>
                             </div>
                         </div>
@@ -159,14 +168,14 @@ const Home4FeatureSection = () => {
                     <div className="row justify-content-center wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                         <div className="col-xl-6 col-lg-8 col-md-10">
                             <div className="contact-btn-area two">
-                                <h6>To Make Sure to Best Service Provide Our Clients.</h6>
-                                <Link href="/contact" className="primary-btn4 transparent">
+                                <h6>{data.ctaLead || "To Make Sure to Best Service Provide Our Clients."}</h6>
+                                <Link href={cta.url} className="primary-btn4 transparent">
                                     <span className="icon">
                                         <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" strokeWidth="1.5" strokeLinecap="round" />
                                         </svg>
                                     </span>
-                                    <span className="content">Let’s Talk</span>
+                                    <span className="content">{cta.label}</span>
                                     <span className="icon two">
                                         <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" strokeWidth="1.5" strokeLinecap="round" />
@@ -179,7 +188,7 @@ const Home4FeatureSection = () => {
                 </div>
             </div>
             <div className="home4-video-section">
-                <video autoPlay loop muted playsInline src="/assets/video/home4-video.mp4" />
+                <video autoPlay loop muted playsInline src={data.videoPath || "/assets/video/home4-video.mp4"} />
             </div>
         </>
 

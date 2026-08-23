@@ -9,21 +9,26 @@ import Home4ProcessSection from '@/components/process-sections/Home4ProcessSecti
 import Home4ServiceSection from '@/components/service-section/Home4ServiceSection'
 import Home4TeamSection from '@/components/team-section/Home4TeamSection'
 import Home4testimonialSection from '@/components/testimonial-section/Home4testimonialSection'
+import { loadMarketingAgencyHomepage } from '@/cms/loaders/homepage'
 import React from 'react'
 
-const page = () => {
+export const dynamic = 'force-dynamic'
+
+const page = async () => {
+    const { data } = await loadMarketingAgencyHomepage({ locale: 'vi' })
+
     return (
         <>
             <Header4 />
-            <Home4Banner />
-            <Home4ParnerSection />
-            <Home4FeatureSection />
-            <Home4ProcessSection />
-            <Home4ServiceSection />
-            <Home4testimonialSection />
-            <Home4CaseStudySection />
-            <Home4TeamSection />
-            <Home4ContactSection />
+            <Home4Banner data={data.hero} />
+            <Home4ParnerSection data={data.partners} />
+            <Home4FeatureSection data={data.feature} />
+            <Home4ProcessSection data={data.process} />
+            <Home4ServiceSection data={data.service} />
+            <Home4testimonialSection data={data.testimonial} />
+            <Home4CaseStudySection data={data.caseStudies} />
+            <Home4TeamSection data={data.team} />
+            <Home4ContactSection data={data.contact} />
             <Home4Footer />
         </>
 

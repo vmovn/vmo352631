@@ -3,7 +3,25 @@ import Link from 'next/link'
 import React, { useEffect, useRef } from 'react'
 import Counter from '../common/Counter'
 
-const Home4Banner = () => {
+const Home4Banner = ({ data = {} }) => {
+  const hero = {
+    partnerTitle: "Meta Partner - 2018",
+    partnerStrapline: "Think Depth.Bold Impact",
+    partnerLogoPath: "/assets/img/home4/icon/meta-logo.svg",
+    eyebrow: "#1 Rated Marketing Agency",
+    titleLead: "Let’s Grow",
+    titleTail: "Your Business.",
+    descriptionLead: "We provides services related to online",
+    descriptionEmphasis: "Marketing, Development, Design,",
+    descriptionTail: "and other digital solutions for clients.",
+    primaryCTA: { label: "Get A Proposal", url: "/contact" },
+    successRate: 3,
+    successRateLabel: "Success Rate",
+    awardCount: 13,
+    awardLabel: "Award Wining.",
+    imagePath: "/assets/img/home4/banner-img.jpg",
+    ...data,
+  };
   const ref3 = useRef(null);
   useEffect(() => {
     const paths = document.querySelectorAll(".blinking-svg .circle");
@@ -30,9 +48,9 @@ const Home4Banner = () => {
     <div className="home4-banner-section mb-130">
       <div className="container position-relative">
         <div className="partner-area">
-          <img src="/assets/img/home4/icon/meta-logo.svg" alt="" />
-          <h5>Meta Partner - 2018</h5>
-          <span>Think Depth.Bold Impact</span>
+          <img src={hero.partnerLogoPath} alt="" />
+          <h5>{hero.partnerTitle}</h5>
+          <span>{hero.partnerStrapline}</span>
           <svg width={200} height={6} viewBox="0 0 200 6" xmlns="http://www.w3.org/2000/svg">
             <path d="M5 2.5L0 0.113249V5.88675L5 3.5V2.5ZM195 3.5L200 5.88675V0.113249L195 2.5V3.5ZM4.5 3.5H195.5V2.5H4.5V3.5Z" />
           </svg>
@@ -63,22 +81,22 @@ const Home4Banner = () => {
           <div className="col-lg-6">
             <div className="banner-content-wrap">
               <div className="subtitle">
-                <span>#1 Rated Marketing Agency</span>
+                <span>{hero.eyebrow}</span>
                 <i className="corner tl" />
                 <i className="corner tr" />
                 <i className="corner br" />
                 <i className="corner bl" />
               </div>
-              <h1><span>Let’s Grow</span> Your Business.</h1>
-              <p>We provides services related to online <span>Marketing, Development, Design,</span> and other digital solutions for clients.</p>
+              <h1><span>{hero.titleLead}</span> {hero.titleTail}</h1>
+              <p>{hero.descriptionLead} <span>{hero.descriptionEmphasis}</span> {hero.descriptionTail}</p>
               <div className="btn-and-counter-area">
-                <Link href="/contact" className="primary-btn4 black-bg">
+                <Link href={hero.primaryCTA.url} className="primary-btn4 black-bg">
                   <span className="icon">
                     <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" strokeWidth="1.5" strokeLinecap="round" />
                     </svg>
                   </span>
-                  <span className="content">Get A Proposal</span>
+                  <span className="content">{hero.primaryCTA.label}</span>
                   <span className="icon two">
                     <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" strokeWidth="1.5" strokeLinecap="round" />
@@ -98,7 +116,7 @@ const Home4Banner = () => {
                     <div className="number">
                       <Counter
                         start={0}
-                        end={3}
+                        end={hero.successRate}
                         speed={100}
                         forwardedRef={ref3}
                         as="h3"
@@ -106,7 +124,7 @@ const Home4Banner = () => {
                       />
                       <span>X+</span>
                     </div>
-                    <p>Success Rate</p>
+                    <p>{hero.successRateLabel}</p>
                   </div>
                 </div>
               </div>
@@ -114,13 +132,13 @@ const Home4Banner = () => {
           </div>
           <div className="col-lg-4 d-lg-block d-none">
             <div className="banner-img-wrap">
-              <img src="/assets/img/home4/banner-img.jpg" alt="" />
+              <img src={hero.imagePath} alt="" />
               <div className="counter-wrap">
                 <div className="counter-content">
                   <div className="number">
                     <Counter
                       start={0}
-                      end={13}
+                      end={hero.awardCount}
                       speed={80}
                       forwardedRef={ref3}
                       as="h4"
@@ -128,7 +146,7 @@ const Home4Banner = () => {
                     />
                     <span>+</span>
                   </div>
-                  <span>Award Wining.</span>
+                  <span>{hero.awardLabel}</span>
                 </div>
                 <svg className="arrow" width={15} height={15} viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
                   <path d="M1 14L13 2M13 2C10.3333 2.5 4.5 3.5 1 2M13 2C12.5 4.5 11.5 10 13 14" strokeWidth={2} strokeLinecap="round" />

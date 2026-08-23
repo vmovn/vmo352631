@@ -1,0 +1,18 @@
+/*
+ * Mortar's purchased stylesheet is intentionally global for the 51 public
+ * routes. Payload ships its admin styles in a named cascade layer, so this
+ * unlayered, admin-scoped reset lets those styles win without moving or
+ * rewriting the public route tree.
+ */
+html[data-theme] {
+  scroll-behavior: auto !important;
+}
+
+html[data-theme] body,
+html[data-theme] body * {
+  all: revert-layer;
+}
+
+html[data-theme] body {
+  cursor: auto !important;
+}

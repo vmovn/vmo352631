@@ -3,7 +3,13 @@ import Link from 'next/link'
 import React, { useRef } from 'react'
 import Counter from '../common/Counter'
 
-const Home4CaseStudySection = () => {
+const defaultCases = [
+    { title: "Revamping Brand Identity Success Story.", imagePath: "/assets/img/home4/case-study-img1.jpg", logoPath: "/assets/img/home4/case-study-logo1.png", metricOneLabel: "Organic Traffic", metricOneValue: 27, metricTwoLabel: "Online Revenue", metricTwoValue: 10 },
+    { title: "Conversion Rate on the Digital Platform.", imagePath: "/assets/img/home4/case-study-img2.jpg", logoPath: "/assets/img/home4/case-study-logo2.png", metricOneLabel: "Organic Traffic", metricOneValue: 800, metricTwoLabel: "Online Revenue", metricTwoValue: 24 },
+];
+
+const Home4CaseStudySection = ({ data = {} }) => {
+    const cases = defaultCases.map((fallback, index) => ({ ...fallback, ...(data.cases?.[index] || {}) }));
     const ref3 = useRef(null);
     const ref4 = useRef(null);
     const ref5 = useRef(null);
@@ -16,12 +22,12 @@ const Home4CaseStudySection = () => {
                         <div className="row g-4 justify-content-between align-items-end">
                             <div className="col-xl-5 col-lg-6">
                                 <div className="section-title2">
-                                    <h2><strong>Result in</strong> Previous Case Study.</h2>
+                                    <h2><strong>{data.caseTitleLead || "Result in"}</strong> {data.caseTitleTail || "Previous Case Study."}</h2>
                                 </div>
                             </div>
                             <div className="col-lg-3 d-flex justify-content-lg-end">
                                 <div className="result-area">
-                                    <span>80%</span>
+                                    <span>{data.caseResultValue || "80%"}</span>
                                     <p>Our Clients Double Revenue Generate in the First <strong>05 Months.</strong></p>
                                     <svg width={200} height={6} viewBox="0 0 200 6" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M5 2.5L0 0.113249V5.88675L5 3.5V2.5ZM195 3.5L200 5.88675V0.113249L195 2.5V3.5ZM4.5 3.5H195.5V2.5H4.5V3.5Z" />
@@ -37,17 +43,17 @@ const Home4CaseStudySection = () => {
                             <div className="row g-xxl-4 g-xl-3 g-lg-4 g-md-4 g-sm-3 g-4">
                                 <div className="col-xl-6 col-lg-12 col-sm-6">
                                     <Link href="/case-study/details" className="case-study-img">
-                                        <img src="/assets/img/home4/case-study-img1.jpg" alt="" />
+                                        <img src={cases[0].imagePath} alt="" />
                                     </Link>
                                 </div>
                                 <div className="col-xl-6 col-lg-12 col-sm-6">
                                     <div className="case-study-content-wrap">
                                         <div className="case-study-content">
                                             <div className="case-study-logo">
-                                                <img src="/assets/img/home4/case-study-logo1.png" alt="" className="light" />
+                                                <img src={cases[0].logoPath} alt="" className="light" />
                                                 <img src="/assets/img/home4/case-study-logo1-light.png" alt="" className="dark" />
                                             </div>
-                                            <h4><Link href="/case-study/details">Revamping Brand Identity Success Story.</Link></h4>
+                                            <h4><Link href="/case-study/details">{cases[0].title}</Link></h4>
                                             <ul>
                                                 <li>
                                                     <h6>
@@ -56,12 +62,12 @@ const Home4CaseStudySection = () => {
                                                                 <path d="M1 10V0L9 5L1 10Z" />
                                                             </g>
                                                         </svg>
-                                                        Organic Traffic
+                                                        {cases[0].metricOneLabel}
                                                     </h6>
                                                     <div className="counter-area">
                                                         <Counter
                                                             start={0}
-                                                            end={27}
+                                                            end={cases[0].metricOneValue}
                                                             speed={50}
                                                             forwardedRef={ref3}
                                                             as="h5"
@@ -77,12 +83,12 @@ const Home4CaseStudySection = () => {
                                                                 <path d="M1 10V0L9 5L1 10Z" />
                                                             </g>
                                                         </svg>
-                                                        Online Revenue
+                                                        {cases[0].metricTwoLabel}
                                                     </h6>
                                                     <div className="counter-area">
                                                         <Counter
                                                             start={0}
-                                                            end={10}
+                                                            end={cases[0].metricTwoValue}
                                                             speed={50}
                                                             forwardedRef={ref4}
                                                             as="h5"
@@ -118,17 +124,17 @@ const Home4CaseStudySection = () => {
                             <div className="row g-xxl-4 g-xl-3 g-lg-4 g-md-4 g-sm-3 g-4">
                                 <div className="col-xl-6 col-lg-12 col-sm-6">
                                     <Link href="/case-study/details" className="case-study-img">
-                                        <img src="/assets/img/home4/case-study-img2.jpg" alt="" />
+                                        <img src={cases[1].imagePath} alt="" />
                                     </Link>
                                 </div>
                                 <div className="col-xl-6 col-lg-12 col-sm-6">
                                     <div className="case-study-content-wrap">
                                         <div className="case-study-content">
                                             <div className="case-study-logo">
-                                                <img src="/assets/img/home4/case-study-logo2.png" alt="" className="light" />
+                                                <img src={cases[1].logoPath} alt="" className="light" />
                                                 <img src="/assets/img/home4/case-study-logo2-light.png" alt="" className="dark" />
                                             </div>
-                                            <h4><Link href="/case-study/details">Conversion Rate on the Digital Platform.</Link></h4>
+                                            <h4><Link href="/case-study/details">{cases[1].title}</Link></h4>
                                             <ul>
                                                 <li>
                                                     <h6>
@@ -137,12 +143,12 @@ const Home4CaseStudySection = () => {
                                                                 <path d="M1 10V0L9 5L1 10Z" />
                                                             </g>
                                                         </svg>
-                                                        Organic Traffic
+                                                        {cases[1].metricOneLabel}
                                                     </h6>
                                                     <div className="counter-area">
                                                         <Counter
                                                             start={0}
-                                                            end={800}
+                                                            end={cases[1].metricOneValue}
                                                             speed={10}
                                                             forwardedRef={ref5}
                                                             as="h5"
@@ -158,12 +164,12 @@ const Home4CaseStudySection = () => {
                                                                 <path d="M1 10V0L9 5L1 10Z" />
                                                             </g>
                                                         </svg>
-                                                        Online Revenue
+                                                        {cases[1].metricTwoLabel}
                                                     </h6>
                                                     <div className="counter-area">
                                                         <Counter
                                                             start={0}
-                                                            end={24}
+                                                            end={cases[1].metricTwoValue}
                                                             speed={50}
                                                             forwardedRef={ref6}
                                                             as="h5"

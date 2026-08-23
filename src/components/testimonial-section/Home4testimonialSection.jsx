@@ -12,7 +12,14 @@ import SwiperCore, {
 SwiperCore.use([Autoplay, EffectFade, Navigation, Pagination]);
 
 
-const Home4testimonialSection = () => {
+const defaultTestimonials = [
+    { headline: "Outstanding Support!", quote: "We’ve been extremely pleased with the creativity and strategic approach the agency brought to our campaigns.", author: "Robert Kcarery", role: "Product Manger", imagePath: "/assets/img/home4/testimonial-img1.png" },
+    { headline: "Superb Assistance!", quote: "Outstanding Apps! They are very helpful & mindblowing to get services. Delivering thorough care to ensure client happiness.", author: "Jorche Milton", role: "QA Engineer", imagePath: "/assets/img/home4/testimonial-img2.png" },
+    { headline: "Excellent Service!", quote: "We were thoroughly impressed with the professionalism and dedication of Mortar. From our consultation to the final delivery.", author: "Hanry Macle", role: "Support Engineer", imagePath: "/assets/img/home4/testimonial-img3.png" },
+];
+
+const Home4testimonialSection = ({ data = {} }) => {
+    const testimonials = defaultTestimonials.map((fallback, index) => ({ ...fallback, ...(data.testimonials?.[index] || {}) }));
     const [isOpen, setOpen] = useState(false);
     const settings = useMemo(() => {
         return {
@@ -52,10 +59,10 @@ const Home4testimonialSection = () => {
                             <div className="testimonial-area">
                                 <div className="section-title2 wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
                                     <h2>
-                                        <strong>They Loves Us!</strong>
+                                        <strong>{data.testimonialTitle || "They Loves Us!"}</strong>
                                         <img src="/assets/img/home4/emoji.png" alt="" />
                                     </h2>
-                                    <p>This feedback acknowledges strengths while providing constructive input for improvement.</p>
+                                    <p>{data.testimonialDescription || "This feedback acknowledges strengths while providing constructive input for improvement."}</p>
                                 </div>
                                 <Swiper {...settings} className="swiper home2-testimonial-slider mt-70">
                                     <div className="swiper-wrapper">
@@ -64,7 +71,7 @@ const Home4testimonialSection = () => {
                                                 <div className="row g-4">
                                                     <div className="col-xl-4 col-md-5">
                                                         <div className="testimonial-img">
-                                                            <img src="/assets/img/home4/testimonial-img1.png" alt="" />
+                                                            <img src={testimonials[0].imagePath} alt="" />
                                                             <a style={{ cursor: "pointer" }}
                                                                 onClick={() => setOpen(true)} className="video-player">
                                                                 <i className="bi bi-play-fill" />
@@ -73,11 +80,11 @@ const Home4testimonialSection = () => {
                                                     </div>
                                                     <div className="col-md-7">
                                                         <div className="testimonial-content">
-                                                            <span>Outstanding Support!</span>
-                                                            <p>We’ve been extremely pleased with the creativity and strategic approach the agency brought to our campaigns.</p>
+                                                            <span>{testimonials[0].headline}</span>
+                                                            <p>{testimonials[0].quote}</p>
                                                             <div className="author-area">
-                                                                <h5>Robert Kcarery</h5>
-                                                                <span>Product Manger</span>
+                                                                <h5>{testimonials[0].author}</h5>
+                                                                <span>{testimonials[0].role}</span>
                                                             </div>
                                                             <svg className="quote" width={110} height={82} viewBox="0 0 110 82" xmlns="http://www.w3.org/2000/svg">
                                                                 <path d="M26.3071 0.666626C41.5823 0.666626 52.6106 13.179 52.6106 31.7079C52.5149 58.6259 32.1178 77.6578 2.69136 81.3114C-0.0346363 81.6531 -1.08678 77.8951 1.42401 76.7895C12.7106 71.8073 18.4161 65.4871 19.1526 59.2333C19.7025 54.5595 17.1439 50.4646 13.9253 49.696C5.58953 47.7078 0.003623 37.4066 0.003623 26.7637C0.003623 19.8423 2.77488 13.2044 7.70774 8.31029C12.6406 3.41614 19.331 0.666626 26.3071 0.666626ZM83.6965 0.666626C98.9717 0.666626 110 13.179 110 31.7079C109.904 58.6259 89.5072 77.6578 60.0808 81.3114C57.3548 81.6531 56.3026 77.8951 58.8134 76.7895C70.1 71.8073 75.8055 65.4871 76.542 59.2333C77.0919 54.5595 74.5333 50.4646 71.3148 49.696C62.9789 47.7078 57.393 37.4066 57.393 26.7637C57.393 19.8423 60.1643 13.2044 65.0971 8.31029C70.03 3.41614 76.7204 0.666626 83.6965 0.666626Z" />
@@ -92,7 +99,7 @@ const Home4testimonialSection = () => {
                                                 <div className="row g-4">
                                                     <div className="col-xl-4 col-md-5">
                                                         <div className="testimonial-img">
-                                                            <img src="/assets/img/home4/testimonial-img2.png" alt="" />
+                                                            <img src={testimonials[1].imagePath} alt="" />
                                                             <a style={{ cursor: "pointer" }}
                                                                 onClick={() => setOpen(true)} className="video-player">
                                                                 <i className="bi bi-play-fill" />
@@ -101,11 +108,11 @@ const Home4testimonialSection = () => {
                                                     </div>
                                                     <div className="col-md-7">
                                                         <div className="testimonial-content">
-                                                            <span>Superb Assistance!</span>
-                                                            <p>Outstanding Apps! They are very helpful &amp; mindblowing to get services. Delivering thorough care to ensure client happiness.</p>
+                                                            <span>{testimonials[1].headline}</span>
+                                                            <p>{testimonials[1].quote}</p>
                                                             <div className="author-area">
-                                                                <h5>Jorche Milton</h5>
-                                                                <span>QA Engineer</span>
+                                                                <h5>{testimonials[1].author}</h5>
+                                                                <span>{testimonials[1].role}</span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -117,7 +124,7 @@ const Home4testimonialSection = () => {
                                                 <div className="row g-4">
                                                     <div className="col-xl-4 col-md-5">
                                                         <div className="testimonial-img">
-                                                            <img src="/assets/img/home4/testimonial-img3.png" alt="" />
+                                                            <img src={testimonials[2].imagePath} alt="" />
                                                             <a style={{ cursor: "pointer" }}
                                                                 onClick={() => setOpen(true)} className="video-player">
                                                                 <i className="bi bi-play-fill" />
@@ -126,11 +133,11 @@ const Home4testimonialSection = () => {
                                                     </div>
                                                     <div className="col-md-7">
                                                         <div className="testimonial-content">
-                                                            <span>Excellent Service!</span>
-                                                            <p>We were thoroughly impressed with the professionalism and dedication of Mortar. From our consultation to the final delivery.</p>
+                                                            <span>{testimonials[2].headline}</span>
+                                                            <p>{testimonials[2].quote}</p>
                                                             <div className="author-area">
-                                                                <h5>Hanry Macle</h5>
-                                                                <span>Support Engineer</span>
+                                                                <h5>{testimonials[2].author}</h5>
+                                                                <span>{testimonials[2].role}</span>
                                                             </div>
                                                         </div>
                                                     </div>

@@ -14,19 +14,23 @@ import { dmsans, lora, suseSans } from "@/fonts/font";
 
 const mortarBodyClassName = `tt-magic-cursor ${lora.variable} ${dmsans.variable} ${suseSans.variable}`;
 
+export const metadata = {
+  title: "Mortar - IT Startup & Digital Agency Template.",
+  description: "Your description here",
+  keywords: ["next.js", "SEO", "meta tags"],
+  icons: {
+    icon: "/assets/img/fav-icon.svg",
+  },
+};
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" data-scroll-behavior="smooth">
+    <html
+      lang="en"
+      data-scroll-behavior="smooth"
+      suppressHydrationWarning
+    >
       <head>
-        <link
-          rel="icon"
-          href="/assets/img/fav-icon.svg"
-          type="image/x-icon"
-          sizes="16x16"
-        />
-        <meta name="description" content="Your description here" />
-        <meta name="keywords" content="next.js, SEO, meta tags" />
-        <title>Mortar - IT Startup &amp; Digital Agency Template.</title>
         <link
           href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
           rel="stylesheet"

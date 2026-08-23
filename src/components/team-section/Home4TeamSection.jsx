@@ -13,7 +13,23 @@ import Link from "next/link";
 SwiperCore.use([Autoplay, EffectFade, Navigation, Pagination]);
 
 
-const Home4TeamSection = () => {
+const defaultMembers = [
+    ["Mr. Jorche Milton", "(CTO, Co-founder)", "team-img1.png", "emoji1.gif"],
+    ["Robert Jhonson", "(Marketing Head)", "team-img2.png", "emoji2.gif"],
+    ["Daniel Ryan", "(Sr. Marketing Manager)", "team-img3.png", "emoji1.gif"],
+    ["Mrs. Emily Sophia", "(Jr. Marketing Manager)", "team-img4.png", "emoji3.gif"],
+    ["Alexander Benjamin", "(WordPress Developer)", "team-img5.png", "emoji1.gif"],
+    ["Lucy Zoe", "(Junior Engineer)", "team-img6.png", "emoji2.gif"],
+].map(([name, role, image, emoji]) => ({
+    name,
+    role,
+    imagePath: `/assets/img/home4/${image}`,
+    emojiPath: `/assets/img/home4/${emoji}`,
+    linkedinURL: "https://www.linkedin.com/",
+}));
+
+const Home4TeamSection = ({ data = {} }) => {
+    const members = defaultMembers.map((fallback, index) => ({ ...fallback, ...(data.teamMembers?.[index] || {}) }));
 
     const settings = useMemo(() => {
         return {
@@ -65,8 +81,8 @@ const Home4TeamSection = () => {
                             <div className="row g-4 justify-content-between align-items-end">
                                 <div className="col-xl-5 col-md-6 wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
                                     <div className="section-title2">
-                                        <h2><strong>We’ve Most</strong> Talented Team.</h2>
-                                        <p>To provide most expensive work for our clients in the world-wide.</p>
+                                        <h2><strong>{data.teamTitleLead || "We’ve Most"}</strong> {data.teamTitleTail || "Talented Team."}</h2>
+                                        <p>{data.teamDescription || "To provide most expensive work for our clients in the world-wide."}</p>
                                     </div>
                                 </div>
                                 <div className="col-lg-3 col-md-6 d-flex justify-content-md-end wow animate fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
@@ -102,21 +118,21 @@ const Home4TeamSection = () => {
                                     <SwiperSlide className="swiper-slide">
                                         <div className="team-card">
                                             <div className="team-img">
-                                                <Link href="/team/details"><img src="/assets/img/home4/team-img1.png" alt="" /></Link>
+                                                <Link href="/team/details"><img src={members[0].imagePath} alt="" /></Link>
                                                 <div className="emoji-area">
                                                     <img src="/assets/img/home4/emoji-bg.png" alt="" />
-                                                    <img src="/assets/img/home4/emoji1.gif" alt="" className="emoji" />
+                                                    <img src={members[0].emojiPath} alt="" className="emoji" />
                                                 </div>
                                             </div>
                                             <div className="team-content">
-                                                <h5><Link href="/team/details">Mr. Jorche Milton</Link></h5>
-                                                <span>(CTO, Co-founder)</span>
+                                                <h5><Link href="/team/details">{members[0].name}</Link></h5>
+                                                <span>{members[0].role}</span>
                                                 <svg className="divider" height={6} viewBox="0 0 312 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M5 2.5L0 0.113249V5.88675L5 3.5V2.5ZM307 3.5L312 5.88675V0.113249L307 2.5V3.5ZM4.5 3.5H307.5V2.5H4.5V3.5Z" />
                                                 </svg>
                                                 <ul className="social-list">
                                                     <li>
-                                                        <a href="https://www.linkedin.com/" className="social-area">
+                                                        <a href={members[0].linkedinURL} className="social-area">
                                                             <div className="icon">
                                                                 <i className="bx bxl-linkedin" />
                                                             </div>
@@ -132,21 +148,21 @@ const Home4TeamSection = () => {
                                     <SwiperSlide className="swiper-slide">
                                         <div className="team-card">
                                             <div className="team-img">
-                                                <Link href="/team/details"><img src="/assets/img/home4/team-img2.png" alt="" /></Link>
+                                                <Link href="/team/details"><img src={members[1].imagePath} alt="" /></Link>
                                                 <div className="emoji-area">
                                                     <img src="/assets/img/home4/emoji-bg.png" alt="" />
-                                                    <img src="/assets/img/home4/emoji2.gif" alt="" className="emoji" />
+                                                    <img src={members[1].emojiPath} alt="" className="emoji" />
                                                 </div>
                                             </div>
                                             <div className="team-content">
-                                                <h5><Link href="/team/details">Robert Jhonson</Link></h5>
-                                                <span>(Marketing Head)</span>
+                                                <h5><Link href="/team/details">{members[1].name}</Link></h5>
+                                                <span>{members[1].role}</span>
                                                 <svg className="divider" height={6} viewBox="0 0 312 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M5 2.5L0 0.113249V5.88675L5 3.5V2.5ZM307 3.5L312 5.88675V0.113249L307 2.5V3.5ZM4.5 3.5H307.5V2.5H4.5V3.5Z" />
                                                 </svg>
                                                 <ul className="social-list">
                                                     <li>
-                                                        <a href="https://www.linkedin.com/" className="social-area">
+                                                        <a href={members[1].linkedinURL} className="social-area">
                                                             <div className="icon">
                                                                 <i className="bx bxl-linkedin" />
                                                             </div>
@@ -162,21 +178,21 @@ const Home4TeamSection = () => {
                                     <SwiperSlide className="swiper-slide">
                                         <div className="team-card">
                                             <div className="team-img">
-                                                <Link href="/team/details"><img src="/assets/img/home4/team-img3.png" alt="" /></Link>
+                                                <Link href="/team/details"><img src={members[2].imagePath} alt="" /></Link>
                                                 <div className="emoji-area">
                                                     <img src="/assets/img/home4/emoji-bg.png" alt="" />
-                                                    <img src="/assets/img/home4/emoji1.gif" alt="" className="emoji" />
+                                                    <img src={members[2].emojiPath} alt="" className="emoji" />
                                                 </div>
                                             </div>
                                             <div className="team-content">
-                                                <h5><Link href="/team/details">Daniel Ryan</Link></h5>
-                                                <span>(Sr. Marketing Manager)</span>
+                                                <h5><Link href="/team/details">{members[2].name}</Link></h5>
+                                                <span>{members[2].role}</span>
                                                 <svg className="divider" height={6} viewBox="0 0 312 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M5 2.5L0 0.113249V5.88675L5 3.5V2.5ZM307 3.5L312 5.88675V0.113249L307 2.5V3.5ZM4.5 3.5H307.5V2.5H4.5V3.5Z" />
                                                 </svg>
                                                 <ul className="social-list">
                                                     <li>
-                                                        <a href="https://www.linkedin.com/" className="social-area">
+                                                        <a href={members[2].linkedinURL} className="social-area">
                                                             <div className="icon">
                                                                 <i className="bx bxl-linkedin" />
                                                             </div>
@@ -192,21 +208,21 @@ const Home4TeamSection = () => {
                                     <SwiperSlide className="swiper-slide">
                                         <div className="team-card">
                                             <div className="team-img">
-                                                <Link href="/team/details"><img src="/assets/img/home4/team-img4.png" alt="" /></Link>
+                                                <Link href="/team/details"><img src={members[3].imagePath} alt="" /></Link>
                                                 <div className="emoji-area">
                                                     <img src="/assets/img/home4/emoji-bg.png" alt="" />
-                                                    <img src="/assets/img/home4/emoji3.gif" alt="" className="emoji" />
+                                                    <img src={members[3].emojiPath} alt="" className="emoji" />
                                                 </div>
                                             </div>
                                             <div className="team-content">
-                                                <h5><Link href="/team/details">Mrs. Emily Sophia</Link></h5>
-                                                <span>(Jr. Marketing Manager)</span>
+                                                <h5><Link href="/team/details">{members[3].name}</Link></h5>
+                                                <span>{members[3].role}</span>
                                                 <svg className="divider" height={6} viewBox="0 0 312 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M5 2.5L0 0.113249V5.88675L5 3.5V2.5ZM307 3.5L312 5.88675V0.113249L307 2.5V3.5ZM4.5 3.5H307.5V2.5H4.5V3.5Z" />
                                                 </svg>
                                                 <ul className="social-list">
                                                     <li>
-                                                        <a href="https://www.linkedin.com/" className="social-area">
+                                                        <a href={members[3].linkedinURL} className="social-area">
                                                             <div className="icon">
                                                                 <i className="bx bxl-linkedin" />
                                                             </div>
@@ -222,21 +238,21 @@ const Home4TeamSection = () => {
                                     <SwiperSlide className="swiper-slide">
                                         <div className="team-card">
                                             <div className="team-img">
-                                                <Link href="/team/details"><img src="/assets/img/home4/team-img5.png" alt="" /></Link>
+                                                <Link href="/team/details"><img src={members[4].imagePath} alt="" /></Link>
                                                 <div className="emoji-area">
                                                     <img src="/assets/img/home4/emoji-bg.png" alt="" />
-                                                    <img src="/assets/img/home4/emoji1.gif" alt="" className="emoji" />
+                                                    <img src={members[4].emojiPath} alt="" className="emoji" />
                                                 </div>
                                             </div>
                                             <div className="team-content">
-                                                <h5><Link href="/team/details">Alexander Benjamin</Link></h5>
-                                                <span>(WordPress Developer)</span>
+                                                <h5><Link href="/team/details">{members[4].name}</Link></h5>
+                                                <span>{members[4].role}</span>
                                                 <svg className="divider" height={6} viewBox="0 0 312 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M5 2.5L0 0.113249V5.88675L5 3.5V2.5ZM307 3.5L312 5.88675V0.113249L307 2.5V3.5ZM4.5 3.5H307.5V2.5H4.5V3.5Z" />
                                                 </svg>
                                                 <ul className="social-list">
                                                     <li>
-                                                        <a href="https://www.linkedin.com/" className="social-area">
+                                                        <a href={members[4].linkedinURL} className="social-area">
                                                             <div className="icon">
                                                                 <i className="bx bxl-linkedin" />
                                                             </div>
@@ -252,21 +268,21 @@ const Home4TeamSection = () => {
                                     <SwiperSlide className="swiper-slide">
                                         <div className="team-card">
                                             <div className="team-img">
-                                                <Link href="/team/details"><img src="/assets/img/home4/team-img6.png" alt="" /></Link>
+                                                <Link href="/team/details"><img src={members[5].imagePath} alt="" /></Link>
                                                 <div className="emoji-area">
                                                     <img src="/assets/img/home4/emoji-bg.png" alt="" />
-                                                    <img src="/assets/img/home4/emoji2.gif" alt="" className="emoji" />
+                                                    <img src={members[5].emojiPath} alt="" className="emoji" />
                                                 </div>
                                             </div>
                                             <div className="team-content">
-                                                <h5><Link href="/team/details">Lucy Zoe</Link></h5>
-                                                <span>(Junior Engineer)</span>
+                                                <h5><Link href="/team/details">{members[5].name}</Link></h5>
+                                                <span>{members[5].role}</span>
                                                 <svg className="divider" height={6} viewBox="0 0 312 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M5 2.5L0 0.113249V5.88675L5 3.5V2.5ZM307 3.5L312 5.88675V0.113249L307 2.5V3.5ZM4.5 3.5H307.5V2.5H4.5V3.5Z" />
                                                 </svg>
                                                 <ul className="social-list">
                                                     <li>
-                                                        <a href="https://www.linkedin.com/" className="social-area">
+                                                        <a href={members[5].linkedinURL} className="social-area">
                                                             <div className="icon">
                                                                 <i className="bx bxl-linkedin" />
                                                             </div>
