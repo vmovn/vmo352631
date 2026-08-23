@@ -1486,6 +1486,10 @@ export interface Homepage {
       label?: string | null;
       url?: string | null;
     };
+    secondaryCTA?: {
+      label?: string | null;
+      url?: string | null;
+    };
     successRate?: number | null;
     successRateLabel?: string | null;
     awardCount?: number | null;
@@ -1555,6 +1559,7 @@ export interface Homepage {
     showResultMetric?: boolean | null;
     titleLead?: string | null;
     titleTail?: string | null;
+    description?: string | null;
     resultValue?: string | null;
     resultLabel?: string | null;
     items?:
@@ -1950,6 +1955,12 @@ export interface HomepageSelect<T extends boolean = true> {
               label?: T;
               url?: T;
             };
+        secondaryCTA?:
+          | T
+          | {
+              label?: T;
+              url?: T;
+            };
         successRate?: T;
         successRateLabel?: T;
         awardCount?: T;
@@ -2023,6 +2034,7 @@ export interface HomepageSelect<T extends boolean = true> {
         showResultMetric?: T;
         titleLead?: T;
         titleTail?: T;
+        description?: T;
         resultValue?: T;
         resultLabel?: T;
         items?:

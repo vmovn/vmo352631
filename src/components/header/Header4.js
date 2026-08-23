@@ -53,10 +53,13 @@ function reducer(state, action) {
     }
 }
 
-const Header4 = () => {
+const Header4 = ({ brand } = {}) => {
     const [state, dispatch] = useReducer(reducer, initialState);
     const headerRef = useRef(null);
     const pathname = usePathname()
+    const cta = brand?.cta || { label: "Let’s Talk", url: "/contact" };
+    const wordmark = brand?.wordmark;
+    const nav = Array.isArray(brand?.nav) ? brand.nav : null;
     const handleScroll = () => {
         const { scrollY } = window;
         dispatch({ type: "setScrollY", payload: scrollY });
@@ -222,21 +225,42 @@ const Header4 = () => {
             <header className={`header-area style-4 ${pathname === "/portfolio/carousel" || pathname === "/digital-agency" || pathname === "/digital-agency-dark" ? "position-absolute" : ""} ${state.scrollY > 20 ? "sticky" : ""}`}>
                 <div className="container-fluid d-flex flex-nowrap align-items-center justify-content-between">
                     <div className="company-logo">
-                        <Link href="/" className="logo-dark"><img alt="image" className="img-fluid" src="/assets/img/header-logo.svg" /></Link>
-                        <Link href="/" className="logo-light"><img alt="image" className="img-fluid" src="/assets/img/header-logo-white.svg" /></Link>
+                        {wordmark ? (
+                            <>
+                                <Link href="/" className="logo-dark vmo-wordmark">{wordmark}</Link>
+                                <Link href="/" className="logo-light vmo-wordmark">{wordmark}</Link>
+                            </>
+                        ) : (
+                            <>
+                                <Link href="/" className="logo-dark"><img alt="image" className="img-fluid" src="/assets/img/header-logo.svg" /></Link>
+                                <Link href="/" className="logo-light"><img alt="image" className="img-fluid" src="/assets/img/header-logo-white.svg" /></Link>
+                            </>
+                        )}
                     </div>
                     <div className="menu-wrap">
                         <div className={`main-menu ${state.isSidebarOpen ? "show-menu" : ""}`}>
                             <div className="mobile-logo-area d-lg-none d-flex align-items-center justify-content-between">
                                 <Link href="/" className="mobile-logo-wrap">
-                                    <img alt="image" className="img-fluid light" src="/assets/img/header-logo.svg" />
-                                    <img alt="image" className="img-fluid dark" src="/assets/img/header-logo-white.svg" />
+                                    {wordmark ? (
+                                        <span className="vmo-wordmark">{wordmark}</span>
+                                    ) : (
+                                        <>
+                                            <img alt="image" className="img-fluid light" src="/assets/img/header-logo.svg" />
+                                            <img alt="image" className="img-fluid dark" src="/assets/img/header-logo-white.svg" />
+                                        </>
+                                    )}
                                 </Link>
                                 <div className="menu-close-btn" onClick={toggleSidebar}>
                                     <i className="bi bi-x" />
                                 </div>
                             </div>
                             <ul className="menu-list">
+                                {nav?.length ? nav.map((item) => (
+                                    <li key={`${item.label}-${item.url}`}>
+                                        <Link href={item.url}>{item.label}</Link>
+                                    </li>
+                                )) : (
+                                <>
                                 <li className={`menu-item-has-children position-inherit ${isHomeActive ? "active" : ""}`}>
                                     <Link href="/" className="drop-down">
                                         Home
@@ -939,15 +963,17 @@ const Header4 = () => {
                                         </div>
                                     </div>
                                 </li>
+                                </>
+                                )}
                             </ul>
                             <div className="btn-and-contact-area d-lg-none d-block">
-                                <Link href="/contact" className="primary-btn4">
+                                <Link href={cta.url} className="primary-btn4">
                                     <span className="icon">
                                         <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" strokeWidth="1.5" strokeLinecap="round" />
                                         </svg>
                                     </span>
-                                    <span className="content">Let’s Talk</span>
+                                    <span className="content">{cta.label}</span>
                                     <span className="icon two">
                                         <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" strokeWidth="1.5" strokeLinecap="round" />
@@ -962,17 +988,17 @@ const Header4 = () => {
                                     <img src="/assets/img/home4/icon/support-icon.svg" alt="" />
                                 </div>
                                 <div className="content">
-                                    <span>Our Support</span>
-                                    <h6><a href="tel:+997636844563">+99-763 684 4563 </a></h6>
+                                    <span>{brand?.supportLabel || "Our Support"}</span>
+                                    <h6>{brand?.supportValue ? brand.supportValue : <a href="tel:+997636844563">+99-763 684 4563 </a>}</h6>
                                 </div>
                             </div>
-                            <Link href="/contact" className="primary-btn4 d-lg-flex d-none">
+                            <Link href={cta.url} className="primary-btn4 d-lg-flex d-none">
                                 <span className="icon">
                                     <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" strokeWidth="1.5" strokeLinecap="round" />
                                     </svg>
                                 </span>
-                                <span className="content">Let’s Talk</span>
+                                <span className="content">{cta.label}</span>
                                 <span className="icon two">
                                     <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" strokeWidth="1.5" strokeLinecap="round" />

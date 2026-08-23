@@ -2,7 +2,26 @@
 import React, { useRef } from 'react'
 import Counter from '../common/Counter'
 
-const Home6IntegrationSection = () => {
+const defaultIntegrations = [
+    "Google Drive",
+    "Slack",
+    "Hubspot",
+    "Magento",
+    "Zoom",
+    "WhatsApp",
+    "GitHub",
+    "Spotify",
+    "Gmail",
+    "Flutter",
+    "Google Ads",
+];
+
+const Home6IntegrationSection = ({ data = {} }) => {
+    const showCounters = data.showCounters !== false;
+    const integrations = defaultIntegrations.map((title, index) => (
+        data.items?.[index]?.title || title
+    ));
+    const cta = { label: "View All Integrations", url: "#", ...(data.cta || {}) };
     const ref3 = useRef(null);
     const ref4 = useRef(null);
     const ref5 = useRef(null);
@@ -10,6 +29,7 @@ const Home6IntegrationSection = () => {
 
     return (
         <>
+            {showCounters ? (
             <div className="home6-counter-section mb-130">
                 <img src="/assets/img/home6/home6-counter-section-vector.svg" alt="" className="vector light" />
                 <img src="/assets/img/home6/home6-counter-section-vector-dark.svg" alt="" className="vector dark" />
@@ -115,20 +135,25 @@ const Home6IntegrationSection = () => {
                     </div>
                 </div>
             </div>
-            <div className="home6-integration-section mb-130">
+            ) : null}
+            <div className="home6-integration-section mb-130" id={data.sectionId || undefined}>
                 <div className="container">
                     <div className="row justify-content-center mb-65 wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
                         <div className="col-xxl-4 col-lg-5 col-md-7">
                             <div className="section-title text-center">
-                                <h2>Integrations</h2>
-                                <p>Seamless integration with popular tools like Google,Calendar, Dropbox, &amp; Slack etc.</p>
+                                <h2>{data.title || "Integrations"}</h2>
+                                <p>{data.description || <>Seamless integration with popular tools like Google,Calendar, Dropbox, &amp; Slack etc.</>}</p>
                             </div>
                         </div>
                     </div>
                     <div className="row mb-50">
                         <div className="col-lg-12">
                             <div className="company-logo">
-                                <img src="/assets/img/home6/company-logo.svg" alt="" />
+                                {data.centerLabel ? (
+                                    <span className="vmo-os-mark">{data.centerLabel}</span>
+                                ) : (
+                                    <img src="/assets/img/home6/company-logo.svg" alt="" />
+                                )}
                             </div>
                             <div className="arrow-vec-wrap">
                                 <svg className="awrrow-vec" height={125} viewBox="0 0 1102 125" xmlns="http://www.w3.org/2000/svg">
@@ -167,48 +192,48 @@ const Home6IntegrationSection = () => {
                                     <div className="integration-wrap">
                                         <div className="single-integration">
                                             <img src="/assets/img/home6/icon/integration-04.svg" alt="" />
-                                            <h6>Google Drive</h6>
+                                            <h6>{integrations[0]}</h6>
                                         </div>
                                         <div className="single-integration">
                                             <img src="/assets/img/home6/icon/integration-02.svg" alt="" />
-                                            <h6>Slack</h6>
+                                            <h6>{integrations[1]}</h6>
                                         </div>
                                         <div className="single-integration">
                                             <img src="/assets/img/home6/icon/integration-03.svg" alt="" />
-                                            <h6>Hubspot</h6>
+                                            <h6>{integrations[2]}</h6>
                                         </div>
                                         <div className="single-integration">
                                             <img src="/assets/img/home6/icon/megento.svg" alt="" />
-                                            <h6>Magento</h6>
+                                            <h6>{integrations[3]}</h6>
                                         </div>
                                         <div className="single-integration">
                                             <img src="/assets/img/home6/icon/integration-05.svg" alt="" />
-                                            <h6>Zoom</h6>
+                                            <h6>{integrations[4]}</h6>
                                         </div>
                                         <div className="single-integration">
                                             <img src="/assets/img/home6/icon/integration-06.svg" alt="" />
-                                            <h6>WhatsApp</h6>
+                                            <h6>{integrations[5]}</h6>
                                         </div>
                                         <div className="single-integration">
                                             <img src="/assets/img/home6/icon/integration-07.svg" alt="" className="light" />
                                             <img src="/assets/img/home6/icon/integration-07-dark.svg" alt="" className="dark" />
-                                            <h6>GitHub</h6>
+                                            <h6>{integrations[6]}</h6>
                                         </div>
                                         <div className="single-integration">
                                             <img src="/assets/img/home6/icon/integration-08.svg" alt="" />
-                                            <h6>Spotify</h6>
+                                            <h6>{integrations[7]}</h6>
                                         </div>
                                         <div className="single-integration">
                                             <img src="/assets/img/home6/icon/integration-09.svg" alt="" />
-                                            <h6>Gmail</h6>
+                                            <h6>{integrations[8]}</h6>
                                         </div>
                                         <div className="single-integration">
                                             <img src="/assets/img/home6/icon/flatter.svg" alt="" />
-                                            <h6>Flutter</h6>
+                                            <h6>{integrations[9]}</h6>
                                         </div>
                                         <div className="single-integration">
                                             <img src="/assets/img/home6/icon/integration-11.svg" alt="" />
-                                            <h6>Google Ads</h6>
+                                            <h6>{integrations[10]}</h6>
                                         </div>
                                     </div>
                                 </div>
@@ -217,8 +242,8 @@ const Home6IntegrationSection = () => {
                     </div>
                     <div className="row">
                         <div className="col-lg-12 d-flex justify-content-center">
-                            <a href="#" className="view-all-btn">
-                                View All Integrations
+                            <a href={cta.url} className="view-all-btn">
+                                {cta.label}
                                 <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" strokeWidth="1.5" strokeLinecap="round" />
                                 </svg>

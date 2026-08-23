@@ -26,6 +26,11 @@ test(
         name.includes("phase2_6_content_safety"),
       ),
     );
+    assert.ok(
+      migrations.docs.some(({ name }) =>
+        name.includes("phase3a_vmo_homepage"),
+      ),
+    );
 
     const homepageVI = await payload.findGlobal({
       slug: "homepage",
@@ -42,12 +47,16 @@ test(
 
     assert.equal(homepageVI.demoSeed, false);
     assert.equal(homepageEN.demoSeed, false);
-    assert.equal(homepageVI.hero.titleLead, null);
+    assert.equal(homepageVI.hero.eyebrow, "Đơn vị triển khai tăng trưởng");
+    assert.match(homepageVI.hero.titleLead, /Từ sản phẩm đến người dùng/);
     assert.equal(homepageEN.hero.titleLead, null);
     assert.equal(homepageVI.hero.showPartnerProof, false);
     assert.equal(homepageEN.hero.showPartnerProof, false);
+    assert.equal(homepageVI.hero.showSuccessMetric, false);
+    assert.equal(homepageVI.hero.showAwardMetric, false);
     assert.equal(homepageVI.proofProcessScale.stages.length, 3);
     assert.equal(homepageVI.proofProcessScale.stages[0].step, "01");
+    assert.equal(homepageVI.proofProcessScale.stages[0].titleLead, "0→1");
     assert.equal(homepageEN.proofProcessScale.stages[0].step, "01");
     assert.equal(homepageVI.capabilities.items.length, 6);
     assert.equal(homepageVI.measurement.enabled, false);
@@ -58,8 +67,14 @@ test(
     assert.equal(homepageVI.featuredProof.testimonials.length, 0);
     assert.equal(homepageVI.featuredProof.cases.length, 0);
     assert.equal(homepageVI.featuredProof.teamMembers.length, 0);
-    assert.equal(homepageVI.infrastructure.enabled, false);
+    assert.equal(homepageVI.infrastructure.enabled, true);
+    assert.match(homepageVI.infrastructure.title, /Hạ tầng/);
+    assert.equal(homepageVI.infrastructure.items.length, 11);
+    assert.equal(homepageVI.infrastructure.items[0].title, "CRM.VMO");
+    assert.ok(homepageVI.capabilities.items[0].bullets.length > 0);
     assert.equal(homepageVI.insights.enabled, false);
+    assert.equal(homepageVI.growthMissionCTA.enabled, true);
+    assert.equal(homepageVI.growthMissionCTA.cta.label, "Trao đổi bài toán");
 
     const users = await payload.find({
       collection: "users",

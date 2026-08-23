@@ -1,7 +1,10 @@
 import Link from 'next/link'
 import React from 'react'
 
-const Home4Footer = () => {
+const Home4Footer = ({ data = {} }) => {
+    const hasProductionCopy = Boolean(data.heading);
+    const columns = Array.isArray(data.columns) ? data.columns : [];
+
     return (
         <footer className="footer-section style-4">
             <div className="container">
@@ -10,8 +13,18 @@ const Home4Footer = () => {
                         <div className="col-lg-7">
                             <div className="footer-contact-wrap">
                                 <div className="title-area">
-                                    <h2>We are Global #1 Digital Marketing Agency.</h2>
+                                    <h2>{data.heading || "We are Global #1 Digital Marketing Agency."}</h2>
                                 </div>
+                                {hasProductionCopy ? (
+                                <ul className="contact-list">
+                                    <li className="single-contact">
+                                        <div className="content">
+                                            <span>Growth Mission</span>
+                                            <a href="#trao-doi-bai-toan">Trao đổi bài toán</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                ) : (
                                 <ul className="contact-list">
                                     <li className="single-contact">
                                         <div className="icon">
@@ -23,8 +36,24 @@ const Home4Footer = () => {
                                         </div>
                                     </li>
                                 </ul>
+                                )}
                             </div>
                         </div>
+                        {hasProductionCopy ? columns.map((column, index) => (
+                        <div key={column.title} className={index === 0 ? "col-xl-3 col-lg-2 col-sm-6" : "col-xl-2 col-lg-3 col-sm-6 d-flex justify-content-lg-end"}>
+                            <div className="footer-widget">
+                                <div className="widget-title">
+                                    <h3>{column.title}</h3>
+                                </div>
+                                <ul className="widget-list">
+                                    {(column.links || []).map((link) => (
+                                        <li key={`${link.label}-${link.url}`}><Link href={link.url}>{link.label}</Link></li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                        )) : (
+                        <>
                         <div className="col-xl-3 col-lg-2 col-sm-6">
                             <div className="footer-widget">
                                 <div className="widget-title">
@@ -53,6 +82,8 @@ const Home4Footer = () => {
                                 </ul>
                             </div>
                         </div>
+                        </>
+                        )}
                     </div>
                     <svg className="divider-line" height={6} viewBox="0 0 1320 6" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5 2.5L0 0.113249V5.88675L5 3.5V2.5ZM1315 3.5L1320 5.88675V0.113249L1315 2.5V3.5ZM4.5 3.5H1315.5V2.5H4.5V3.5Z" />
@@ -61,7 +92,12 @@ const Home4Footer = () => {
                         <div className="row gy-5">
                             <div className="col-lg-3 col-md-4">
                                 <div className="company-logo-area">
-                                    <img src="/assets/img/footer-logo3.svg" alt="" />
+                                    {data.wordmark ? (
+                                        <span className="vmo-wordmark">{data.wordmark}</span>
+                                    ) : (
+                                        <img src="/assets/img/footer-logo3.svg" alt="" />
+                                    )}
+                                    {hasProductionCopy ? null : (
                                     <a href="assets/company-desk.pdf" className="file-download-btn" download>
                                         <div className="icon">
                                             <svg width={24} height={24} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -72,9 +108,18 @@ const Home4Footer = () => {
                                         </div>
                                         Company <br /> Desk
                                     </a>
+                                    )}
                                 </div>
                             </div>
                             <div className="col-lg-6 col-md-8">
+                                {hasProductionCopy ? (
+                                <ul className="location-list">
+                                    <li>
+                                        <span>VMO</span>
+                                        <a href="#trao-doi-bai-toan">{data.description || "Đơn vị triển khai tăng trưởng."}</a>
+                                    </li>
+                                </ul>
+                                ) : (
                                 <ul className="location-list">
                                     <li>
                                         <span>New York</span>
@@ -85,10 +130,11 @@ const Home4Footer = () => {
                                         <a href="https://www.google.com/maps">123 Innovation Road, Suite 101Tech City, State, ZIP Code Country</a>
                                     </li>
                                 </ul>
+                                )}
                             </div>
                             <div className="col-lg-3 d-flex justify-content-lg-end">
                                 <div className="newsletter-area">
-                                    <h3>Newsletter</h3>
+                                    <h3>{hasProductionCopy ? "Kết nối" : "Newsletter"}</h3>
                                     <form className="newsletter-form">
                                         <input type="email" placeholder="Email" />
                                         <svg width={18} height={18} viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
@@ -114,7 +160,7 @@ const Home4Footer = () => {
             <div className="footer-bottom">
                 <div className="container">
                     <div className="copyright-and-social-area">
-                        <p>Copyright 2025 <a href="https://www.egenslab.com/">Egens Lab</a> | All Right Reserved.</p>
+                        <p>{data.copyright || <>Copyright 2025 <a href="https://www.egenslab.com/">Egens Lab</a> | All Right Reserved.</>}</p>
                         <div className="terms-condition">
                             <svg width={12} height={12} viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                                 <g>

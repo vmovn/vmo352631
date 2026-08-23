@@ -1,0 +1,48 @@
+{
+  "home_390": {
+    "h1": "Từ sản phẩm đến người dùng, giao dịch và một hệ thống tăng trưởng có thể lặp lại.",
+    "hasProofSuccess": false,
+    "hasMetaPartner": false,
+    "hasVmoWordmark": true,
+    "hasCta": true,
+    "sections": {
+      "challenge": true,
+      "value": true,
+      "process": true,
+      "services": true,
+      "infra": true,
+      "contact": true,
+      "header4": true,
+      "footer4": true,
+      "counters": false
+    }
+  },
+  "ma_390": {
+    "h1": "Let’s Grow Your Business.",
+    "hasMeta": true
+  },
+  "home_1440": {
+    "h1": "Từ sản phẩm đến người dùng, giao dịch và một hệ thống tăng trưởng có thể lặp lại.",
+    "hasProofSuccess": false,
+    "hasMetaPartner": false,
+    "hasVmoWordmark": true,
+    "hasCta": true,
+    "sections": {
+      "challenge": true,
+      "value": true,
+      "process": true,
+      "services": true,
+      "infra": true,
+      "contact": true,
+      "header4": true,
+      "footer4": true,
+      "counters": false
+    }
+  },
+  "ma_1440": {
+    "h1": "Let’s Grow Your Business.",
+    "hasMeta": true
+  },
+  "secondaryCtaHash": "#cach-vmo-trien-khai",
+  "processInView": true
+}

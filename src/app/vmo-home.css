@@ -1,0 +1,91 @@
+.vmo-home {
+  --vmo-signal: #ffbd24;
+  --vmo-signal-opc: 255, 189, 36;
+}
+
+.vmo-home .primary-btn4 .content,
+.vmo-home .primary-btn4 .icon {
+  background-color: var(--vmo-signal);
+  color: #111;
+}
+
+.vmo-home .primary-btn4 .icon svg {
+  stroke: #111;
+}
+
+.vmo-home .primary-btn4.black-bg .content,
+.vmo-home .primary-btn4.black-bg .icon {
+  background-color: #111;
+  color: var(--vmo-signal);
+}
+
+.vmo-home .primary-btn4.black-bg .icon svg {
+  stroke: var(--vmo-signal);
+}
+
+.vmo-home .primary-btn4.transparent .content,
+.vmo-home .primary-btn4.transparent .icon {
+  background-color: transparent;
+  border-color: #111;
+  color: #111;
+}
+
+.vmo-home header.style-4 .primary-btn4 .content,
+.vmo-home header.style-4 .primary-btn4 .icon {
+  background-color: var(--vmo-signal);
+  color: #111;
+}
+
+.vmo-home .home4-banner-section .subtitle span,
+.vmo-home .home4-process-section .step-no strong,
+.vmo-home .home1-feature-section .feature-banner-area .banner-content span {
+  color: var(--vmo-signal);
+}
+
+.vmo-home .vmo-wordmark {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  font-family: var(--font-dmsans), sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #111;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.vmo-home header.style-4 .company-logo .logo-dark.vmo-wordmark {
+  display: inline-flex;
+}
+
+.vmo-home header.style-4 .company-logo .logo-light.vmo-wordmark {
+  display: none;
+}
+
+.vmo-home .vmo-os-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 64px;
+  font-family: var(--font-dmsans), sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #111;
+}
+
+.vmo-home .home4-process-section .single-process .step-no strong {
+  color: var(--vmo-signal);
+}
+
+@media (max-width: 767px) {
+  .vmo-home .home4-banner-section h1 {
+    font-size: 34px;
+    line-height: 1.15;
+  }
+
+  .vmo-home .primary-btn4 .content {
+    white-space: normal;
+  }
+}

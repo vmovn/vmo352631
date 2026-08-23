@@ -20,6 +20,12 @@ const { default: config } = await import("../payload.config.js");
 const { productionHomepageFoundation } = await import(
   "../src/cms/data/productionHomepageFoundation.js"
 );
+const {
+  vmoFooterVi,
+  vmoHeaderVi,
+  vmoHomepageVi,
+  vmoSiteSettingsVi,
+} = await import("../src/cms/data/vmoHomepageVi.js");
 
 const payload = await getPayload({ config });
 
@@ -128,25 +134,30 @@ async function upsertLocalizedCollection({ collection, vi, en = vi }) {
   return doc;
 }
 
-async function updateLocalizedGlobal({ slug, vi, en = vi }) {
+async function updateLocalizedGlobal({ slug, vi, en = vi, writeVILast = false }) {
   const existing = await payload.findGlobal({
     slug,
     locale: "vi",
     fallbackLocale: false,
     overrideAccess: true,
   });
-  const doc = await payload.updateGlobal({
-    slug,
-    data: retainArrayRowIds({ ...vi, _status: "published" }, existing),
-    locale: "vi",
-    overrideAccess: true,
-  });
-  await payload.updateGlobal({
-    slug,
-    data: retainArrayRowIds({ ...en, _status: "published" }, doc),
-    locale: "en",
-    overrideAccess: true,
-  });
+
+  const write = async (locale, data, previous) =>
+    payload.updateGlobal({
+      slug,
+      data: retainArrayRowIds({ ...data, _status: "published" }, previous),
+      locale,
+      overrideAccess: true,
+    });
+
+  if (writeVILast) {
+    const enDoc = await write("en", en, existing);
+    return write("vi", vi, enDoc);
+  }
+
+  const doc = await write("vi", vi, existing);
+  await write("en", en, doc);
+  return doc;
 }
 
 const adminEmail = process.env.PAYLOAD_SEED_ADMIN_EMAIL;
@@ -390,7 +401,8 @@ if (!faqExisting.docs.length) {
 
 await updateLocalizedGlobal({
   slug: "site-settings",
-  vi: {
+  vi: vmoSiteSettingsVi,
+  en: {
     siteName: "Mortar Demo",
     siteDescription: "Development-only CMS foundation seed.",
     contact: { email: "info@example.com", phone: "+99-763 684 4563" },
@@ -399,7 +411,8 @@ await updateLocalizedGlobal({
 
 await updateLocalizedGlobal({
   slug: "header",
-  vi: {
+  vi: vmoHeaderVi,
+  en: {
     navigation: [
       { label: "Home", url: "/" },
       { label: "Solution", url: "/service" },
@@ -411,7 +424,8 @@ await updateLocalizedGlobal({
 
 await updateLocalizedGlobal({
   slug: "footer",
-  vi: {
+  vi: vmoFooterVi,
+  en: {
     heading: "We are Global Digital Brand Tech Agency.",
     description: "Development-only Mortar footer seed.",
     copyright: "Copyright © Mortar demo.",
@@ -421,8 +435,19 @@ await updateLocalizedGlobal({
 
 await updateLocalizedGlobal({
   slug: "homepage",
-  vi: productionHomepageFoundation,
-  en: productionHomepageFoundation,
+  writeVILast: true,
+  vi: vmoHomepageVi,
+  en: {
+    ...productionHomepageFoundation,
+    infrastructure: {
+      ...productionHomepageFoundation.infrastructure,
+      enabled: true,
+    },
+    growthMissionCTA: {
+      ...productionHomepageFoundation.growthMissionCTA,
+      enabled: true,
+    },
+  },
 });
 
 await updateLocalizedGlobal({
@@ -476,7 +501,7 @@ console.log(
     {
       seeded: true,
       adminSeeded: Boolean(adminEmail && adminPassword),
-      homepage: "Production-safe claim-free foundation",
+      homepage: "VMO Vietnamese production Homepage",
       locales: ["vi", "en"],
       leadsSeeded: false,
     },

@@ -8,8 +8,10 @@ import {
   Users,
 } from "../../src/cms/payload/collections.js";
 import { adaptMarketingAgencyDemoToHome4 } from "../../src/cms/adapters/homepageToHome4.js";
+import { adaptVmoHomepage } from "../../src/cms/adapters/vmoHomepage.js";
 import { marketingAgencyDemo } from "../../src/cms/data/marketingAgencyDemo.js";
 import { productionHomepageFoundation } from "../../src/cms/data/productionHomepageFoundation.js";
+import { vmoHomepageVi } from "../../src/cms/data/vmoHomepageVi.js";
 import { homepageSectionNames } from "../../src/cms/types/homepage.js";
 import { isMortarFrontendPath } from "../../src/utils/isMortarFrontendPath.mjs";
 
@@ -82,8 +84,9 @@ test("Marketing Agency is reference-only and never queries production Homepage",
 
   assert.match(route, /marketingAgencyDemo/);
   assert.match(route, /adaptMarketingAgencyDemoToHome4/);
-  assert.doesNotMatch(route, /loadProductionHomepage|getPayload|findGlobal/);
+  assert.doesNotMatch(route, /loadProductionHomepage|getPayload|findGlobal|adaptVmoHomepage|vmoHomepageVi/);
   assert.doesNotMatch(productionLoader, /marketingAgencyDemo|demo-fallback/);
+  assert.match(productionLoader, /fallbackLocale: false/);
 });
 
 test("Marketing Agency adapter returns the original Home4 demo shape", () => {
@@ -106,6 +109,29 @@ test("Marketing Agency adapter returns the original Home4 demo shape", () => {
     () => adaptMarketingAgencyDemoToHome4(productionHomepageFoundation),
     /only accepts marketingAgencyDemo/,
   );
+  assert.throws(
+    () => adaptMarketingAgencyDemoToHome4(vmoHomepageVi),
+    /only accepts marketingAgencyDemo/,
+  );
+});
+
+test("VMO homepage adapter maps production copy onto original Mortar sections", () => {
+  const view = adaptVmoHomepage(vmoHomepageVi);
+
+  assert.equal(view.hero.eyebrow, "Đơn vị triển khai tăng trưởng");
+  assert.match(view.hero.titleLead, /Từ sản phẩm đến người dùng/);
+  assert.equal(view.hero.showPartnerProof, false);
+  assert.equal(view.hero.showSuccessMetric, false);
+  assert.equal(view.hero.showAwardMetric, false);
+  assert.equal(view.challenge.items.length, 4);
+  assert.equal(view.valueLayers.items.length, 4);
+  assert.equal(view.valueLayers.showPartnerProof, false);
+  assert.equal(view.process.stages.length, 3);
+  assert.equal(view.process.stages[0].titleLead, "0→1");
+  assert.equal(view.capabilities.items.length, 6);
+  assert.equal(view.infrastructure.showCounters, false);
+  assert.equal(view.contact.cta.label, "Trao đổi bài toán");
+  assert.throws(() => adaptVmoHomepage(productionHomepageFoundation));
 });
 
 test("Homepage proof fields allow empty, disabled production content", async () => {
@@ -193,4 +219,23 @@ test("required Mortar components remain present", () => {
   ];
 
   for (const file of requiredFiles) assert.equal(fs.existsSync(file), true, file);
+});
+
+test("Production homepage reads Payload through a dedicated VMO adapter", () => {
+  const route = fs.readFileSync("src/app/page.js", "utf8");
+
+  assert.match(route, /loadProductionHomepageExperience/);
+  assert.match(route, /adaptVmoHomepage/);
+  assert.match(route, /Home4Banner/);
+  assert.match(route, /Home1SeatureSection/);
+  assert.match(route, /Home4FeatureSection/);
+  assert.match(route, /Home4ProcessSection/);
+  assert.match(route, /Home3ServiceSection/);
+  assert.match(route, /Home6IntegrationSection/);
+  assert.match(route, /Home4ContactSection/);
+  assert.match(route, /Header4/);
+  assert.doesNotMatch(route, /adaptMarketingAgencyDemoToHome4/);
+  assert.doesNotMatch(route, /marketingAgencyDemo/);
+  assert.doesNotMatch(route, /vmoHomepageVi/);
+  assert.doesNotMatch(route, /GenericHero|FeatureGrid|RenderBlocks/);
 });

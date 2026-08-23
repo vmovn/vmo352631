@@ -2,7 +2,9 @@
 import Link from 'next/link'
 import React, { useEffect } from 'react'
 
-const Home3ServiceSection = () => {
+const Home3ServiceSection = ({ data = {} }) => {
+    const items = data.items || [];
+    const serviceCta = { label: "Start The Journey", url: "/contact", ...(data.cta || {}) };
     useEffect(()=>{
         const serviceImgItem = document.querySelectorAll(
             ".sevices-wrap .single-services "
@@ -21,14 +23,14 @@ const Home3ServiceSection = () => {
         });
     },[])
     return (
-        <div className="home3-service-section pt-130 mb-130">
+        <div className="home3-service-section pt-130 mb-130" id={data.sectionId || undefined}>
             <div className="container">
                 <div className="row align-items-center justify-content-between mb-60">
                     <div className="col-lg-5 col-md-8 wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
                         <div className="section-title three">
-                            <span>Smart Solution</span>
-                            <h2>Scope of Work.</h2>
-                            <p>We provides a wide range of services aimed at helping <span>Businesses, Organizations.</span></p>
+                            <span>{data.eyebrow || "Smart Solution"}</span>
+                            <h2>{data.title || "Scope of Work."}</h2>
+                            <p>{data.description || <>We provides a wide range of services aimed at helping <span>Businesses, Organizations.</span></>}</p>
                         </div>
                     </div>
                     <div className="col-lg-3 col-md-3 d-md-block d-none">
@@ -52,23 +54,23 @@ const Home3ServiceSection = () => {
                                             <path d="M53.9531 36.9609C56.3203 34.8633 57.5859 32.4844 57.5859 30C57.5859 27.4688 56.25 25.0078 53.7305 22.8516C56.2383 20.707 57.5859 18.2578 57.5859 15.6914C57.5859 11.9062 54.668 8.35547 49.3594 5.70703C44.1094 3.08203 37.125 1.62891 29.707 1.62891C22.2891 1.62891 15.293 3.08203 10.043 5.70703C4.73438 8.35547 1.81641 11.9062 1.81641 15.6914C1.81641 18.2578 3.15234 20.707 5.67188 22.8516C3.15234 25.0078 1.81641 27.4688 1.81641 30C1.81641 32.5664 3.15234 35.0156 5.67188 37.1602C3.15234 39.3164 1.81641 41.7773 1.81641 44.3086C1.81641 48.0938 4.73438 51.6445 10.043 54.293C15.293 56.918 22.2773 58.3711 29.6953 58.3711C37.1133 58.3711 44.0977 56.9297 49.3477 54.293C50.168 53.8828 50.9414 53.4492 51.6445 52.9922C55.5938 50.5898 57.9492 47.5078 57.9492 44.1562C57.9492 41.5195 56.4844 39.0586 53.9531 36.9609ZM2.28516 15.6914C2.28516 8.20312 14.5781 2.09766 29.6953 2.09766C44.8125 2.09766 57.1055 8.1914 57.1055 15.6914C57.1055 23.1797 44.8125 29.2852 29.6953 29.2852C14.5781 29.2852 2.28516 23.1797 2.28516 15.6914ZM29.6953 43.5938C14.5781 43.5938 2.28516 37.4883 2.28516 30C2.28516 27.5859 3.58594 25.2305 6.03516 23.1563C7.16016 24.0586 8.49609 24.9141 10.043 25.6758C15.293 28.3008 22.2773 29.7539 29.6953 29.7539C37.1133 29.7539 44.0977 28.3125 49.3477 25.6758C50.8945 24.9023 52.2305 24.0586 53.3555 23.1563C55.8047 25.2305 57.1055 27.5977 57.1055 30C57.1055 37.4883 44.8125 43.5938 29.6953 43.5938Z" />
                                         </svg>
                                     </div>
-                                    <h3><Link href="/service/details">Web Development <br /> &amp; Design.</Link></h3>
+                                    <h3><Link href={items[0]?.href || "/service/details"}>{items[0]?.titleLead || "Web Development"} <br /> {items[0]?.titleTail || "& Design."}</Link></h3>
                                 </div>
                                 <div className="services-img">
                                     <img src="/assets/img/home3/service-img1.jpg" alt="" />
                                 </div>
                                 <div className="content">
-                                    <p>Strategy that involves creating and sharing content on social a website's media platforms.</p>
+                                    <p>{items[0]?.description || "Strategy that involves creating and sharing content on social a website's media platforms."}</p>
                                     <ul className="tag-list">
-                                        <li>+ Web Development</li>
-                                        <li>+ UI/UX Design</li>
-                                        <li>+ Strategy &amp; Consult</li>
+                                        {(items[0]?.bullets || [{ label: "Web Development" }, { label: "UI/UX Design" }, { label: "Strategy & Consult" }]).map((bullet) => (
+                                            <li key={bullet.label}>+ {bullet.label}</li>
+                                        ))}
                                     </ul>
                                 </div>
                                 <div className="button-area">
                                     <div className="details-btn">
-                                        <Link href="/service/details" className="primary-btn3 three transparent btn-hover">
-                                            View Details
+                                        <Link href={items[0]?.href || "/service/details"} className="primary-btn3 three transparent btn-hover">
+                                            {items[0]?.ctaLabel || "View Details"}
                                             <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" strokeWidth="1.5" strokeLinecap="round" />
                                             </svg>
@@ -84,23 +86,23 @@ const Home3ServiceSection = () => {
                                             <path d="M44.297 15.7031C44.1681 7.92188 37.8048 1.64062 30.0001 1.64062C22.1954 1.64062 15.8321 7.93359 15.7032 15.7031C12.129 15.7617 8.76572 17.1211 6.14072 19.582C3.36338 22.1953 1.75791 25.7461 1.64072 29.5547C1.52354 33.3633 2.89463 37.0078 5.51963 39.7852C8.13291 42.5625 11.6837 44.168 15.4923 44.2852H15.6915C15.7501 47.8594 17.1095 51.2344 19.5704 53.8477C22.1837 56.625 25.7345 58.2305 29.5431 58.3477C29.6954 58.3477 29.8478 58.3594 29.9884 58.3594C33.6446 58.3594 37.1017 56.9883 39.7735 54.4805C42.5509 51.8672 44.1563 48.3164 44.2735 44.5078V44.3086C52.0548 44.1797 58.336 37.8164 58.336 30.0117C58.3595 22.1953 52.0665 15.832 44.297 15.7031ZM30.0001 2.10938C37.547 2.10938 43.6993 8.19141 43.8282 15.7031C36.9376 15.8086 31.2188 20.8242 30.0001 27.3867C29.5079 24.7148 28.2657 22.2305 26.3556 20.2031C23.7423 17.4258 20.1915 15.8203 16.3829 15.7031H16.1837C16.3009 8.19141 22.4532 2.10938 30.0001 2.10938ZM15.7032 43.8281H15.5157C11.8243 43.7109 8.39072 42.1758 5.87119 39.4805C3.33994 36.7852 2.00401 33.2695 2.12119 29.5781C2.23838 25.8867 3.77354 22.4531 6.46885 19.9336C9.0001 17.5547 12.2579 16.2305 15.7032 16.1836C15.8087 23.0742 20.8243 28.793 27.3868 30.0117C24.7149 30.5039 22.2306 31.7461 20.1915 33.6562C17.4142 36.2695 15.8087 39.8203 15.6915 43.6289C15.7032 43.6875 15.7032 43.7578 15.7032 43.8281ZM43.8282 44.4844C43.711 48.1758 42.1759 51.6094 39.4806 54.1289C36.7853 56.6602 33.2696 57.9844 29.5782 57.8789C25.8868 57.7617 22.4532 56.2266 19.9337 53.5312C17.5548 51 16.2306 47.7422 16.1837 44.2969C19.7579 44.2383 23.1329 42.8789 25.7462 40.418C27.9962 38.3086 29.461 35.5898 30.0118 32.6016C31.2306 39.1758 36.9493 44.1797 43.8399 44.2969C43.8282 44.3555 43.8282 44.4258 43.8282 44.4844ZM44.297 43.8281C44.2384 40.2539 42.879 36.8789 40.4181 34.2656C38.3087 32.0156 35.5899 30.5508 32.6017 30C39.1759 28.7812 44.1798 23.0625 44.297 16.1719C51.8204 16.3008 57.8907 22.4531 57.8907 30C57.8907 37.5469 51.8087 43.6992 44.297 43.8281Z" />
                                         </svg>
                                     </div>
-                                    <h3><Link href="/service/details">Digital <br /> Marketing</Link></h3>
+                                    <h3><Link href={items[1]?.href || "/service/details"}>{items[1]?.titleLead || "Digital"} <br /> {items[1]?.titleTail || "Marketing"}</Link></h3>
                                 </div>
                                 <div className="services-img">
                                     <img src="/assets/img/home3/service-img2.jpg" alt="" />
                                 </div>
                                 <div className="content">
-                                    <p>Strategy that involves creating and sharing content on social a website's media platforms.</p>
+                                    <p>{items[1]?.description || "Strategy that involves creating and sharing content on social a website's media platforms."}</p>
                                     <ul className="tag-list">
-                                        <li>+ Email Marketing</li>
-                                        <li>+ Content Marekting</li>
-                                        <li>+ SEO Optimize</li>
+                                        {(items[1]?.bullets || [{ label: "Email Marketing" }, { label: "Content Marekting" }, { label: "SEO Optimize" }]).map((bullet) => (
+                                            <li key={bullet.label}>+ {bullet.label}</li>
+                                        ))}
                                     </ul>
                                 </div>
                                 <div className="button-area">
                                     <div className="details-btn">
-                                        <Link href="/service/details" className="primary-btn3 three transparent btn-hover">
-                                            View Details
+                                        <Link href={items[1]?.href || "/service/details"} className="primary-btn3 three transparent btn-hover">
+                                            {items[1]?.ctaLabel || "View Details"}
                                             <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" strokeWidth="1.5" strokeLinecap="round" />
                                             </svg>
@@ -117,23 +119,23 @@ const Home3ServiceSection = () => {
                                             <path d="M31.3242 29.4492L34.043 25.957L30.5508 28.6758L30 20.4609L29.4492 28.6758L25.957 25.957L28.6758 29.4492L24.2812 30L28.6758 30.5508L25.957 34.043L29.4492 31.3242L30 39.5391L30.5508 31.3242L34.043 34.043L31.3242 30.5508L35.7187 30L31.3242 29.4492Z" />
                                         </svg>
                                     </div>
-                                    <h3><Link href="/service/details">E-commerce <br /> Solutions</Link></h3>
+                                    <h3><Link href={items[2]?.href || "/service/details"}>{items[2]?.titleLead || "E-commerce"} <br /> {items[2]?.titleTail || "Solutions"}</Link></h3>
                                 </div>
                                 <div className="services-img">
                                     <img src="/assets/img/home3/service-img3.jpg" alt="" />
                                 </div>
                                 <div className="content">
-                                    <p>Strategy that involves creating and sharing content on social a website's media platforms.</p>
+                                    <p>{items[2]?.description || "Strategy that involves creating and sharing content on social a website's media platforms."}</p>
                                     <ul className="tag-list">
-                                        <li>+ Online Store Design</li>
-                                        <li>+ Shopping Cart</li>
-                                        <li>+ Payment Gateway</li>
+                                        {(items[2]?.bullets || [{ label: "Online Store Design" }, { label: "Shopping Cart" }, { label: "Payment Gateway" }]).map((bullet) => (
+                                            <li key={bullet.label}>+ {bullet.label}</li>
+                                        ))}
                                     </ul>
                                 </div>
                                 <div className="button-area">
                                     <div className="details-btn">
-                                        <Link href="/service/details" className="primary-btn3 three transparent btn-hover">
-                                            View Details
+                                        <Link href={items[2]?.href || "/service/details"} className="primary-btn3 three transparent btn-hover">
+                                            {items[2]?.ctaLabel || "View Details"}
                                             <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" strokeWidth="1.5" strokeLinecap="round" />
                                             </svg>
@@ -149,23 +151,23 @@ const Home3ServiceSection = () => {
                                             <path d="M53.8125 2.11719C52.4414 1.8125 50.6484 1.37891 48.8086 0.652344L48.6445 0.582031L48.5391 0.722656C44.8477 5.60938 41.0977 8.22266 37.4648 10.7422C37.1367 10.9766 36.8086 11.1992 36.4805 11.4336C32.8359 13.8945 28.5469 17 24.3281 21.2773C20.9062 24.6641 17.4258 28.9063 14.0625 33.0078C13.4414 33.7695 12.8086 34.5312 12.1875 35.293C7.89844 40.3906 4.04297 44.6797 0.1875 45.5703L0.0117188 45.6172V48.6172L0.0468749 48.6758C1.41797 51.125 3.23438 54.3125 5.08594 57.2773L5.21484 57.4883L5.41406 57.3477C9.15234 54.8281 12.9375 49.8828 16.6055 45.1133C16.9336 44.6797 17.2617 44.2461 17.6016 43.8242C21.2227 39.0312 25.5 33.5703 29.707 29.4102C33.1055 25.9766 36.5742 23.2695 39.9258 20.6562C40.5469 20.1641 41.1797 19.6836 41.8125 19.1797C46.1367 15.6758 50.0391 12.207 53.9883 5.22266L54.0234 5.16406V2.15234L53.8125 2.11719ZM12.5391 35.5977C13.1602 34.8359 13.793 34.0742 14.4141 33.3125C17.7656 29.2227 21.2344 24.9805 24.6445 21.6172C28.8398 17.3633 33.1055 14.293 36.7383 11.832C37.0664 11.5977 37.3945 11.375 37.7344 11.1406C41.3672 8.62109 45.1172 6.00781 48.8086 1.15625C50.4727 1.8125 52.1133 2.22266 53.4023 2.51562C49.5469 9.25391 45.7266 12.6406 41.4961 16.0625C40.875 16.5547 40.2422 17.0469 39.6211 17.5273C36.2578 20.1523 32.7773 22.8594 29.3555 26.3164C25.1367 30.4883 20.8477 35.9609 17.2148 40.7773C16.8867 41.2109 16.5586 41.6328 16.2188 42.0664C12.6445 46.7305 8.95312 51.5469 5.34375 54.0664C3.60937 51.2773 1.91016 48.3008 0.585937 45.957C4.48828 44.8789 8.30859 40.625 12.5391 35.5977ZM5.03906 56.3164C3.35156 53.5859 1.73438 50.7266 0.46875 48.4883V46.6953C1.76953 49.0039 3.38672 51.8164 5.03906 54.4648V56.3164Z" />
                                         </svg>
                                     </div>
-                                    <h3><Link href="/service/details">Branding &amp; <br /> Graphic Design</Link></h3>
+                                    <h3><Link href={items[3]?.href || "/service/details"}>{items[3]?.titleLead || "Branding &"} <br /> {items[3]?.titleTail || "Graphic Design"}</Link></h3>
                                 </div>
                                 <div className="services-img">
                                     <img src="/assets/img/home3/service-img4.jpg" alt="" />
                                 </div>
                                 <div className="content">
-                                    <p>Strategy that involves creating and sharing content on social a website's media platforms.</p>
+                                    <p>{items[3]?.description || "Strategy that involves creating and sharing content on social a website's media platforms."}</p>
                                     <ul className="tag-list">
-                                        <li>+ Logo Design</li>
-                                        <li>+ Brand Guidelines</li>
-                                        <li>+ Marketing Collateral</li>
+                                        {(items[3]?.bullets || [{ label: "Logo Design" }, { label: "Brand Guidelines" }, { label: "Marketing Collateral" }]).map((bullet) => (
+                                            <li key={bullet.label}>+ {bullet.label}</li>
+                                        ))}
                                     </ul>
                                 </div>
                                 <div className="button-area">
                                     <div className="details-btn">
-                                        <Link href="/service/details" className="primary-btn3 three transparent btn-hover">
-                                            View Details
+                                        <Link href={items[3]?.href || "/service/details"} className="primary-btn3 three transparent btn-hover">
+                                            {items[3]?.ctaLabel || "View Details"}
                                             <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" strokeWidth="1.5" strokeLinecap="round" />
                                             </svg>
@@ -181,23 +183,23 @@ const Home3ServiceSection = () => {
                                             <path d="M44.297 15.7031C44.1681 7.92188 37.8048 1.64062 30.0001 1.64062C22.1954 1.64062 15.8321 7.93359 15.7032 15.7031C12.129 15.7617 8.76572 17.1211 6.14072 19.582C3.36338 22.1953 1.75791 25.7461 1.64072 29.5547C1.52354 33.3633 2.89463 37.0078 5.51963 39.7852C8.13291 42.5625 11.6837 44.168 15.4923 44.2852H15.6915C15.7501 47.8594 17.1095 51.2344 19.5704 53.8477C22.1837 56.625 25.7345 58.2305 29.5431 58.3477C29.6954 58.3477 29.8478 58.3594 29.9884 58.3594C33.6446 58.3594 37.1017 56.9883 39.7735 54.4805C42.5509 51.8672 44.1563 48.3164 44.2735 44.5078V44.3086C52.0548 44.1797 58.336 37.8164 58.336 30.0117C58.3595 22.1953 52.0665 15.832 44.297 15.7031ZM30.0001 2.10938C37.547 2.10938 43.6993 8.19141 43.8282 15.7031C36.9376 15.8086 31.2188 20.8242 30.0001 27.3867C29.5079 24.7148 28.2657 22.2305 26.3556 20.2031C23.7423 17.4258 20.1915 15.8203 16.3829 15.7031H16.1837C16.3009 8.19141 22.4532 2.10938 30.0001 2.10938ZM15.7032 43.8281H15.5157C11.8243 43.7109 8.39072 42.1758 5.87119 39.4805C3.33994 36.7852 2.00401 33.2695 2.12119 29.5781C2.23838 25.8867 3.77354 22.4531 6.46885 19.9336C9.0001 17.5547 12.2579 16.2305 15.7032 16.1836C15.8087 23.0742 20.8243 28.793 27.3868 30.0117C24.7149 30.5039 22.2306 31.7461 20.1915 33.6562C17.4142 36.2695 15.8087 39.8203 15.6915 43.6289C15.7032 43.6875 15.7032 43.7578 15.7032 43.8281ZM43.8282 44.4844C43.711 48.1758 42.1759 51.6094 39.4806 54.1289C36.7853 56.6602 33.2696 57.9844 29.5782 57.8789C25.8868 57.7617 22.4532 56.2266 19.9337 53.5312C17.5548 51 16.2306 47.7422 16.1837 44.2969C19.7579 44.2383 23.1329 42.8789 25.7462 40.418C27.9962 38.3086 29.461 35.5898 30.0118 32.6016C31.2306 39.1758 36.9493 44.1797 43.8399 44.2969C43.8282 44.3555 43.8282 44.4258 43.8282 44.4844ZM44.297 43.8281C44.2384 40.2539 42.879 36.8789 40.4181 34.2656C38.3087 32.0156 35.5899 30.5508 32.6017 30C39.1759 28.7812 44.1798 23.0625 44.297 16.1719C51.8204 16.3008 57.8907 22.4531 57.8907 30C57.8907 37.5469 51.8087 43.6992 44.297 43.8281Z" />
                                         </svg>
                                     </div>
-                                    <h3><Link href="/service/details">Consulting &amp; <br /> Strategy</Link></h3>
+                                    <h3><Link href={items[4]?.href || "/service/details"}>{items[4]?.titleLead || "Consulting &"} <br /> {items[4]?.titleTail || "Strategy"}</Link></h3>
                                 </div>
                                 <div className="services-img">
                                     <img src="/assets/img/home3/service-img5.jpg" alt="" />
                                 </div>
                                 <div className="content">
-                                    <p>Strategy that involves creating and sharing content on social a website's media platforms.</p>
+                                    <p>{items[4]?.description || "Strategy that involves creating and sharing content on social a website's media platforms."}</p>
                                     <ul className="tag-list">
-                                        <li>+ Digital Strategy</li>
-                                        <li>+ Competitor Analysis</li>
-                                        <li>+ Market Research</li>
+                                        {(items[4]?.bullets || [{ label: "Digital Strategy" }, { label: "Competitor Analysis" }, { label: "Market Research" }]).map((bullet) => (
+                                            <li key={bullet.label}>+ {bullet.label}</li>
+                                        ))}
                                     </ul>
                                 </div>
                                 <div className="button-area">
                                     <div className="details-btn">
-                                        <Link href="/service/details" className="primary-btn3 three transparent btn-hover">
-                                            View Details
+                                        <Link href={items[4]?.href || "/service/details"} className="primary-btn3 three transparent btn-hover">
+                                            {items[4]?.ctaLabel || "View Details"}
                                             <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" strokeWidth="1.5" strokeLinecap="round" />
                                             </svg>
@@ -206,15 +208,47 @@ const Home3ServiceSection = () => {
                                     </div>
                                 </div>
                             </div>
+                            {items[5] ? (
+                            <div className="single-services wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
+                                <div className="title-area">
+                                    <div className="icon">
+                                        <img src="/assets/img/home1/icon/feature-icon1.svg" alt="" />
+                                    </div>
+                                    <h3><Link href={items[5].href || "#trao-doi-bai-toan"}>{items[5].titleLead} <br /> {items[5].titleTail}</Link></h3>
+                                </div>
+                                <div className="services-img">
+                                    <img src="/assets/img/home3/service-img1.jpg" alt="" />
+                                </div>
+                                <div className="content">
+                                    <p>{items[5].description}</p>
+                                    <ul className="tag-list">
+                                        {(items[5].bullets || []).map((bullet) => (
+                                            <li key={bullet.label}>+ {bullet.label}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                                <div className="button-area">
+                                    <div className="details-btn">
+                                        <Link href={items[5].href || "#trao-doi-bai-toan"} className="primary-btn3 three transparent btn-hover">
+                                            {items[5].ctaLabel || "View Details"}
+                                            <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" strokeWidth="1.5" strokeLinecap="round" />
+                                            </svg>
+                                            <span />
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                            ) : null}
                         </div>
                     </div>
                 </div>
                 <div className="row justify-content-center wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                     <div className="col-xl-8 col-lg-10">
                         <div className="contact-btn-area two">
-                            <h6>To Make Sure to Best Service Provide Our Clients.</h6>
-                            <Link href="/contact" className="primary-btn3 two btn-hover">
-                                Start The Journey
+                            <h6>{data.footerLead || "To Make Sure to Best Service Provide Our Clients."}</h6>
+                            <Link href={serviceCta.url} className="primary-btn3 two btn-hover">
+                                {serviceCta.label}
                                 <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" strokeWidth="1.5" strokeLinecap="round" />
                                 </svg>

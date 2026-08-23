@@ -10,7 +10,7 @@ const Home4ProcessSection = ({ data = {} }) => {
     const stages = defaults.map((fallback, index) => ({ ...fallback, ...(data.stages?.[index] || {}) }));
     return (
         <>
-            <div className="home4-process-section mb-130">
+            <div className="home4-process-section mb-130" id={data.sectionId || undefined}>
                 <div className="container">
                     <div className="row justify-content-lg-end">
                         <div className="col-xl-10 col-lg-11">
@@ -27,7 +27,7 @@ const Home4ProcessSection = ({ data = {} }) => {
                                             </div>
                                             <div className="process-content">
                                                 <h5>{stages[0].titleLead} <br />{stages[0].titleTail}</h5>
-                                                <p>Included <strong>meetings</strong> and <strong>questionnaires</strong> to gather key information.</p>
+                                                <p>{stages[0].description === defaults[0].description ? <>Included <strong>meetings</strong> and <strong>questionnaires</strong> to gather key information.</> : stages[0].description}</p>
                                             </div>
                                         </div>
                                     </li>
@@ -42,7 +42,7 @@ const Home4ProcessSection = ({ data = {} }) => {
                                             </div>
                                             <div className="process-content">
                                                 <h5>{stages[1].titleLead} <br />{stages[1].titleTail}</h5>
-                                                <p>Like <strong>Google Ads, Facebook Ads, email marketing,</strong> or other tools.</p>
+                                                <p>{stages[1].description === defaults[1].description ? <>Like <strong>Google Ads, Facebook Ads, email marketing,</strong> or other tools.</> : stages[1].description}</p>
                                             </div>
                                         </div>
                                     </li>
@@ -54,7 +54,7 @@ const Home4ProcessSection = ({ data = {} }) => {
                                             </div>
                                             <div className="process-content">
                                                 <h5>{stages[2].titleLead} <br />{stages[2].titleTail}</h5>
-                                                <p>A comprehensive report is delivered, outlining the results, <strong>ROI.</strong></p>
+                                                <p>{stages[2].description === defaults[2].description ? <>A comprehensive report is delivered, outlining the results, <strong>ROI.</strong></> : stages[2].description}</p>
                                             </div>
                                         </div>
                                     </li>

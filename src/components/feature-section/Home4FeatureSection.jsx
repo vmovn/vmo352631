@@ -11,6 +11,7 @@ const defaultItems = [
 const Home4FeatureSection = ({ data = {} }) => {
     const items = defaultItems.map((fallback, index) => ({ ...fallback, ...(data.items?.[index] || {}) }));
     const cta = { label: "Let’s Talk", url: "/contact", ...(data.cta || {}) };
+    const showPartnerProof = data.showPartnerProof !== false;
     return (
         <>
             <div className="home4-feature-section mb-130">
@@ -25,6 +26,7 @@ const Home4FeatureSection = ({ data = {} }) => {
                                     </div>
                                 </div>
                                 <div className="col-lg-5 wow animate fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
+                                    {showPartnerProof ? (
                                     <div className="partner-area">
                                         <div className="google-partner">
                                             <img src="/assets/img/home4/google-partner.png" alt="" className="light" />
@@ -35,6 +37,7 @@ const Home4FeatureSection = ({ data = {} }) => {
                                             <img src="/assets/img/home4/microsoft-advertising-dark.png" alt="" className="dark" />
                                         </div>
                                     </div>
+                                    ) : null}
                                 </div>
                             </div>
                         </div>

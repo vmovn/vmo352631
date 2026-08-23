@@ -22,6 +22,10 @@ const Home4Banner = ({ data = {} }) => {
     imagePath: "/assets/img/home4/banner-img.jpg",
     ...data,
   };
+  const showPartnerProof = hero.showPartnerProof !== false;
+  const showSuccessMetric = hero.showSuccessMetric !== false;
+  const showAwardMetric = hero.showAwardMetric !== false;
+  const secondaryCTA = hero.secondaryCTA || {};
   const ref3 = useRef(null);
   useEffect(() => {
     const paths = document.querySelectorAll(".blinking-svg .circle");
@@ -47,6 +51,7 @@ const Home4Banner = ({ data = {} }) => {
   return (
     <div className="home4-banner-section mb-130">
       <div className="container position-relative">
+        {showPartnerProof ? (
         <div className="partner-area">
           <img src={hero.partnerLogoPath} alt="" />
           <h5>{hero.partnerTitle}</h5>
@@ -55,6 +60,7 @@ const Home4Banner = ({ data = {} }) => {
             <path d="M5 2.5L0 0.113249V5.88675L5 3.5V2.5ZM195 3.5L200 5.88675V0.113249L195 2.5V3.5ZM4.5 3.5H195.5V2.5H4.5V3.5Z" />
           </svg>
         </div>
+        ) : null}
         <div className="row gy-5 align-items-end">
           <div className="col-lg-2 d-lg-block d-none">
             <div className="animated-svg">
@@ -103,6 +109,7 @@ const Home4Banner = ({ data = {} }) => {
                     </svg>
                   </span>
                 </Link>
+                {showSuccessMetric ? (
                 <div className="counter-area">
                   <div className="icon">
                     <svg width={30} height={30} viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
@@ -127,12 +134,28 @@ const Home4Banner = ({ data = {} }) => {
                     <p>{hero.successRateLabel}</p>
                   </div>
                 </div>
+                ) : secondaryCTA.label ? (
+                <Link href={secondaryCTA.url || "#"} className="primary-btn4 transparent">
+                  <span className="icon">
+                    <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" strokeWidth="1.5" strokeLinecap="round" />
+                    </svg>
+                  </span>
+                  <span className="content">{secondaryCTA.label}</span>
+                  <span className="icon two">
+                    <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" strokeWidth="1.5" strokeLinecap="round" />
+                    </svg>
+                  </span>
+                </Link>
+                ) : null}
               </div>
             </div>
           </div>
           <div className="col-lg-4 d-lg-block d-none">
             <div className="banner-img-wrap">
               <img src={hero.imagePath} alt="" />
+              {showAwardMetric ? (
               <div className="counter-wrap">
                 <div className="counter-content">
                   <div className="number">
@@ -152,6 +175,7 @@ const Home4Banner = ({ data = {} }) => {
                   <path d="M1 14L13 2M13 2C10.3333 2.5 4.5 3.5 1 2M13 2C12.5 4.5 11.5 10 13 14" strokeWidth={2} strokeLinecap="round" />
                 </svg>
               </div>
+              ) : null}
             </div>
           </div>
         </div>

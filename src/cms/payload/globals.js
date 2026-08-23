@@ -163,6 +163,7 @@ export const Homepage = {
         localizedText("descriptionEmphasis"),
         localizedText("descriptionTail"),
         localizedCTA("primaryCTA", "Primary CTA"),
+        localizedCTA("secondaryCTA", "Secondary CTA"),
         { name: "successRate", type: "number" },
         localizedText("successRateLabel"),
         { name: "awardCount", type: "number" },
@@ -253,6 +254,7 @@ export const Homepage = {
         ),
         localizedText("titleLead"),
         localizedText("titleTail"),
+        localizedTextarea("description"),
         localizedText("resultValue"),
         localizedTextarea("resultLabel"),
         {

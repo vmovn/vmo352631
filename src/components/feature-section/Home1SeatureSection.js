@@ -1,15 +1,56 @@
 import Link from 'next/link'
 import React from 'react'
 
-const Home1SeatureSection = () => {
+const defaultItems = [
+    {
+        titleLead: "Quality",
+        titleTail: "Assurance",
+        description: "We understand that delivering high-quality software is crucial to your business success.",
+        icon: "/assets/img/home1/icon/feature-icon1.svg",
+        cardClass: "feature-card",
+        delay: "200ms",
+    },
+    {
+        titleLead: "Value",
+        titleTail: "Assurance",
+        description: "Our value proposition is rooted in a commitment to excellence, a passion for innovation.",
+        icon: "/assets/img/home1/icon/feature-icon2.svg",
+        cardClass: "feature-card two",
+        delay: "400ms",
+    },
+    {
+        titleLead: "Security &",
+        titleTail: "Compliance",
+        description: "We understand that in today’s digital landscape, security and compliance are paramount.",
+        icon: "/assets/img/home1/icon/feature-icon3.svg",
+        cardClass: "feature-card",
+        delay: "600ms",
+    },
+    {
+        titleLead: "Scalability &",
+        titleTail: "Growth",
+        description: "We understand that your business needs to evolve to stay competitive.",
+        icon: "/assets/img/home1/icon/feature-icon4.svg",
+        cardClass: "feature-card three",
+        delay: "800ms",
+    },
+];
+
+const Home1SeatureSection = ({ data = {} }) => {
+    const items = defaultItems.map((fallback, index) => ({
+        ...fallback,
+        ...(data.items?.[index] || {}),
+    }));
+    const cta = { label: "Contact Us", url: "/contact", ...(data.cta || {}) };
+
     return (
-        <div className="home1-feature-section mb-80">
+        <div className="home1-feature-section mb-80" id={data.sectionId || undefined}>
             <div className="container">
                 <div className="feature-banner-area">
                     <div className="banner-content wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
-                        <span>Our Challenge Part</span>
-                        <h2>Challenge We Tackle</h2>
-                        <p>We thrive on solving complex problems and turning challenges into opportunities for growth and innovation.</p>
+                        <span>{data.eyebrow || "Our Challenge Part"}</span>
+                        <h2>{data.title || "Challenge We Tackle"}</h2>
+                        <p>{data.description || "We thrive on solving complex problems and turning challenges into opportunities for growth and innovation."}</p>
                     </div>
                 </div>
                 <div className="feature-card-area">
@@ -30,52 +71,27 @@ const Home1SeatureSection = () => {
                         </div>
                     </div>
                     <div className="row g-4 mb-50">
-                        <div className="col-lg-3 col-sm-6 wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
-                            <div className="feature-card">
-                                <div className="icon">
-                                    <img src="/assets/img/home1/icon/feature-icon1.svg" alt="" />
+                        {items.map((item, index) => (
+                            <div key={`${item.titleLead}-${index}`} className="col-lg-3 col-sm-6 wow animate fadeInDown" data-wow-delay={item.delay} data-wow-duration="1500ms">
+                                <div className={item.cardClass}>
+                                    <div className="icon">
+                                        <img src={item.icon} alt="" />
+                                    </div>
+                                    <h3>{item.titleLead} <br />{item.titleTail}</h3>
+                                    <p>{item.description}</p>
                                 </div>
-                                <h3>Quality <br />Assurance</h3>
-                                <p>We understand that delivering high-quality software is crucial to your business success.</p>
                             </div>
-                        </div>
-                        <div className="col-lg-3 col-sm-6 wow animate fadeInDown" data-wow-delay="400ms" data-wow-duration="1500ms">
-                            <div className="feature-card two">
-                                <div className="icon">
-                                    <img src="/assets/img/home1/icon/feature-icon2.svg" alt="" />
-                                </div>
-                                <h3>Value <br />Assurance</h3>
-                                <p>Our value proposition is rooted in a commitment to excellence, a passion for innovation.</p>
-                            </div>
-                        </div>
-                        <div className="col-lg-3 col-sm-6 wow animate fadeInDown" data-wow-delay="600ms" data-wow-duration="1500ms">
-                            <div className="feature-card">
-                                <div className="icon">
-                                    <img src="/assets/img/home1/icon/feature-icon3.svg" alt="" />
-                                </div>
-                                <h3>Security &amp; <br />Compliance</h3>
-                                <p>We understand that in today’s digital landscape, security and compliance are paramount.</p>
-                            </div>
-                        </div>
-                        <div className="col-lg-3 col-sm-6 wow animate fadeInDown" data-wow-delay="800ms" data-wow-duration="1500ms">
-                            <div className="feature-card three">
-                                <div className="icon">
-                                    <img src="/assets/img/home1/icon/feature-icon4.svg" alt="" />
-                                </div>
-                                <h3>Scalability &amp; <br />Growth</h3>
-                                <p>We understand that your business needs to evolve to stay competitive.</p>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                     <div className="contact-btn-area wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-                        <h6>Don’t Hesitate to <span>Collaborate</span> with Us.</h6>
-                        <Link href="/contact" className="primary-btn1">
-                            <span>Contact Us
+                        <h6>{data.ctaLead || <>Don’t Hesitate to <span>Collaborate</span> with Us.</>}</h6>
+                        <Link href={cta.url} className="primary-btn1">
+                            <span>{cta.label}
                                 <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" strokeWidth="1.5" strokeLinecap="round" />
                                 </svg>
                             </span>
-                            <span>Contact Us
+                            <span>{cta.label}
                                 <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" strokeWidth="1.5" strokeLinecap="round" />
                                 </svg>
