@@ -11,6 +11,17 @@ const defaultMedia = [
     { type: "image", path: "/assets/img/home4/home4-contact-img6.png" },
 ];
 
+const mediaClassNames = ["video1", "", "video2", "video2", "", ""];
+
+function ContactMedia({ item, className }) {
+    if (item?.type === "video") {
+        return (
+            <video className={className || undefined} autoPlay loop muted playsInline src={item.path} />
+        );
+    }
+    return <img src={item?.path} alt="" />;
+}
+
 const Home4ContactSection = ({ data = {} }) => {
     const mediaItems = data.mediaItems?.length === 6 ? data.mediaItems : defaultMedia;
     const cta = { label: "Free Stretagy Session", url: "/contact", ...(data.cta || {}) };
@@ -70,18 +81,11 @@ const Home4ContactSection = ({ data = {} }) => {
                                             </span>
                                         </Link>
                                         <ul className="img-list">
-                                            <li>
-                                                <video className="video1" autoPlay loop muted playsInline src={mediaItems[0].path} />
-                                            </li>
-                                            <li><img src={mediaItems[1].path} alt="" /></li>
-                                            <li>
-                                                <video className="video2" autoPlay loop muted playsInline src={mediaItems[2].path} />
-                                            </li>
-                                            <li>
-                                                <video className="video2" autoPlay loop muted playsInline src={mediaItems[3].path} />
-                                            </li>
-                                            <li><img src={mediaItems[4].path} alt="" /></li>
-                                            <li><img src={mediaItems[5].path} alt="" /></li>
+                                            {mediaItems.map((item, index) => (
+                                                <li key={`${item.type}-${item.path}-${index}`}>
+                                                    <ContactMedia item={item} className={mediaClassNames[index]} />
+                                                </li>
+                                            ))}
                                         </ul>
                                     </div>
                                 </div>

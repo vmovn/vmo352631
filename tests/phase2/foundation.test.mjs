@@ -239,3 +239,43 @@ test("Production homepage reads Payload through a dedicated VMO adapter", () => 
   assert.doesNotMatch(route, /vmoHomepageVi/);
   assert.doesNotMatch(route, /GenericHero|FeatureGrid|RenderBlocks/);
 });
+
+test("VMO adapter replaces vendor integration icons with Mortar marks", () => {
+  const adapted = adaptVmoHomepage(vmoHomepageVi);
+  assert.equal(adapted.infrastructure.items.length, 11);
+  assert.equal(adapted.infrastructure.items[0].title, "CRM.VMO");
+  for (const item of adapted.infrastructure.items) {
+    assert.match(item.iconMark, /^(layers|lobes|star|pen)$/);
+  }
+  assert.equal(
+    adapted.contact.mediaItems.some((item) => /home4-contact-img/.test(item.path)),
+    false,
+  );
+  const home6 = fs.readFileSync(
+    "src/components/integration-section/Home6IntegrationSection.jsx",
+    "utf8",
+  );
+  assert.match(home6, /integration-04\.svg/);
+  assert.match(home6, /iconMark/);
+  const saas = fs.readFileSync("src/app/saas-product/page.js", "utf8");
+  assert.match(saas, /<Home6IntegrationSection \/>/);
+});
+
+test("Header4 keeps Mortar demo chrome unless production brand is set", () => {
+  const header = fs.readFileSync("src/components/header/Header4.js", "utf8");
+  assert.match(header, /brand \? null/);
+  assert.match(header, /We are Global Digital Brand Tech Agency/);
+  assert.match(header, /info@example\.com/);
+  const marketing = fs.readFileSync("src/app/marketing-agency/page.js", "utf8");
+  assert.match(marketing, /<Header4 \/>/);
+  assert.doesNotMatch(marketing, /brand=/);
+});
+
+test("Sixth Home3 capability uses Home3 SVG grammar", () => {
+  const source = fs.readFileSync(
+    "src/components/service-section/Home3ServiceSection.jsx",
+    "utf8",
+  );
+  assert.doesNotMatch(source, /feature-icon1/);
+  assert.match(source, /Home3ServiceMark/);
+});

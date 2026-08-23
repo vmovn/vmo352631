@@ -79,6 +79,24 @@
   color: var(--vmo-signal);
 }
 
+.vmo-home .home6-integration-section .integration-wrap .single-integration svg {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 5px;
+  fill: #111;
+}
+
+.vmo-home .home4-feature-section .partner-area img {
+  max-height: 72px;
+  width: auto;
+  filter: brightness(0.18);
+}
+
+.vmo-home .home4-contact-section .img-list img,
+.vmo-home .home4-contact-section .img-list video {
+  object-fit: cover;
+}
+
 @media (max-width: 767px) {
   .vmo-home .home4-banner-section h1 {
     font-size: 34px;

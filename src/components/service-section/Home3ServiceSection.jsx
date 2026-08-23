@@ -1,6 +1,7 @@
 "use client"
 import Link from 'next/link'
 import React, { useEffect } from 'react'
+import { Home3ServiceMark } from '../common/Home3ServiceMarks'
 
 const Home3ServiceSection = ({ data = {} }) => {
     const items = data.items || [];
@@ -212,7 +213,7 @@ const Home3ServiceSection = ({ data = {} }) => {
                             <div className="single-services wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
                                 <div className="title-area">
                                     <div className="icon">
-                                        <img src="/assets/img/home1/icon/feature-icon1.svg" alt="" />
+                                        <Home3ServiceMark name="star" />
                                     </div>
                                     <h3><Link href={items[5].href || "#trao-doi-bai-toan"}>{items[5].titleLead} <br /> {items[5].titleTail}</Link></h3>
                                 </div>

@@ -148,6 +148,7 @@ const Header4 = ({ brand } = {}) => {
     const isHomeActive = homePaths.some((path) => pathname.startsWith(path));
     return (
         <>
+            {brand ? null : (
             <div className={`right-sidebar-menu ${state.isRightSidebar ? "show-right-menu" : ""
                 }`}>
                 <div className="sidebar-logo-area d-flex justify-content-between align-items-center">
@@ -222,6 +223,7 @@ const Header4 = ({ brand } = {}) => {
                     </div>
                 </div>
             </div>
+            )}
             <header className={`header-area style-4 ${pathname === "/portfolio/carousel" || pathname === "/digital-agency" || pathname === "/digital-agency-dark" ? "position-absolute" : ""} ${state.scrollY > 20 ? "sticky" : ""}`}>
                 <div className="container-fluid d-flex flex-nowrap align-items-center justify-content-between">
                     <div className="company-logo">

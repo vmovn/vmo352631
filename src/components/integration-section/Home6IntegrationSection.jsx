@@ -1,6 +1,7 @@
 "use client"
 import React, { useRef } from 'react'
 import Counter from '../common/Counter'
+import { Home3ServiceMark } from '../common/Home3ServiceMarks'
 
 const defaultIntegrations = [
     "Google Drive",
@@ -15,6 +16,38 @@ const defaultIntegrations = [
     "Flutter",
     "Google Ads",
 ];
+
+const defaultIconSets = [
+    { light: "/assets/img/home6/icon/integration-04.svg" },
+    { light: "/assets/img/home6/icon/integration-02.svg" },
+    { light: "/assets/img/home6/icon/integration-03.svg" },
+    { light: "/assets/img/home6/icon/megento.svg" },
+    { light: "/assets/img/home6/icon/integration-05.svg" },
+    { light: "/assets/img/home6/icon/integration-06.svg" },
+    { light: "/assets/img/home6/icon/integration-07.svg", dark: "/assets/img/home6/icon/integration-07-dark.svg" },
+    { light: "/assets/img/home6/icon/integration-08.svg" },
+    { light: "/assets/img/home6/icon/integration-09.svg" },
+    { light: "/assets/img/home6/icon/flatter.svg" },
+    { light: "/assets/img/home6/icon/integration-11.svg" },
+];
+
+function IntegrationGlyph({ item, fallback }) {
+    if (item?.iconMark) {
+        return <Home3ServiceMark name={item.iconMark} width={40} height={40} />;
+    }
+    if (item?.iconPath) {
+        return <img src={item.iconPath} alt="" />;
+    }
+    if (fallback.dark) {
+        return (
+            <>
+                <img src={fallback.light} alt="" className="light" />
+                <img src={fallback.dark} alt="" className="dark" />
+            </>
+        );
+    }
+    return <img src={fallback.light} alt="" />;
+}
 
 const Home6IntegrationSection = ({ data = {} }) => {
     const showCounters = data.showCounters !== false;
@@ -190,51 +223,12 @@ const Home6IntegrationSection = ({ data = {} }) => {
                             <div className="row justify-content-center">
                                 <div className="col-lg-12">
                                     <div className="integration-wrap">
-                                        <div className="single-integration">
-                                            <img src="/assets/img/home6/icon/integration-04.svg" alt="" />
-                                            <h6>{integrations[0]}</h6>
-                                        </div>
-                                        <div className="single-integration">
-                                            <img src="/assets/img/home6/icon/integration-02.svg" alt="" />
-                                            <h6>{integrations[1]}</h6>
-                                        </div>
-                                        <div className="single-integration">
-                                            <img src="/assets/img/home6/icon/integration-03.svg" alt="" />
-                                            <h6>{integrations[2]}</h6>
-                                        </div>
-                                        <div className="single-integration">
-                                            <img src="/assets/img/home6/icon/megento.svg" alt="" />
-                                            <h6>{integrations[3]}</h6>
-                                        </div>
-                                        <div className="single-integration">
-                                            <img src="/assets/img/home6/icon/integration-05.svg" alt="" />
-                                            <h6>{integrations[4]}</h6>
-                                        </div>
-                                        <div className="single-integration">
-                                            <img src="/assets/img/home6/icon/integration-06.svg" alt="" />
-                                            <h6>{integrations[5]}</h6>
-                                        </div>
-                                        <div className="single-integration">
-                                            <img src="/assets/img/home6/icon/integration-07.svg" alt="" className="light" />
-                                            <img src="/assets/img/home6/icon/integration-07-dark.svg" alt="" className="dark" />
-                                            <h6>{integrations[6]}</h6>
-                                        </div>
-                                        <div className="single-integration">
-                                            <img src="/assets/img/home6/icon/integration-08.svg" alt="" />
-                                            <h6>{integrations[7]}</h6>
-                                        </div>
-                                        <div className="single-integration">
-                                            <img src="/assets/img/home6/icon/integration-09.svg" alt="" />
-                                            <h6>{integrations[8]}</h6>
-                                        </div>
-                                        <div className="single-integration">
-                                            <img src="/assets/img/home6/icon/flatter.svg" alt="" />
-                                            <h6>{integrations[9]}</h6>
-                                        </div>
-                                        <div className="single-integration">
-                                            <img src="/assets/img/home6/icon/integration-11.svg" alt="" />
-                                            <h6>{integrations[10]}</h6>
-                                        </div>
+                                        {defaultIconSets.map((fallback, index) => (
+                                            <div className="single-integration" key={`${integrations[index]}-${index}`}>
+                                                <IntegrationGlyph item={data.items?.[index]} fallback={fallback} />
+                                                <h6>{integrations[index]}</h6>
+                                            </div>
+                                        ))}
                                     </div>
                                 </div>
                             </div>

@@ -11,6 +11,34 @@ const valueLayerSplits = [
   ["Mở rộng", "bằng công nghệ"],
 ];
 
+const vmoOsIconMarks = [
+  "layers",
+  "star",
+  "pen",
+  "lobes",
+  "layers",
+  "pen",
+  "lobes",
+  "star",
+  "layers",
+  "pen",
+  "star",
+];
+
+const decorativeCtaMedia = [
+  { type: "video", path: "assets/video/home4-contact-video1.mp4" },
+  { type: "image", path: "/assets/img/home5/home5-about-section-vector1.svg" },
+  { type: "video", path: "assets/video/home4-contact-video1.mp4" },
+  { type: "video", path: "assets/video/home4-contact-video1.mp4" },
+  { type: "image", path: "/assets/img/home6/home6-counter-section-vector.svg" },
+  { type: "image", path: "/assets/img/home4/icon/home4-counter-vector2.svg" },
+];
+
+const valueLayerVisualMarks = [
+  { src: "/assets/img/home4/icon/home4-counter-vector2.svg" },
+  { src: "/assets/img/home4/icon/home4-counter-vector3.svg" },
+];
+
 function splitValueLayerTitle(title, index) {
   const canonical = valueLayerSplits[index];
   const value = text(title);
@@ -74,6 +102,7 @@ export function adaptVmoHomepage(homepage) {
       description: layers.description,
       items: layerItems,
       showPartnerProof: false,
+      visualMarks: valueLayerVisualMarks,
       ctaLead: process.description,
       cta: gap.cta,
       videoPath: gap.videoPath || "/assets/video/home4-video.mp4",
@@ -101,7 +130,10 @@ export function adaptVmoHomepage(homepage) {
       ? {
           title: infrastructure.title,
           description: infrastructure.description,
-          items: infrastructure.items || [],
+          items: (infrastructure.items || []).map((item, index) => ({
+            ...item,
+            iconMark: vmoOsIconMarks[index] || "layers",
+          })),
           showCounters: false,
           centerLabel: "VMO OS",
           cta: {
@@ -114,6 +146,7 @@ export function adaptVmoHomepage(homepage) {
     contact: cta.enabled
       ? {
           ...cta,
+          mediaItems: decorativeCtaMedia,
           sectionId: "trao-doi-bai-toan",
         }
       : null,

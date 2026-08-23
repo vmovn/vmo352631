@@ -258,11 +258,11 @@ export const vmoHomepageVi = {
     cta: { label: "Trao đổi bài toán", url: "#trao-doi-bai-toan" },
     mediaItems: [
       { type: "video", path: "assets/video/home4-contact-video1.mp4" },
-      { type: "image", path: "/assets/img/home4/home4-contact-img2.png" },
-      { type: "video", path: "assets/video/home4-contact-video2.mp4" },
-      { type: "video", path: "assets/video/home4-contact-video3.mp4" },
-      { type: "image", path: "/assets/img/home4/home4-contact-img5.png" },
-      { type: "image", path: "/assets/img/home4/home4-contact-img6.png" },
+      { type: "image", path: "/assets/img/home5/home5-about-section-vector1.svg" },
+      { type: "video", path: "assets/video/home4-contact-video1.mp4" },
+      { type: "video", path: "assets/video/home4-contact-video1.mp4" },
+      { type: "image", path: "/assets/img/home6/home6-counter-section-vector.svg" },
+      { type: "image", path: "/assets/img/home4/icon/home4-counter-vector2.svg" },
     ],
   },
 };

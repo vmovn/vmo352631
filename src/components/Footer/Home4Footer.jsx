@@ -135,6 +135,15 @@ const Home4Footer = ({ data = {} }) => {
                             <div className="col-lg-3 d-flex justify-content-lg-end">
                                 <div className="newsletter-area">
                                     <h3>{hasProductionCopy ? "Kết nối" : "Newsletter"}</h3>
+                                    {hasProductionCopy ? (
+                                    <div className="social-area">
+                                        <h5>Growth Mission</h5>
+                                        <ul className="social-list">
+                                            <li><Link href="#trao-doi-bai-toan">Trao đổi bài toán</Link></li>
+                                        </ul>
+                                    </div>
+                                    ) : (
+                                    <>
                                     <form className="newsletter-form">
                                         <input type="email" placeholder="Email" />
                                         <svg width={18} height={18} viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
@@ -151,6 +160,8 @@ const Home4Footer = ({ data = {} }) => {
                                             <li><a href="https://www.instagram.com/"><i className="bx bxl-instagram-alt" /></a></li>
                                         </ul>
                                     </div>
+                                    </>
+                                    )}
                                 </div>
                             </div>
                         </div>

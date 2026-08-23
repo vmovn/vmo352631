@@ -37,6 +37,17 @@ const Home4FeatureSection = ({ data = {} }) => {
                                             <img src="/assets/img/home4/microsoft-advertising-dark.png" alt="" className="dark" />
                                         </div>
                                     </div>
+                                    ) : data.visualMarks?.length ? (
+                                    <div className="partner-area">
+                                        <div className="google-partner">
+                                            <img src={data.visualMarks[0].src} alt="" />
+                                        </div>
+                                        {data.visualMarks[1] ? (
+                                        <div className="microsoft-partner">
+                                            <img src={data.visualMarks[1].src} alt="" />
+                                        </div>
+                                        ) : null}
+                                    </div>
                                     ) : null}
                                 </div>
                             </div>

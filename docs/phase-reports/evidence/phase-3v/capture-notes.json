@@ -1,0 +1,75 @@
+{
+  "overflowByWidth": {
+    "320": 0,
+    "390": 0,
+    "430": 0,
+    "768": 0,
+    "1024": 0,
+    "1440": 0
+  },
+  "audit": {
+    "h1": "Từ sản phẩm đến người dùng, giao dịch và một hệ thống tăng trưởng có thể lặp lại.",
+    "vendorSrcs": [],
+    "integrationSvgs": 11,
+    "demo": {
+      "globalAgency": false,
+      "newYork": false,
+      "exampleEmail": false,
+      "fakePhone": false,
+      "conference": false,
+      "facebook": false
+    },
+    "proof": {
+      "metaPartner": false,
+      "successRate": false,
+      "googlePartner": false,
+      "microsoft": false,
+      "clutch": false
+    },
+    "hasVmoWordmark": true,
+    "hasRightSidebar": false,
+    "featureMarks": [
+      "/assets/img/home4/icon/home4-counter-vector2.svg",
+      "/assets/img/home4/icon/home4-counter-vector3.svg"
+    ],
+    "ctaMedia": [
+      "assets/video/home4-contact-video1.mp4",
+      "/assets/img/home5/home5-about-section-vector1.svg",
+      "assets/video/home4-contact-video1.mp4",
+      "assets/video/home4-video.mp4",
+      "/assets/img/home6/home6-counter-section-vector.svg",
+      "/assets/img/home4/icon/home4-counter-vector2.svg"
+    ],
+    "nav": [
+      {
+        "text": "Cách triển khai",
+        "href": "#cach-vmo-trien-khai"
+      },
+      {
+        "text": "Năng lực",
+        "href": "#nang-luc"
+      },
+      {
+        "text": "Hạ tầng",
+        "href": "#ha-tang-trien-khai"
+      }
+    ],
+    "capabilitySvgs": 6,
+    "capabilityImgs": []
+  },
+  "ma": {
+    "h1": "Let’s Grow Your Business.",
+    "meta": true,
+    "header4": true,
+    "vmo": false,
+    "demoSidebar": true
+  },
+  "saas": {
+    "vendor": [
+      "/assets/img/home6/company-logo.svg",
+      "/assets/img/home6/icon/integration-04.svg",
+      "/assets/img/home6/icon/integration-02.svg"
+    ],
+    "googleDrive": true
+  }
+}
