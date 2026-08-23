@@ -1457,10 +1457,22 @@ export interface Footer {
 export interface Homepage {
   id: number;
   /**
-   * Development-only Mortar parity seed. This is not verified VMO proof.
+   * Historical compatibility marker only. Production rendering must never depend on this value.
    */
   demoSeed?: boolean | null;
   hero?: {
+    /**
+     * Keep off until the partner relationship and public display are verified.
+     */
+    showPartnerProof?: boolean | null;
+    /**
+     * Keep off until the numeric success claim is verified.
+     */
+    showSuccessMetric?: boolean | null;
+    /**
+     * Keep off until the award claim is verified.
+     */
+    showAwardMetric?: boolean | null;
     partnerTitle?: string | null;
     partnerStrapline?: string | null;
     partnerLogoPath?: string | null;
@@ -1481,6 +1493,10 @@ export interface Homepage {
     imagePath?: string | null;
   };
   productToMarketGap?: {
+    /**
+     * Keep off until client/partner statistics and logos are approved for public use.
+     */
+    showPartnerProof?: boolean | null;
     partnerStatLeft?: string | null;
     partnerStatRight?: string | null;
     partnerLogos?:
@@ -1533,6 +1549,10 @@ export interface Homepage {
       | null;
   };
   capabilities?: {
+    /**
+     * Keep off until the result value and label are verified.
+     */
+    showResultMetric?: boolean | null;
     titleLead?: string | null;
     titleTail?: string | null;
     resultValue?: string | null;
@@ -1556,12 +1576,16 @@ export interface Homepage {
       | null;
   };
   measurement?: {
+    /**
+     * Off by default. Enable only when the section has approved production data.
+     */
+    enabled?: boolean | null;
     titleLead?: string | null;
     titleTail?: string | null;
     description?: string | null;
     metrics?:
       | {
-          value: number;
+          value?: number | null;
           labelLead?: string | null;
           labelTail?: string | null;
           id?: string | null;
@@ -1580,6 +1604,18 @@ export interface Homepage {
       | null;
   };
   featuredProof?: {
+    /**
+     * Off by default. Enable only for verified, publishable testimonials.
+     */
+    showTestimonials?: boolean | null;
+    /**
+     * Off by default. Enable only for verified, publishable case evidence.
+     */
+    showCases?: boolean | null;
+    /**
+     * Off by default. Enable only for approved public team profiles.
+     */
+    showTeam?: boolean | null;
     testimonialTitle?: string | null;
     testimonialDescription?: string | null;
     testimonials?:
@@ -1623,6 +1659,10 @@ export interface Homepage {
       | null;
   };
   infrastructure?: {
+    /**
+     * Off by default until approved production infrastructure content exists.
+     */
+    enabled?: boolean | null;
     title?: string | null;
     description?: string | null;
     items?:
@@ -1634,11 +1674,19 @@ export interface Homepage {
       | null;
   };
   insights?: {
+    /**
+     * Off by default until approved production insights are selected.
+     */
+    enabled?: boolean | null;
     title?: string | null;
     description?: string | null;
     featuredPosts?: (number | Post)[] | null;
   };
   growthMissionCTA?: {
+    /**
+     * Off by default until approved production CTA content and media exist.
+     */
+    enabled?: boolean | null;
     titleLead?: string | null;
     titleTail?: string | null;
     descriptionLead?: string | null;
@@ -1884,6 +1932,9 @@ export interface HomepageSelect<T extends boolean = true> {
   hero?:
     | T
     | {
+        showPartnerProof?: T;
+        showSuccessMetric?: T;
+        showAwardMetric?: T;
         partnerTitle?: T;
         partnerStrapline?: T;
         partnerLogoPath?: T;
@@ -1908,6 +1959,7 @@ export interface HomepageSelect<T extends boolean = true> {
   productToMarketGap?:
     | T
     | {
+        showPartnerProof?: T;
         partnerStatLeft?: T;
         partnerStatRight?: T;
         partnerLogos?:
@@ -1968,6 +2020,7 @@ export interface HomepageSelect<T extends boolean = true> {
   capabilities?:
     | T
     | {
+        showResultMetric?: T;
         titleLead?: T;
         titleTail?: T;
         resultValue?: T;
@@ -1995,6 +2048,7 @@ export interface HomepageSelect<T extends boolean = true> {
   measurement?:
     | T
     | {
+        enabled?: T;
         titleLead?: T;
         titleTail?: T;
         description?: T;
@@ -2021,6 +2075,9 @@ export interface HomepageSelect<T extends boolean = true> {
   featuredProof?:
     | T
     | {
+        showTestimonials?: T;
+        showCases?: T;
+        showTeam?: T;
         testimonialTitle?: T;
         testimonialDescription?: T;
         testimonials?:
@@ -2066,6 +2123,7 @@ export interface HomepageSelect<T extends boolean = true> {
   infrastructure?:
     | T
     | {
+        enabled?: T;
         title?: T;
         description?: T;
         items?:
@@ -2079,6 +2137,7 @@ export interface HomepageSelect<T extends boolean = true> {
   insights?:
     | T
     | {
+        enabled?: T;
         title?: T;
         description?: T;
         featuredPosts?: T;
@@ -2086,6 +2145,7 @@ export interface HomepageSelect<T extends boolean = true> {
   growthMissionCTA?:
     | T
     | {
+        enabled?: T;
         titleLead?: T;
         titleTail?: T;
         descriptionLead?: T;

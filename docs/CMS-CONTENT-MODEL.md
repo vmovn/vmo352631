@@ -43,6 +43,11 @@ Fields mirror selected Mortar components:
 
 Each field supports `vi` and `en`.
 
+Proof-bearing Homepage zones are opt-in. Measurement, testimonials, cases,
+team, infrastructure, and insights remain hidden until verified production
+content exists. Empty proof arrays are valid and must never be filled with
+Mortar demo data by a production loader or adapter.
+
 ## Generic Pages
 Only for:
 - policies;

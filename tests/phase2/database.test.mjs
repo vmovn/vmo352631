@@ -21,6 +21,11 @@ test(
         name.includes("phase2_payload_foundation"),
       ),
     );
+    assert.ok(
+      migrations.docs.some(({ name }) =>
+        name.includes("phase2_6_content_safety"),
+      ),
+    );
 
     const homepageVI = await payload.findGlobal({
       slug: "homepage",
@@ -35,18 +40,26 @@ test(
       overrideAccess: true,
     });
 
-    assert.equal(homepageVI.hero.titleLead, "Let’s Grow");
-    assert.equal(homepageEN.hero.titleLead, "Let’s Grow");
+    assert.equal(homepageVI.demoSeed, false);
+    assert.equal(homepageEN.demoSeed, false);
+    assert.equal(homepageVI.hero.titleLead, null);
+    assert.equal(homepageEN.hero.titleLead, null);
+    assert.equal(homepageVI.hero.showPartnerProof, false);
+    assert.equal(homepageEN.hero.showPartnerProof, false);
     assert.equal(homepageVI.proofProcessScale.stages.length, 3);
-    assert.equal(
-      homepageVI.proofProcessScale.stages[0].titleLead,
-      "Client",
-    );
-    assert.equal(
-      homepageEN.proofProcessScale.stages[0].titleLead,
-      "Client",
-    );
+    assert.equal(homepageVI.proofProcessScale.stages[0].step, "01");
+    assert.equal(homepageEN.proofProcessScale.stages[0].step, "01");
     assert.equal(homepageVI.capabilities.items.length, 6);
+    assert.equal(homepageVI.measurement.enabled, false);
+    assert.equal(homepageVI.measurement.metrics.length, 0);
+    assert.equal(homepageVI.featuredProof.showTestimonials, false);
+    assert.equal(homepageVI.featuredProof.showCases, false);
+    assert.equal(homepageVI.featuredProof.showTeam, false);
+    assert.equal(homepageVI.featuredProof.testimonials.length, 0);
+    assert.equal(homepageVI.featuredProof.cases.length, 0);
+    assert.equal(homepageVI.featuredProof.teamMembers.length, 0);
+    assert.equal(homepageVI.infrastructure.enabled, false);
+    assert.equal(homepageVI.insights.enabled, false);
 
     const users = await payload.find({
       collection: "users",

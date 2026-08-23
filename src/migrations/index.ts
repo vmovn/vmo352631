@@ -1,9 +1,15 @@
 import * as migration_20260823_133545_phase2_payload_foundation from './20260823_133545_phase2_payload_foundation';
+import * as migration_20260823_145322_phase2_6_content_safety from './20260823_145322_phase2_6_content_safety';
 
 export const migrations = [
   {
     up: migration_20260823_133545_phase2_payload_foundation.up,
     down: migration_20260823_133545_phase2_payload_foundation.down,
-    name: '20260823_133545_phase2_payload_foundation'
+    name: '20260823_133545_phase2_payload_foundation',
+  },
+  {
+    up: migration_20260823_145322_phase2_6_content_safety.up,
+    down: migration_20260823_145322_phase2_6_content_safety.down,
+    name: '20260823_145322_phase2_6_content_safety'
   },
 ];

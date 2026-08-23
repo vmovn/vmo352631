@@ -7,8 +7,9 @@ import {
   Leads,
   Users,
 } from "../../src/cms/payload/collections.js";
-import { adaptHomepageToHome4 } from "../../src/cms/adapters/homepageToHome4.js";
+import { adaptMarketingAgencyDemoToHome4 } from "../../src/cms/adapters/homepageToHome4.js";
 import { marketingAgencyDemo } from "../../src/cms/data/marketingAgencyDemo.js";
+import { productionHomepageFoundation } from "../../src/cms/data/productionHomepageFoundation.js";
 import { homepageSectionNames } from "../../src/cms/types/homepage.js";
 import { isMortarFrontendPath } from "../../src/utils/isMortarFrontendPath.mjs";
 
@@ -72,8 +73,21 @@ test("Homepage is a fixed schema, not a generic block builder", async () => {
   assert.equal(homepage.fields.some(({ type }) => type === "blocks"), false);
 });
 
-test("Homepage adapter returns the expected original Home4 data shape", () => {
-  const adapted = adaptHomepageToHome4(marketingAgencyDemo);
+test("Marketing Agency is reference-only and never queries production Homepage", () => {
+  const route = fs.readFileSync("src/app/marketing-agency/page.js", "utf8");
+  const productionLoader = fs.readFileSync(
+    "src/cms/loaders/homepage.js",
+    "utf8",
+  );
+
+  assert.match(route, /marketingAgencyDemo/);
+  assert.match(route, /adaptMarketingAgencyDemoToHome4/);
+  assert.doesNotMatch(route, /loadProductionHomepage|getPayload|findGlobal/);
+  assert.doesNotMatch(productionLoader, /marketingAgencyDemo|demo-fallback/);
+});
+
+test("Marketing Agency adapter returns the original Home4 demo shape", () => {
+  const adapted = adaptMarketingAgencyDemoToHome4(marketingAgencyDemo);
   assert.deepEqual(Object.keys(adapted), [
     "hero",
     "partners",
@@ -88,6 +102,73 @@ test("Homepage adapter returns the expected original Home4 data shape", () => {
   assert.equal(adapted.hero.titleLead, "Let’s Grow");
   assert.equal(adapted.service.capabilities.items.length, 6);
   assert.equal(adapted.team.teamMembers.length, 6);
+  assert.throws(
+    () => adaptMarketingAgencyDemoToHome4(productionHomepageFoundation),
+    /only accepts marketingAgencyDemo/,
+  );
+});
+
+test("Homepage proof fields allow empty, disabled production content", async () => {
+  const config = await configPromise;
+  const homepage = config.globals.find(({ slug }) => slug === "homepage");
+  const group = (name) => homepage.fields.find((field) => field.name === name);
+  const child = (parent, name) =>
+    parent.fields.find((field) => field.name === name);
+
+  const process = group("proofProcessScale");
+  const measurement = group("measurement");
+  const featuredProof = group("featuredProof");
+  const infrastructure = group("infrastructure");
+  const insights = group("insights");
+
+  assert.equal(child(process, "stages").minRows, 3);
+  assert.equal(child(process, "stages").maxRows, 3);
+
+  assert.equal(child(measurement, "enabled").defaultValue, false);
+  assert.equal(child(measurement, "metrics").minRows, undefined);
+  assert.equal(child(measurement, "metrics").maxRows, 4);
+  assert.notEqual(
+    child(child(measurement, "metrics"), "value").required,
+    true,
+  );
+  assert.notEqual(child(group("hero"), "successRate").required, true);
+  assert.notEqual(child(group("hero"), "awardCount").required, true);
+  assert.notEqual(
+    child(child(featuredProof, "cases"), "metricOneValue").required,
+    true,
+  );
+  assert.notEqual(
+    child(child(featuredProof, "cases"), "metricTwoValue").required,
+    true,
+  );
+
+  for (const [fieldName, maximum] of [
+    ["testimonials", 3],
+    ["cases", 2],
+    ["teamMembers", 6],
+  ]) {
+    assert.equal(child(featuredProof, fieldName).minRows, undefined);
+    assert.equal(child(featuredProof, fieldName).maxRows, maximum);
+  }
+
+  for (const toggle of ["showTestimonials", "showCases", "showTeam"]) {
+    assert.equal(child(featuredProof, toggle).defaultValue, false);
+  }
+
+  assert.equal(child(infrastructure, "enabled").defaultValue, false);
+  assert.equal(child(insights, "enabled").defaultValue, false);
+
+  assert.equal(productionHomepageFoundation.demoSeed, false);
+  assert.equal(productionHomepageFoundation.measurement.metrics.length, 0);
+  assert.equal(
+    productionHomepageFoundation.featuredProof.testimonials.length,
+    0,
+  );
+  assert.equal(productionHomepageFoundation.featuredProof.cases.length, 0);
+  assert.equal(
+    productionHomepageFoundation.featuredProof.teamMembers.length,
+    0,
+  );
 });
 
 test("Payload paths remain outside the Mortar public runtime", () => {

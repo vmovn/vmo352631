@@ -11,6 +11,12 @@ Preferred server flow:
 `Payload Local API → data adapter → Mortar component`.
 Client interactivity remains inside the Mortar component where needed.
 
+## Demo / production boundary
+- `src/cms/data/marketingAgencyDemo.js` is immutable Mortar reference data for `/marketing-agency` only.
+- `/marketing-agency` must render that file through its reference-only Home4 adapter and must never query the production Homepage Global.
+- The Payload `Homepage` Global belongs to production `vmo.vn` content and has no Mortar demo fallback.
+- Production loaders must fail closed when Payload is unavailable; they must not substitute demo claims, metrics, testimonials, cases, or team members.
+
 ## Access
 - anonymous: published public content only;
 - editor: content/draft workflow;

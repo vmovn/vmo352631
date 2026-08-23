@@ -17,8 +17,8 @@ if (!process.env.DATABASE_URI || !process.env.PAYLOAD_SECRET) {
 
 const { getPayload } = await import("payload");
 const { default: config } = await import("../payload.config.js");
-const { marketingAgencyDemo } = await import(
-  "../src/cms/data/marketingAgencyDemo.js"
+const { productionHomepageFoundation } = await import(
+  "../src/cms/data/productionHomepageFoundation.js"
 );
 
 const payload = await getPayload({ config });
@@ -421,8 +421,8 @@ await updateLocalizedGlobal({
 
 await updateLocalizedGlobal({
   slug: "homepage",
-  vi: marketingAgencyDemo,
-  en: marketingAgencyDemo,
+  vi: productionHomepageFoundation,
+  en: productionHomepageFoundation,
 });
 
 await updateLocalizedGlobal({
@@ -476,7 +476,7 @@ console.log(
     {
       seeded: true,
       adminSeeded: Boolean(adminEmail && adminPassword),
-      homepage: "Mortar development/demo parity values",
+      homepage: "Production-safe claim-free foundation",
       locales: ["vi", "en"],
       leadsSeeded: false,
     },

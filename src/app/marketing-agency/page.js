@@ -9,13 +9,12 @@ import Home4ProcessSection from '@/components/process-sections/Home4ProcessSecti
 import Home4ServiceSection from '@/components/service-section/Home4ServiceSection'
 import Home4TeamSection from '@/components/team-section/Home4TeamSection'
 import Home4testimonialSection from '@/components/testimonial-section/Home4testimonialSection'
-import { loadMarketingAgencyHomepage } from '@/cms/loaders/homepage'
+import { adaptMarketingAgencyDemoToHome4 } from '@/cms/adapters/homepageToHome4'
+import { marketingAgencyDemo } from '@/cms/data/marketingAgencyDemo'
 import React from 'react'
 
-export const dynamic = 'force-dynamic'
-
-const page = async () => {
-    const { data } = await loadMarketingAgencyHomepage({ locale: 'vi' })
+const page = () => {
+    const data = adaptMarketingAgencyDemoToHome4(marketingAgencyDemo)
 
     return (
         <>

@@ -20,6 +20,14 @@ const localizedTextarea = (name, overrides = {}) => ({
   ...overrides,
 });
 
+const visibilityToggle = (name, label, description) => ({
+  name,
+  label,
+  type: "checkbox",
+  defaultValue: false,
+  admin: { description },
+});
+
 const fixedPageGlobal = ({ slug, label, fields = [] }) => ({
   slug,
   label,
@@ -122,7 +130,7 @@ export const Homepage = {
       defaultValue: false,
       admin: {
         description:
-          "Development-only Mortar parity seed. This is not verified VMO proof.",
+          "Historical compatibility marker only. Production rendering must never depend on this value.",
         readOnly: true,
       },
     },
@@ -130,6 +138,21 @@ export const Homepage = {
       name: "hero",
       type: "group",
       fields: [
+        visibilityToggle(
+          "showPartnerProof",
+          "Show partner proof",
+          "Keep off until the partner relationship and public display are verified.",
+        ),
+        visibilityToggle(
+          "showSuccessMetric",
+          "Show success metric",
+          "Keep off until the numeric success claim is verified.",
+        ),
+        visibilityToggle(
+          "showAwardMetric",
+          "Show award metric",
+          "Keep off until the award claim is verified.",
+        ),
         localizedText("partnerTitle"),
         localizedText("partnerStrapline"),
         { name: "partnerLogoPath", type: "text" },
@@ -151,6 +174,11 @@ export const Homepage = {
       name: "productToMarketGap",
       type: "group",
       fields: [
+        visibilityToggle(
+          "showPartnerProof",
+          "Show partner proof",
+          "Keep off until client/partner statistics and logos are approved for public use.",
+        ),
         localizedText("partnerStatLeft"),
         localizedText("partnerStatRight"),
         {
@@ -218,6 +246,11 @@ export const Homepage = {
       name: "capabilities",
       type: "group",
       fields: [
+        visibilityToggle(
+          "showResultMetric",
+          "Show capability result metric",
+          "Keep off until the result value and label are verified.",
+        ),
         localizedText("titleLead"),
         localizedText("titleTail"),
         localizedText("resultValue"),
@@ -245,16 +278,20 @@ export const Homepage = {
       name: "measurement",
       type: "group",
       fields: [
+        visibilityToggle(
+          "enabled",
+          "Enable measurement section",
+          "Off by default. Enable only when the section has approved production data.",
+        ),
         localizedText("titleLead"),
         localizedText("titleTail"),
         localizedTextarea("description"),
         {
           name: "metrics",
           type: "array",
-          minRows: 4,
           maxRows: 4,
           fields: [
-            { name: "value", type: "number", required: true },
+            { name: "value", type: "number" },
             localizedText("labelLead"),
             localizedText("labelTail"),
           ],
@@ -265,7 +302,6 @@ export const Homepage = {
         {
           name: "industries",
           type: "array",
-          minRows: 6,
           maxRows: 6,
           fields: [
             localizedText("title"),
@@ -279,12 +315,26 @@ export const Homepage = {
       name: "featuredProof",
       type: "group",
       fields: [
+        visibilityToggle(
+          "showTestimonials",
+          "Show testimonials",
+          "Off by default. Enable only for verified, publishable testimonials.",
+        ),
+        visibilityToggle(
+          "showCases",
+          "Show cases",
+          "Off by default. Enable only for verified, publishable case evidence.",
+        ),
+        visibilityToggle(
+          "showTeam",
+          "Show team",
+          "Off by default. Enable only for approved public team profiles.",
+        ),
         localizedText("testimonialTitle"),
         localizedTextarea("testimonialDescription"),
         {
           name: "testimonials",
           type: "array",
-          minRows: 3,
           maxRows: 3,
           fields: [
             localizedText("headline"),
@@ -301,7 +351,6 @@ export const Homepage = {
         {
           name: "cases",
           type: "array",
-          minRows: 2,
           maxRows: 2,
           fields: [
             localizedText("title"),
@@ -319,7 +368,6 @@ export const Homepage = {
         {
           name: "teamMembers",
           type: "array",
-          minRows: 6,
           maxRows: 6,
           fields: [
             localizedText("name"),
@@ -335,6 +383,11 @@ export const Homepage = {
       name: "infrastructure",
       type: "group",
       fields: [
+        visibilityToggle(
+          "enabled",
+          "Enable infrastructure section",
+          "Off by default until approved production infrastructure content exists.",
+        ),
         localizedText("title"),
         localizedTextarea("description"),
         {
@@ -351,6 +404,11 @@ export const Homepage = {
       name: "insights",
       type: "group",
       fields: [
+        visibilityToggle(
+          "enabled",
+          "Enable insights section",
+          "Off by default until approved production insights are selected.",
+        ),
         localizedText("title"),
         localizedTextarea("description"),
         {
@@ -366,6 +424,11 @@ export const Homepage = {
       name: "growthMissionCTA",
       type: "group",
       fields: [
+        visibilityToggle(
+          "enabled",
+          "Enable Growth Mission CTA",
+          "Off by default until approved production CTA content and media exist.",
+        ),
         localizedText("titleLead"),
         localizedText("titleTail"),
         localizedTextarea("descriptionLead"),
@@ -375,7 +438,6 @@ export const Homepage = {
         {
           name: "mediaItems",
           type: "array",
-          minRows: 6,
           maxRows: 6,
           fields: [
             { name: "type", type: "select", options: ["image", "video"] },

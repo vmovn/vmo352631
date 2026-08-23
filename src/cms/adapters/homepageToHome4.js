@@ -1,6 +1,12 @@
 import { marketingAgencyDemo } from "../data/marketingAgencyDemo.js";
 import { assertHomepageShape } from "../types/homepage.js";
 
+/**
+ * Reference-only Home4 adapter for the immutable Mortar marketing route.
+ * Never pass the production Payload Homepage Global to this adapter: its
+ * fallback behavior intentionally restores original Mortar demo values.
+ */
+
 function mergeSection(section, fallback) {
   if (!section) return fallback;
 
@@ -25,7 +31,15 @@ function mergeSection(section, fallback) {
   );
 }
 
-export function adaptHomepageToHome4(homepage) {
+export function adaptMarketingAgencyDemoToHome4(
+  homepage = marketingAgencyDemo,
+) {
+  if (homepage !== marketingAgencyDemo) {
+    throw new TypeError(
+      "The Mortar reference adapter only accepts marketingAgencyDemo",
+    );
+  }
+
   const safeHomepage = assertHomepageShape({
     ...marketingAgencyDemo,
     ...(homepage || {}),
