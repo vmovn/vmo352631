@@ -86,22 +86,30 @@ function CursorCore({
   const requestRef = useRef(null);
   const targetRef = useRef({ x: 0, y: 0 });
   const outerPositionRef = useRef({ x: 0, y: 0 });
-  const [isVisible, setIsVisible] = useState(false);
   const [isActive, setIsActive] = useState(false);
   const [isActiveClickable, setIsActiveClickable] = useState(false);
   const [options, setOptions] = useState(defaultOptions);
 
   useEffect(() => setOptions(defaultOptions), [defaultOptions]);
 
+  const setCursorVisibility = useCallback((visible) => {
+    const opacity = visible ? "1" : "0";
+    if (cursorInnerRef.current) cursorInnerRef.current.style.opacity = opacity;
+    if (cursorOuterRef.current) cursorOuterRef.current.style.opacity = opacity;
+  }, []);
+
   const onMouseMove = useCallback((event) => {
     const { clientX, clientY } = event;
+    setCursorVisibility(true);
     targetRef.current = { x: clientX, y: clientY };
 
     if (cursorInnerRef.current) {
       cursorInnerRef.current.style.top = `${clientY}px`;
       cursorInnerRef.current.style.left = `${clientX}px`;
     }
-  }, []);
+  }, [setCursorVisibility]);
+
+  useEffect(() => setCursorVisibility(false), [setCursorVisibility]);
 
   useEffect(() => {
     const animateOuterCursor = () => {
@@ -125,23 +133,22 @@ function CursorCore({
   useEffect(() => {
     const onMouseDown = () => setIsActive(true);
     const onMouseUp = () => setIsActive(false);
-    const onMouseOver = () => setIsVisible(true);
-    const onMouseOut = () => setIsVisible(false);
+    const onMouseOut = (event) => {
+      if (!event.relatedTarget && !event.toElement) setCursorVisibility(false);
+    };
 
     window.addEventListener("mousemove", onMouseMove);
     window.addEventListener("mousedown", onMouseDown);
     window.addEventListener("mouseup", onMouseUp);
-    window.addEventListener("mouseover", onMouseOver);
     window.addEventListener("mouseout", onMouseOut);
 
     return () => {
       window.removeEventListener("mousemove", onMouseMove);
       window.removeEventListener("mousedown", onMouseDown);
       window.removeEventListener("mouseup", onMouseUp);
-      window.removeEventListener("mouseover", onMouseOver);
       window.removeEventListener("mouseout", onMouseOut);
     };
-  }, [onMouseMove]);
+  }, [onMouseMove, setCursorVisibility]);
 
   const scaleBySize = useCallback((element, size, scale) => {
     if (!element) return;
@@ -189,6 +196,7 @@ function CursorCore({
       const elementOptions = { ...defaultOptions, ...clickableOptions };
       const handlers = {
         mouseover: () => {
+          setCursorVisibility(true);
           setIsActive(true);
           setOptions(elementOptions);
         },
@@ -217,7 +225,7 @@ function CursorCore({
     });
 
     return () => cleanups.forEach((cleanup) => cleanup());
-  }, [clickables, defaultOptions, showSystemCursor]);
+  }, [clickables, defaultOptions, setCursorVisibility, showSystemCursor]);
 
   useEffect(() => {
     const previousCursor = document.body.style.cursor;
@@ -238,7 +246,6 @@ function CursorCore({
     transform: "translate(-50%, -50%)",
     transition:
       "opacity 0.15s ease-in-out, height 0.2s ease-in-out, width 0.2s ease-in-out",
-    opacity: isVisible ? 1 : 0,
   };
 
   const cursorInnerStyles = {

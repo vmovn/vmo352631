@@ -16,7 +16,7 @@ const mortarBodyClassName = `tt-magic-cursor ${lora.variable} ${dmsans.variable}
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <head>
         <link
           rel="icon"

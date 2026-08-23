@@ -1,10 +1,9 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { Observer } from "gsap/Observer";
+import { gsap } from "gsap/dist/gsap.js";
+import { Observer } from "gsap/dist/Observer.js";
 
-gsap.registerPlugin(Observer);
 import Home3Footer from '@/components/Footer/Home3Footer'
 import Header3 from '@/components/header/Header3'
 import Link from 'next/link'
@@ -14,6 +13,7 @@ const VerticalPortfolioPage = () => {
   const containerRef = useRef(null);
 
   useEffect(() => {
+    gsap.registerPlugin(Observer);
     const sections = containerRef.current.querySelectorAll("section");
     const images = containerRef.current.querySelectorAll(".bg");
     const outerWrappers = gsap.utils.toArray(".outer");

@@ -1,8 +1,8 @@
 // customHooks/useGsapAnimations.js
 import { useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { SplitText } from "gsap/SplitText.js";
+import { gsap } from "gsap/dist/gsap.js";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
+import { SplitText } from "gsap/dist/SplitText.js";
 
 export default function useGsapAnimations() {
   useEffect(() => {

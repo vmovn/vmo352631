@@ -1,9 +1,8 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
-gsap.registerPlugin(ScrollTrigger);
+import { gsap } from 'gsap/dist/gsap.js';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger.js';
 import Link from 'next/link'
 import Counter from '../common/Counter';
 
@@ -13,6 +12,7 @@ const Home3Banner = () => {
     const ref3 = useRef(null);
 
     useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
         const mm = gsap.matchMedia();
 
         mm.add("(min-width: 1200px)", () => {
@@ -87,7 +87,11 @@ const Home3Banner = () => {
             });
         });
 
-        return () => mm.revert(); // Clean up on unmount
+        ScrollTrigger.refresh();
+
+        return () => {
+            mm.revert();
+        };
     }, []);
     return (
         <>
